@@ -152,3 +152,17 @@
     background-color: $color;
   }
 }
+
+html.dark {
+
+  .shiki-light {
+    display: none;
+  }
+}
+
+html.light {
+
+  .shiki-dark {
+    display: none;
+  }
+}

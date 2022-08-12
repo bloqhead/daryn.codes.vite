@@ -25,7 +25,7 @@
 
 <script setup lang="ts">
 import axios from 'axios';
-import type { Music } from './types'
+import type { Music, Artist } from './types'
 
 const items = ref<Music>([])
 const error = ref<Boolean>(false)

@@ -44,15 +44,14 @@ body {
 
 .content {
   min-height: 450px;
-  padding: $global-component-padding $global-component-padding
-    ($global-component-padding * 3) $global-component-padding;
+  padding: $global-component-padding $global-component-padding (
+      $global-component-padding * 3) $global-component-padding;
 }
 
 .page-content {
   max-width: $content-width;
   will-change: opacity, transform;
-  transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1),
-    transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1), transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .page-footer__email-link {

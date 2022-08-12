@@ -55,19 +55,6 @@
     <h3>I build things with&hellip;</h3>
 
     <brand-logos />
-
-    <!-- <ul class="list list--cols">
-      <li>WordPress</li>
-      <li><a href="https://sass-lang.com/">SCSS</a></li>
-      <li>JavaScript / ES(X)</li>
-      <li>HTML5</li>
-      <li>PHP / Twig</li>
-      <li>Node</li>
-      <li><a href="https://vuejs.org/">VueJS</a></li>
-      <li><a href="https://gridsome.org/">Gridsome</a></li>
-      <li><a href="https://animejs.com/">AnimeJS</a></li>
-      <li><a href="https://greensock.com/">Greensock</a></li>
-    </ul> -->
   </div>
 </template>
 

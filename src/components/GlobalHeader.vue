@@ -35,36 +35,36 @@
             to="/"
             exact
             tabindex="1"
-            class="menu__link"
-            >Home</router-link
-          >
+            class="menu__link">
+            Home
+          </router-link>
         </li>
         <li>
           <router-link
             @click.native="restingState"
             to="/work/"
             tabindex="2"
-            class="menu__link"
-            >Work</router-link
-          >
+            class="menu__link">
+            Work
+          </router-link>
         </li>
         <li>
           <router-link
             @click.native="restingState"
             to="/journal/"
             tabindex="3"
-            class="menu__link"
-            >Journal</router-link
-          >
+            class="menu__link">
+            Journal
+          </router-link>
         </li>
         <li>
           <router-link
             @click.native="restingState"
             to="/contact/"
             tabindex="4"
-            class="menu__link"
-            >Hello</router-link
-          >
+            class="menu__link">
+            Hello
+          </router-link>
         </li>
       </ul>
     </nav>
