@@ -1,0 +1,23 @@
+// 
+// Breadcrumb
+// 
+
+.breadcrumb {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: $char-spacing;
+  margin: 0 0 3rem 0;
+
+  p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .breadcrumb__link {
+    text-decoration: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}

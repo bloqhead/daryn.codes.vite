@@ -1,0 +1,179 @@
+//
+// Mixins
+//
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin logoColor($page: null, $color: $pink) {
+  body.#{$page} & {
+
+    .path {
+      stroke: $color;
+    }
+
+    .wheel {
+      fill: $color;
+    }
+  }
+}
+
+@mixin nther( $n: null, $color: null, $bg: null ) {
+  $darken: 30%;
+  &:nth-of-type(#{$n}) a {
+    color: $color;
+
+    &:after {
+      background: darken($bg, $darken);
+    }
+
+    &:before {
+      background: $bg;
+      box-shadow: 5px 5px 0 0 darken($bg, $darken);
+    }
+  }
+}
+
+@mixin retroTitle {
+  overflow: hidden;
+  display: inline-block;
+  margin: 0;
+  padding: 1em 1em 2.5em 1em;
+  font-size: 2rem;
+  line-height: 2;
+  letter-spacing: 0;
+  color: $dark;
+  transform: translateY(0.6em) skewY(-3deg);
+  @content;
+
+  > span {
+    background: $pink;
+    transition: $work-transition;
+    padding: 0.25em 0;
+    box-shadow: 0.5em 0 0 $pink, -0.5em 0 0 $pink, 0.75em 0.25em 0 $teal;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+@mixin panel($color: $pink, $background: $panel-bg, $border-radius: $radius) {
+  position: relative;
+  margin: 3em auto 1em auto;
+  padding: 0;
+  background: $background;
+  border-radius: $border-radius;
+
+  &:before, &:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, rgba($color, 0) 0%, $color 50%, rgba($color, 0) 100%);
+  }
+
+  &:before {
+    top: 0; left: 0;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+
+  &:after {
+    bottom: 0; left: 0;
+    border-radius: 0 0 $border-radius $border-radius;
+  }
+}
+
+@mixin pattern($color: "teal") {
+  background-image: url("#{$img-path}/patterns/pattern_#{$color}.svg");
+  background-size: 576px 576px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+@mixin cleartext {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// 
+// Fluid type
+// https://css-tricks.com/snippets/css/fluid-typography/
+// 
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@mixin scrollbar-v {
+  &::-webkit-scrollbar {
+    width: .4em;
+  }
+  
+  &::-webkit-scrollbar-track {
+    $i: rgba($dark, .5);
+
+    background-color: $i;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0 4px $i;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $pink;
+    border-radius: .2em;
+  }
+}
+
+@mixin scrollbar-h {
+  &::-webkit-scrollbar {
+    height: .4em;
+  }
+  
+  &::-webkit-scrollbar-track {
+    $i: rgba($dark, .5);
+
+    background-color: $i;
+    border: 0;
+    outline: 0;
+    box-shadow: 0 0 0 4px $i;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $pink;
+    border-radius: .2em;
+  }
+}

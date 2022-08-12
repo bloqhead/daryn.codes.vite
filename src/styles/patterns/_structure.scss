@@ -1,0 +1,134 @@
+//
+// Structure
+//
+
+html,
+body {
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  &.has-active-menu {
+    overflow: hidden !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  color: #eee;
+  font-weight: normal;
+  line-height: 2;
+  font-family: $open-sans;
+  background-color: black;
+  background-image: url($topography);
+  background-attachment: fixed;
+  @include cleartext;
+
+  $min_width: 320px;
+  $max_width: 1140px;
+  $min_font: 14px;
+  $max_font: 18px;
+  // $max_font: 18px;
+
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+// Template structure
+
+.page-wrapper {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.content {
+  min-height: 450px;
+  padding: $global-component-padding $global-component-padding
+    ($global-component-padding * 3) $global-component-padding;
+}
+
+.page-content {
+  max-width: $content-width;
+  will-change: opacity, transform;
+  transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1),
+    transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.page-footer__email-link {
+  > svg {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 1140px) {
+  .page-wrapper {
+    &:before {
+      position: absolute;
+      top: 25rem;
+      left: 15rem;
+      z-index: -1;
+      display: block;
+      content: attr(data-floating-label);
+      font-family: $overpass-mono;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: $char-spacing;
+      line-height: 0;
+      text-transform: uppercase;
+      writing-mode: vertical-lr;
+      text-orientation: sideways;
+      color: $shade;
+      @include cleartext;
+    }
+  }
+}
+
+@media #{$bp-medium} {
+  .page-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr 1fr);
+    grid-template-areas:
+      "head head head head head head"
+      ".... main main main main ...."
+      "foot foot foot foot foot foot";
+  }
+
+  .page-title {
+    grid-area: title;
+  }
+
+  .page-header {
+    grid-area: head;
+  }
+
+  .content {
+    grid-area: main;
+  }
+
+  .page-footer {
+    grid-area: foot;
+  }
+
+  .page-footer__content {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr 1fr);
+    grid-template-areas: "social music music music copyright";
+    // align-items: center;
+  }
+
+  .page-footer__social {
+    grid-area: social;
+  }
+
+  .page-footer__copyright {
+    grid-area: copyright;
+    align-self: center;
+  }
+
+  .page-footer__music {
+    grid-area: music;
+    padding: 0 3em;
+  }
+}

@@ -1,0 +1,154 @@
+//
+// Helpers
+//
+
+// clip-path masks
+
+@mixin cp-parallelogram {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+@mixin cp-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.intro {
+  background-color: rgba($mid, 0.85);
+  max-width: 35em;
+  font-size: 1.5em;
+  padding: $global-component-padding / 2;
+  margin: 0 0 3.5em 0;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.intro--has-image {
+  @media (min-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > *:not(.intro__image) {
+      flex: 3;
+    }
+  }
+}
+
+.intro__image {
+  position: relative;
+
+  img {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  img,
+  &:after {
+    @include cp-parallelogram;
+  }
+
+  &:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $lime;
+    transform: translate(0.65rem, 0.65rem);
+  }
+
+  @media (max-width: 639px) {
+    margin: 3rem auto;
+    max-width: 250px;
+  }
+
+  @media (min-width: 640px) {
+    flex: 2;
+    transform: translateX(-5rem);
+  }
+}
+
+.attn {
+  font-family: $overpass-mono;
+  font-size: 1.6em;
+  line-height: 1.35;
+  color: $pink;
+  // border-left: 15px solid $mid;
+  // padding-left: 1em;
+  // transform: translateX(-1.5em);
+  margin: 1.5em 0;
+}
+
+.align--center {
+  text-align: center;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.flex-well {
+  display: flex;
+  flex-wrap: wrap;
+  // align-items: center;
+  justify-content: center;
+}
+
+.flex-well--auto > * {
+  flex: auto;
+}
+
+.flex-well--padded-items > * {
+  margin: 2rem;
+}
+
+.mt--sm {
+  margin-top: 3rem;
+}
+
+.mt--lg {
+  margin-top: 6rem;
+}
+
+.mt--xl {
+  margin-top: 12rem;
+}
+
+.mb--sm {
+  margin-bottom: 3rem;
+}
+
+.mb--lg {
+  margin-bottom: 6rem;
+}
+
+.mb--xl {
+  margin-bottom: 12rem;
+}
+
+@each $color, $name in $colors-brand {
+  .color--#{$name} {
+    color: $color;
+  }
+
+  .bg--#{$name} {
+    background-color: $color;
+  }
+}
+
+@each $color, $name in $colors-site-named {
+  .color--#{$name} {
+    color: $color;
+  }
+
+  .bg--#{$name} {
+    background-color: $color;
+  }
+}

@@ -1,0 +1,135 @@
+/*
+
+Dracula Theme v1.2.0
+
+https://github.com/zenorocha/dracula-theme
+
+Copyright 2015, All rights reserved
+
+Code licensed under the MIT license
+http://zenorocha.mit-license.org
+
+@author Éverton Ribeiro <nuxlli@gmail.com>
+@author Zeno Rocha <hi@zenorocha.com>
+
+*/
+
+// custom
+
+:not(pre) > code {
+  display: inline-block;
+  background: $mid;
+  padding: 0 1rem;
+  border-radius: 3px;
+}
+
+pre[class*="language-"] {
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px rgba(#fff, 0.1);
+}
+
+pre code {
+  display: block;
+  overflow-x: auto;
+  // padding: 2rem;
+
+  @include scrollbar-h;
+}
+
+pre code[data-label] {
+  position: relative;
+
+  &::before, &::after {
+    position: absolute;
+    top: 0;
+    display: block;
+  }
+  
+  &::before {
+    right: 30px;
+    content: "<" attr(data-label) ">";
+    font-family: $overpass-mono;
+    line-height: 1;
+    text-transform: lowercase;
+    color: $mid;
+    padding: 1rem;
+    border-radius: 0 0 .25rem .25rem;
+    background-color: $lime;
+  }
+
+  &::after {
+    left: 0;
+    content: "";
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(to right, $pink 50%,$lime 75%);
+  }
+}
+
+// hide the language label if the code block has the 
+// data attribute but no actual value set
+pre code[data-label='']::before {
+  display: none;
+}
+
+// base theme
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  color: $pink;
+}
+
+.hljs-function .hljs-keyword {
+  color: #ff79c6;
+}
+
+.hljs,
+.hljs-subst {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: $yellow;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #6272a4;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-title,
+.hljs-section,
+.hljs-doctag,
+.hljs-type,
+.hljs-name,
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+@media #{$bp-medium} {
+  pre code {
+    font-size: 1.8rem;
+  }
+}

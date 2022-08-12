@@ -1,0 +1,45 @@
+//
+// Page transitions
+//
+
+$base-transform: 9rem;
+
+.brush.title,
+.journal-entry__title h1 {
+  transition: opacity 0.5s cubic-bezier(0.62, 0.26, 0.02, 0.87),
+    transform 0.5s cubic-bezier(0.62, 0.26, 0.02, 0.87);
+  transition-delay: 0.2s;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s cubic-bezier(0.62, 0.26, 0.02, 0.87);
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(0, #{$base-transform});
+
+  .brush.title,
+  .journal-entry__title h1 {
+    opacity: 0;
+    transform: translate(#{$base-transform}, 0);
+  }
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(0, -#{$base-transform});
+
+  .brush.title {
+    opacity: 0;
+    transform: translate(-#{$base-transform}, 0);
+  }
+}

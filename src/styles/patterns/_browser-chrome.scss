@@ -1,0 +1,46 @@
+//
+// Browser chrome
+//
+
+.browser-chrome {
+  overflow: hidden;
+
+  > img {
+    display: block;
+    margin: 0;
+  }
+
+  &:before {
+    --size: 10px;
+    --height: 40px;
+    --bar-bg: #333;
+    --radius: 10px;
+    --color-1: #{$pink};
+    --color-2: #{$yellow};
+    --color-3: #{$lime};
+    --x: 20px;
+    --y: calc(var(--height) / 2);
+
+    display: block;
+    content: "";
+    height: var(--height);
+    // border: 2px solid $pink;
+    border-radius: var(--radius) var(--radius) 0 0;
+    background-color: var(--bar-bg);
+    background-image: radial-gradient(
+        var(--size) circle at var(--x) var(--y),
+        var(--color-1) 50%,
+        transparent 51%
+      ),
+      radial-gradient(
+        var(--size) circle at calc(var(--x) * 2) var(--y),
+        var(--color-2) 50%,
+        transparent 51%
+      ),
+      radial-gradient(
+        var(--size) circle at calc(var(--x) * 3) var(--y),
+        var(--color-3) 50%,
+        transparent 51%
+      );
+  }
+}

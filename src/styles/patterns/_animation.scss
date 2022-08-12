@@ -1,0 +1,74 @@
+//
+// Animation
+//
+
+// logo - bracket right
+@keyframes bracketRight {
+  from {
+    opacity: 0;
+    transform: translateX(0.5em) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+// logo - bracket left
+@keyframes bracketLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-0.5em) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+// logo - skate deck
+@keyframes skateDeck {
+  from {
+    opacity: 0;
+    transform: translateY(1em) rotate(-20deg)  scale(2);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg)  scale(1);
+  }
+}
+
+// special title pseudo animations
+@keyframes titleBefore {
+  from {
+    opacity: 0;
+    transform: translate(0, 0) scale(0) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-0.25em, -0.28em) scale(1.15) rotate(20deg);
+  }
+}
+
+@keyframes titleAfter {
+  from {
+    opacity: 0;
+    transform: translate(0, 0) scale(0) rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-0.2em, -0.15em) scale(0.75) rotate(15deg);
+  }
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0) }
+  50% { transform: scale(1.5) }
+  100% { transform: scale(1) }
+}
+
+@keyframes bounce-out {
+  0% { transform: scale(1) }
+  50% { transform: scale(1.5) }
+  100% { transform: scale(0) }
+}

@@ -1,0 +1,39 @@
+//
+// Logo
+//
+
+#logo {
+  // on-the-fly timining and delay vars
+  $n: 0.32s; // delay
+  $m: 1.3; // modifier
+
+  overflow: visible !important;
+  will-change: transform, opacity;
+  transition: 
+    opacity 250ms ease-in-out,
+    transform 250ms ease-in-out;
+  opacity: 0;
+  transform: scale(0);
+
+  #complete, .bracket {
+    // transform-origin: 50%;
+    // opacity: 0;
+  }
+
+  #complete {
+    // transform: translateY(1em) rotate(-20deg) scale(2);
+    // animation: skateDeck $n forwards ease 1;
+    // animation-delay: $n * $m;
+  }
+
+  #bracket_right {
+    // transform: translateX(0.5em) scale(0.85);
+    // animation: bracketRight $n forwards ease 1;
+    // animation-delay: $n * ( $m + 1 );
+  }
+
+  #bracket_left {
+    // transform: translateX(-0.5em) scale(0.85);
+    // animation: bracketLeft $n forwards ease 1;
+  }
+}
