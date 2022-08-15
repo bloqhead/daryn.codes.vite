@@ -1,19 +1,21 @@
 <template>
-  <global-header />
-
   <div class="page-wrapper" data-floating-label="Daryn St. Pierre // Front End Web Dev">
+    <global-header />
+
     <div class="content" role="main">
       <router-view v-slot="{ Component, route }">
         <transition name="slide-left" mode="out-in">
           <main class="page-content" :key="route.path">
             <component :is="Component" :key="route.path" />
           </main>
+          <!-- .page-content -->
         </transition>
       </router-view>
     </div>
-  </div>
+    <!-- .content -->
 
-  <global-footer />
+    <global-footer />
+  </div>
 </template>
 
 <script setup lang="ts">

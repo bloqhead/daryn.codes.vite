@@ -62,10 +62,8 @@
         transition: transform 300ms $base-easing, background 300ms $base-easing;
       }
 
-      &.active {
-        &:after {
-          transform: scaleX(0.5) scaleY(1);
-        }
+            &.router-link-active:after {
+              transform: scaleX(0.5) scaleY(1);
       }
     }
   }

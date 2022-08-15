@@ -22,6 +22,7 @@ $base-transform: 9rem;
 }
 
 .slide-left-enter,
+.slide-left-enter-from,
 .slide-right-leave-active {
   opacity: 0;
   transform: translate(0, #{$base-transform});
@@ -34,6 +35,7 @@ $base-transform: 9rem;
 }
 
 .slide-left-leave-active,
+.slide-left-leave-from,
 .slide-right-enter {
   opacity: 0;
   transform: translate(0, -#{$base-transform});

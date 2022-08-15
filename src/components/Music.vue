@@ -1,5 +1,8 @@
 <template>
   <div class="music">
+    <div v-if="error">
+      <p>Error retrieving scrobble data.</p>
+    </div>
     <div class="music__content" v-if="items && !error">
       <ul class="music__items">
         <li v-for="(item, idx) of items" :key="idx">
@@ -25,9 +28,9 @@
 
 <script setup lang="ts">
 import axios from 'axios';
-import type { Music, Artist } from './types'
+import type { Music } from '~/types'
 
-const items = ref<Music>([])
+const items = ref<Music>()
 const error = ref<Boolean>(false)
 
 const fetchLatestScrobbles = () => {

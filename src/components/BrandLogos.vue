@@ -62,7 +62,8 @@ const logos = [
     transform: translateY(75%);
     opacity: 0;
 
-    transition: transform 0.5s cubic-bezier(0.78, 0.42, 0.11, 0.92),
+    transition:
+      transform 0.5s cubic-bezier(0.78, 0.42, 0.11, 0.92),
       filter 1s 10s ease-in-out, opacity 0.5s ease-in-out;
   }
 

@@ -16,7 +16,7 @@
   background-color: rgba($mid, 0.85);
   max-width: 35em;
   font-size: 1.5em;
-  padding: $global-component-padding / 2;
+  padding: calc(#{$global-component-padding} / 2);
   margin: 0 0 3.5em 0;
 
   p {
