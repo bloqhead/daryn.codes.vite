@@ -1,5 +1,5 @@
 <template>
-  <div class="page-wrapper" data-floating-label="Daryn St. Pierre // Front End Web Dev">
+  <div class="page-wrapper" :data-floating-label="store.tagline">
     <global-header />
 
     <div class="content" role="main">
@@ -19,8 +19,14 @@
 </template>
 
 <script setup lang="ts">
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
+const store = siteStore()
 import GlobalFooter from "~/components/GlobalFooter.vue";
 import GlobalHeader from "~/components/GlobalHeader.vue";
+
+// update the stored tagline on route change
+watch(useRoute(), () => store.setTagline(), { immediate: true })
 
 useHead({
   title: 'Daryn St. Pierre, Front-End Web Developer',

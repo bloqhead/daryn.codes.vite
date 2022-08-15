@@ -7,11 +7,11 @@
     </div>
 
     <div class="journal-list">
-      <ul m="0" p="0">
+      <ul class="m-0 p-0">
         <li
           v-for="(v, k) in posts"
           :key="k"
-          m="b-4"
+          class="mb-4"
         >
           <h3 class="journal-list__title">
             <router-link :to="v.path">
@@ -30,11 +30,19 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import FormatDate from '~/components/FormatDate.vue'
+import { Meta } from '~/types'
 
+// prepare posts and sort by date
 const posts = computed(() => {
-  return useRouter().getRoutes().filter((i) => {
-    return i.path.startsWith('/journal/') && i.meta?.layout === 'post'
-  })
+  const items = useRouter().getRoutes()
+    .filter((i) => {
+      return i.path.startsWith('/journal/') && i.meta?.layout === 'post'
+    })
+    .sort((a: Meta, b: Meta): number => {
+      return new Date(a.meta.date).getTime() > new Date(b.meta.date).getTime() ? -1 : 1
+    })
+
+  return items
 })
 </script>
 

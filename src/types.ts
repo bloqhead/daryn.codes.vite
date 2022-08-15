@@ -13,3 +13,9 @@ export type Artist = {
 export type Music = {
   [key: string]: Artist
 }
+
+export type Meta = {
+  meta: {
+    [key: string]: any,
+  }
+}
