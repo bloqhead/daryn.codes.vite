@@ -1,18 +1,19 @@
-<script setup lang="ts">
-const router = useRouter()
-const { t } = useI18n()
-</script>
-
 <template>
-  <main p="x4 y10" text="center teal-700 dark:gray-200">
-    <div text-4xl>
-      <div i-carbon-warning inline-block />
-    </div>
-    <RouterView />
-    <div>
-      <button btn text-sm m="3 t8" @click="router.back()">
-        {{ t('button.back') }}
-      </button>
-    </div>
-  </main>
+  <div class="page-content">
+    <h1 class="brush title">
+      Oops!
+    </h1>
+    <p class="intro mb-8">
+      Oops! Looks like that content was removed or never existed.
+    </p>
+    <p>
+      <router-link to="/">
+        &larr; Take me home
+      </router-link>
+    </p>
+  </div>
 </template>
+
+<script setup lang="ts"></script>
+
+<style lang="scss" scoped></style>

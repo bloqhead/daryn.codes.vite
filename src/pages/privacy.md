@@ -15,7 +15,9 @@ meta:
     content: Privacy Policy
 ---
 
-<h1 class="brush title" m="b-8">Privacy</h1>
+<h1 class="brush title mb-8">
+  Privacy
+</h1>
 
 Your privacy is important to us. It is Daryn St. Pierre's policy to
 respect your privacy regarding any information we may collect from you

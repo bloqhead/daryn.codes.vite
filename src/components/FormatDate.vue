@@ -8,27 +8,21 @@
   </div>
 </template>
 
-<script>
-import dayjs from "dayjs";
+<script setup lang="ts">
+import dayjs from 'dayjs'
 
-export default {
-  props: {
-    date: {
-      type: String,
-      required: true,
-    },
+const props = defineProps({
+  date: {
+    type: String,
+    required: true,
   },
-  computed: {
-    niceDate() {
-      const rawDate = new Date(this.date);
-      const fixedDate = new Date(
-        rawDate.getTime() + rawDate.getTimezoneOffset() * 60000
-      ).toISOString();
+})
 
-      const newDate = dayjs(fixedDate).format("MMM DD, YYYY");
+const niceDate = computed(() => {
+  const rawDate = new Date(props.date)
+  const adjuster = rawDate.getTime() + rawDate.getTimezoneOffset() * 60000
+  const fixedDate = new Date(adjuster).toISOString()
 
-      return newDate;
-    },
-  },
-};
+  return dayjs(fixedDate).format('MMM DD, YYYY')
+})
 </script>

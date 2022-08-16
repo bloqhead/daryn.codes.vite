@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="journal-list__item">
     <h3 class="journal-list__title">
       <router-link :to="props.path">
         {{ props.title }}
@@ -14,9 +14,18 @@
 <script setup lang="ts">
 import FormatDate from '~/components/FormatDate.vue'
 
-const props = defineProps<{
-  path: object,
-  title: string,
-  date: string,
-}>()
+const props = defineProps({
+  path: {
+    type: Object,
+    required: true,
+  },
+  title: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: String,
+    required: true,
+  },
+})
 </script>

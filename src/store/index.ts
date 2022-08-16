@@ -27,7 +27,7 @@ export const siteStore = defineStore('site', () => {
       'Bash hax0r',
       'Black Lives Matter',
       'Elden Ring Addict',
-      'Capitalism is the enemy'
+      'Capitalism is the enemy',
     ]
 
     const rand = titles[Math.floor(Math.random() * titles.length)]

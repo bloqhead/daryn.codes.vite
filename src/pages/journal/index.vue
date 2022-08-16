@@ -1,9 +1,13 @@
 <template>
   <div class="page-content">
-    <h1 class="brush title">Journal.</h1>
+    <h1 class="brush title">
+      Journal.
+    </h1>
 
     <div class="intro">
-      <p>A collection of thoughts and findings.</p>
+      <p>
+        A collection of thoughts and findings.
+      </p>
     </div>
 
     <div class="journal-list">
@@ -30,7 +34,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import FormatDate from '~/components/FormatDate.vue'
-import { Meta } from '~/types'
+import type { Meta } from '~/types'
 
 // prepare posts and sort by date
 const posts = computed(() => {

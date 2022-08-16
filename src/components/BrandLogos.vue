@@ -10,11 +10,9 @@
     >
       <fa
         :icon="['fab', logo.slug]"
-        :class="[
-          `color--${logo.color || logo.slug}`,
-          'fa-7x',
-        ]"
+        :class="`color--${logo.color || logo.slug}`"
         :title="logo.title"
+        class="fa-7x"
       />
     </div>
   </div>
@@ -23,34 +21,34 @@
 <script setup lang="ts">
 const logos = [
   {
-    slug: "html5",
-    title: "HTML5",
+    slug: 'html5',
+    title: 'HTML5',
   },
   {
-    slug: "wordpress-simple",
-    title: "WordPress",
-    color: "wordpress",
+    slug: 'wordpress-simple',
+    title: 'WordPress',
+    color: 'wordpress',
   },
   {
-    slug: "sass",
-    title: "Sass",
+    slug: 'sass',
+    title: 'Sass',
   },
   {
-    slug: "js",
-    title: "JavaScript",
+    slug: 'js',
+    title: 'JavaScript',
   },
   {
-    slug: "php",
-    title: "PHP",
+    slug: 'php',
+    title: 'PHP',
   },
   {
-    slug: "vuejs",
-    title: "Vue.js",
-    color: "vue",
+    slug: 'vuejs',
+    title: 'Vue.js',
+    color: 'vue',
   },
   {
-    slug: "node",
-    title: "Node.js",
+    slug: 'node',
+    title: 'Node.js',
   },
 ]
 </script>

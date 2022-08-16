@@ -26,21 +26,24 @@ In your Pardot handler, make sure to set both a success and error URL redirect:
 
 The goal is to make your Vue app react to the queries in your redirect URLs supplied here. In your Vue component, add a `formStatus` data attribute:
 
-```js
+```vue
+<script>
 export default {
   data() {
     return {
-      formStatus: null
-    };
+      formStatus: null,
+    }
   }
-};
+}
+</script>
 ```
 
 This is what we are going to use to trigger the appropriate UI. Let's created a new method to handle this behavior:
 
-```js
+```vue
+<script>
 methods: {
-  formBehaviorHandler () {
+  formBehaviorHandler() {
     const query = this.$route.query.form_success
     const status = query ? JSON.parse(query) : null
 
@@ -49,11 +52,12 @@ methods: {
     if (status === false || status === true) {
       window.scrollTo({
         top: this.formDistanceFromTop,
-        behavior: 'auto'
+        behavior: 'auto',
       })
     }
   }
 }
+</script>
 ```
 
 What this is doing is:
@@ -65,7 +69,7 @@ What this is doing is:
 Where and when do we use this method? Let's trigger it once our Vue app is mounted:
 
 ```js
-mounted () {
+mounted() {
   this.formBehaviorHandler()
 }
 ```
@@ -74,7 +78,7 @@ This will check for the `form_success` URL parameter when our app is mounted, an
 
 Now we are going to handle the UI for whether or not our Pardot form returned an error or a successful submission:
 
-```html
+```vue
 <div v-if="formStatus === true">
   <p>Thank you!</p>
   <p>Your submission has been received.</p>

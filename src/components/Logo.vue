@@ -1,13 +1,15 @@
 <template>
   <svg
+    id="logo"
     itemprop="logo"
     aria-labelledby="logoTitle logoDesc"
-    id="logo"
     viewBox="0 0 312 283"
     preserveAspectRatio="xMinYMin meet"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title id="logoTitle">Daryn St. Pierre - Front-End Web Developer</title>
+    <title id="logoTitle">
+      Daryn St. Pierre - Front-End Web Developer
+    </title>
     <desc id="logoDesc">
       A logo that is comprised of code brackets wrapped around a skateboard.
     </desc>
@@ -51,14 +53,10 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: "Logo"
-};
-</script>
+<script setup lang="ts"></script>
 
-<style lang="scss">
-svg#logo {
+<style lang="scss" scoped>
+#logo {
   .path {
     fill: none;
     stroke: #f54768;

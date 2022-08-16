@@ -5,7 +5,7 @@
     <div class="content" role="main">
       <router-view v-slot="{ Component, route }">
         <transition name="slide-left" mode="out-in">
-          <main class="page-content" :key="route.path">
+          <main :key="route.path" class="page-content">
             <component :is="Component" :key="route.path" />
           </main>
           <!-- .page-content -->
@@ -19,10 +19,10 @@
 </template>
 
 <script setup lang="ts">
-import GlobalFooter from "~/components/GlobalFooter.vue";
-import GlobalHeader from "~/components/GlobalHeader.vue";
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
+import GlobalFooter from '~/components/GlobalFooter.vue'
+import GlobalHeader from '~/components/GlobalHeader.vue'
 
 const store = siteStore()
 
@@ -34,7 +34,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'Daryn St. Pierre is a Front-End Web Developer based in St. Petersburg Florida.'
+      content: 'Daryn St. Pierre is a Front-End Web Developer based in St. Petersburg Florida.',
     },
     {
       name: 'theme-color',

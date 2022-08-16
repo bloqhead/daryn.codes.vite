@@ -3,7 +3,10 @@
     <div v-if="error">
       <p>Error retrieving scrobble data.</p>
     </div>
-    <div class="music__content" v-if="items && !error">
+    <div
+      v-if="items && !error"
+      class="music__content"
+    >
       <ul class="music__items">
         <li v-for="(item, idx) of items" :key="idx">
           <a :href="item.url">
@@ -27,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios';
+import axios from 'axios'
 import type { Music } from '~/types'
 
 const items = ref<Music>()
@@ -36,20 +39,18 @@ const error = ref<Boolean>(false)
 const fetchLatestScrobbles = () => {
   const username = import.meta.env.VITE_LASTFM_USERNAME
   const apiKey = import.meta.env.VITE_LASTFM_API_KEY
-  const api = `https://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=${username}&api_key=${apiKey}&format=json&limit=3`;
+  const api = `https://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=${username}&api_key=${apiKey}&format=json&limit=3`
 
   axios
     .get(api)
     .then((res) => {
-      items.value = res.data.lovedtracks.track;
+      items.value = res.data.lovedtracks.track
     })
     .catch((err) => {
-      error.value = true;
-      console.log(err);
-    });
+      error.value = true
+      throw err
+    })
 }
 
-onMounted(() => {
-  fetchLatestScrobbles()
-})
+onMounted(() => fetchLatestScrobbles())
 </script>

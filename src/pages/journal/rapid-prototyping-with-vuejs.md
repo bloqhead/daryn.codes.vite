@@ -40,7 +40,7 @@ I'm gonna give you the tl;dr for getting things started. I am making the assumpt
 
 First off, you'll want to get your HTML structure in place:
 
-```js
+```vue
 <template>
   <div class="cat">
     <h1>🐈</h1>
@@ -58,8 +58,11 @@ First, you have to install the appropriate loader for it:
 
 **Now you can do this:**
 
-```js
-<template lang="pug">.cat h1 🐈</template>
+```vue
+<template lang="pug">
+  .cat
+    h1 🐈
+</template>
 ```
 
 ### Styling
@@ -73,7 +76,7 @@ You'll need the proper module to compile Sass/SCSS accordingly. For this tutoria
 1. In the directory where your Vue component is, run: `npm i -D sass-loader node-sass`
 2. Now you can do this:
 
-```
+```vue
 <template lang="pug">
   .cat
     h1 🐈
@@ -99,13 +102,15 @@ Now for the last part of our fancy cat Vue component: ✨JavaScript✨
 
 So for this one, we're going to simply write some JS directly in the `mounted` lifecycle hook:
 
-```
+```vue
 <script>
 export default {
   mounted() {
     const el = this.$el // the main element within your Vue app
     const cat = el.querySelector('h1') // now you can target elements within your app
-    cat.addEventListener('click', (e) => window.console.log(e.target))
+    cat.addEventListener('click', (ev) => {
+      window.console.log(ev.target)
+    })
   }
 }
 </script>
@@ -119,7 +124,19 @@ If you want to get fancy and know your way around Vue, you can write functions a
 
 ### Your finalized Vue component
 
-```
+```vue
+<script>
+export default {
+  mounted() {
+    const el = this.$el
+    const cat = el.querySelector('h1')
+    cat.addEventListener('click', (ev) => {
+      window.console.log(ev.target)
+    })
+  }
+}
+</script>
+
 <template lang="pug">
   .cat
     h1 🐈
@@ -133,16 +150,6 @@ If you want to get fancy and know your way around Vue, you can write functions a
   }
 }
 </style>
-
-<script>
-export default {
-  mounted() {
-    const el = this.$el
-    const cat = el.querySelector('h1')
-    cat.addEventListener('click', (e) => window.console.log(e.target))
-  }
-}
-</script>
 ```
 
 ## Run it!

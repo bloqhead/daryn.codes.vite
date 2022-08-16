@@ -1,68 +1,73 @@
 import { ViteSSG } from 'vite-ssg'
 import { setupLayouts } from 'virtual:generated-layouts'
-import App from './App.vue'
-import generatedRoutes from '~pages'
-import { UserModule } from './types'
+import type { DefineComponent } from 'vue'
 
+// Font Awesome
+import type { FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { config, library } from '@fortawesome/fontawesome-svg-core'
+
+import {
+  faArrowRight,
+  faClock,
+  faCode,
+  faCompactDisc,
+  faEnvelope,
+  faTerminal,
+} from '@fortawesome/pro-solid-svg-icons'
+
+import {
+  faCodepen,
+  faGithub,
+  faHtml5,
+  faInstagram,
+  faJs,
+  faMastodon,
+  faNode,
+  faPhp,
+  faSass,
+  faTwitter,
+  faVuejs,
+  faWordpressSimple,
+} from '@fortawesome/free-brands-svg-icons'
+
+// app, routes, types
+import App from './App.vue'
+import type { UserModule } from './types'
+import generatedRoutes from '~pages'
+
+// styles
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import './styles/styles.scss'
 
-const routes = setupLayouts(generatedRoutes)
-
-// Icons
-import { DefineComponent } from 'vue'
-import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
-import { config, library } from '@fortawesome/fontawesome-svg-core'
-
-import {
-  faEnvelope,
+// add FA icons
+library.add(
   faArrowRight,
-  faCode,
   faClock,
-  faTerminal,
-  faCompactDisc,
-} from '@fortawesome/pro-solid-svg-icons'
-
-import {
-  faInstagram,
+  faCode,
   faCodepen,
-  faTwitter,
+  faCompactDisc,
+  faEnvelope,
   faGithub,
   faHtml5,
-  faSass,
-  faPhp,
+  faInstagram,
   faJs,
+  faMastodon,
+  faNode,
+  faPhp,
+  faSass,
+  faTerminal,
+  faTwitter,
   faVuejs,
   faWordpressSimple,
-  faNode,
-  faMastodon,
-} from '@fortawesome/free-brands-svg-icons'
-
-import '@fortawesome/fontawesome-svg-core/styles.css'
+)
 
 config.autoAddCss = false
 
-library.add(
-  faInstagram,
-  faCodepen,
-  faTwitter,
-  faGithub,
-  faHtml5,
-  faSass,
-  faPhp,
-  faJs,
-  faVuejs,
-  faWordpressSimple,
-  faNode,
-  faMastodon,
-  faEnvelope,
-  faArrowRight,
-  faCode,
-  faClock,
-  faTerminal,
-  faCompactDisc,
-)
+// setup routes
+const routes = setupLayouts(generatedRoutes)
 
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(
