@@ -9,10 +9,10 @@
       class="brand-logos__item"
     >
       <fa
-        :icon="[logo.lib ? logo.lib : 'fab', logo.slug]"
+        :icon="['fab', logo.slug]"
         :class="[
-          `color--${logo.color ? logo.color : logo.slug}`,
-          logo.size ? logo.size : 'fa-7x',
+          `color--${logo.color || logo.slug}`,
+          'fa-7x',
         ]"
         :title="logo.title"
       />

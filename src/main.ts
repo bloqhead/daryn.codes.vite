@@ -2,6 +2,7 @@ import { ViteSSG } from 'vite-ssg'
 import { setupLayouts } from 'virtual:generated-layouts'
 import App from './App.vue'
 import generatedRoutes from '~pages'
+import { UserModule } from './types'
 
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
@@ -10,7 +11,8 @@ import './styles/styles.scss'
 const routes = setupLayouts(generatedRoutes)
 
 // Icons
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { DefineComponent } from 'vue'
+import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 
 import {
@@ -67,7 +69,7 @@ export const createApp = ViteSSG(
   App,
   { routes, base: import.meta.env.BASE_URL },
   (ctx) => {
-    ctx.app.component('fa', FontAwesomeIcon)
+    ctx.app.component('fa', FontAwesomeIcon as unknown as DefineComponent<FontAwesomeIconProps>)
 
     // install all modules under `modules/`
     Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))

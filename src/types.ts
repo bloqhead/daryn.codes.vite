@@ -2,20 +2,20 @@ import { type ViteSSGContext } from 'vite-ssg'
 
 export type UserModule = (ctx: ViteSSGContext) => void
 
-export type Artist = {
-  url: string,
-  name: string,
+export interface Artist {
+  url: string
+  name: string
   artist: {
-    name: string,
-  },
+    name: string
+  }
 }
 
-export type Music = {
+export interface Music {
   [key: string]: Artist
 }
 
-export type Meta = {
+export interface Meta {
   meta: {
-    [key: string]: any,
+    [key: string]: any
   }
 }

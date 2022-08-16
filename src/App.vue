@@ -19,11 +19,12 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from 'vue'
-import { useRoute } from 'vue-router'
-const store = siteStore()
 import GlobalFooter from "~/components/GlobalFooter.vue";
 import GlobalHeader from "~/components/GlobalHeader.vue";
+import { watch } from 'vue'
+import { useRoute } from 'vue-router'
+
+const store = siteStore()
 
 // update the stored tagline on route change
 watch(useRoute(), () => store.setTagline(), { immediate: true })

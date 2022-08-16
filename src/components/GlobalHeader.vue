@@ -8,7 +8,7 @@
       type="button"
       aria-label="Menu"
       aria-controls="menu"
-      :aria-expanded="isExpanded.toString()"
+      :aria-expanded="isExpanded ? 'true' : 'false'"
       id="hamburger"
       class="hamburger hamburger--collapse"
       :class="{ 'is-active': isActive }"
