@@ -32,7 +32,9 @@
 import { useRouter } from 'vue-router'
 import FormatDate from '~/components/FormatDate.vue'
 
-const meta = computed(() => useRouter().currentRoute.value.meta)
+const meta = computed((): any => {
+  return useRouter().currentRoute.value.meta
+})
 </script>
 
 <style lang="scss" scoped></style>

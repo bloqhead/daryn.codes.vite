@@ -11,12 +11,9 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
 
-const props = defineProps({
-  date: {
-    type: String,
-    required: true,
-  },
-})
+const props = defineProps<{
+  date: string,
+}>()
 
 const niceDate = computed(() => {
   const rawDate = new Date(props.date)
