@@ -91,6 +91,9 @@ jobs:
       - name: Cypress PNPM Patch
         run: cp pnpm-lock.yaml package-lock.json
 
+      - name: Install Cypress
+        run: ./node_modules/.bin/cypress install --force
+
       - name: Cypress
         uses: cypress-io/github-action@v4
         with:
