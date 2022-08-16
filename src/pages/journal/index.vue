@@ -37,7 +37,7 @@ import FormatDate from '~/components/FormatDate.vue'
 import type { Meta } from '~/types'
 
 // prepare posts and sort by date
-const posts = computed(() => {
+const posts = computed((): any => {
   const items = useRouter().getRoutes()
     .filter((i) => {
       return i.path.startsWith('/journal/') && i.meta?.layout === 'post'
