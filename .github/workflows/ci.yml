@@ -20,13 +20,11 @@ jobs:
           node-version: 16.x
           cache: pnpm
 
-      - name: Font Awesome Authorization
+      - name: Install
         run: |
           pnpm config set "@fortawesome:registry" https://npm.fontawesome.com/
           pnpm config set "//npm.fontawesome.com/:_authToken" ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
-
-      - name: Install
-        run: pnpm install
+          pnpm install
 
       - name: Lint
         run: pnpm run lint
