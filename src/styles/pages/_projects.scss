@@ -28,7 +28,7 @@
   }
 }
 
-a.project-list__link {
+.project-list__link {
   position: relative;
   display: block;
   overflow: hidden;
@@ -98,6 +98,10 @@ a.project-list__link {
   margin: 0;
   width: 100%;
   height: auto;
+
+  img {
+    aspect-ratio: 16 / 9;
+  }
 }
 
 .project-list__item-tasks {

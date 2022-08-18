@@ -23,7 +23,7 @@
             </router-link>
           </h3>
           <div class="journal-entry__postdate">
-            <format-date :date="v.meta.date" />
+            <format-date :date="getDateAsString(v.meta.date)" />
           </div>
         </li>
       </ul>
@@ -32,22 +32,11 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
 import FormatDate from '~/components/FormatDate.vue'
-import type { Meta } from '~/types'
+import { postsStore } from '~/store/posts';
 
-// prepare posts and sort by date
-const posts = computed((): any => {
-  const items = useRouter().getRoutes()
-    .filter((i) => {
-      return i.path.startsWith('/journal/') && i.meta?.layout === 'post'
-    })
-    .sort((a: Meta, b: Meta): number => {
-      return new Date(a.meta.date).getTime() > new Date(b.meta.date).getTime() ? -1 : 1
-    })
-
-  return items
-})
+const posts = postsStore().getPosts()
+const getDateAsString = (v: any) => v as string
 </script>
 
 <route lang="yaml">
