@@ -5,11 +5,11 @@ export const workStore = defineStore('work', () => {
     {
       name: 'DEMIGODS',
       url: 'https://github.com/bloqhead/demigods',
-      image: 'kuma-gui.png',
+      image: 'demigods.png',
       summary: `
-        A simple API built on Express and Node that contains information about all weapons in the
-        Elden Ring universe. Driven entirely by handcrafted JSON files that were sourced from
-        various online data.
+        A simple API built on Express and Node that contains all of the information and detailed
+        stats of every weapon in the Elden Ring universe. Driven entirely by handcrafted JSON files
+        that were sourced from various online data.
       `,
     },
     {
