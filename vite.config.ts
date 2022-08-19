@@ -141,7 +141,7 @@ export default defineConfig({
     noExternal: [
       'workbox-window',
       /vue-i18n/,
-      '@fortawesome/fontawesome-svg-core',
+      '@fortawesome/*',
     ],
   },
 })
