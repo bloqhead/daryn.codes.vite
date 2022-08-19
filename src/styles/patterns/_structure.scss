@@ -2,6 +2,10 @@
 // Structure
 //
 
+@use '../mixins' as m;
+@use '../variables' as v;
+@use './topography' as t;
+
 html,
 body {
   margin: 0;
@@ -16,15 +20,16 @@ html {
 }
 
 body {
+  @include m.cleartext;
+
   min-height: 100vh;
   color: #eee;
   font-weight: normal;
   line-height: 2;
-  font-family: $open-sans;
+  font-family: var(--font-open-sans);
   background-color: black;
-  background-image: url($topography);
+  background-image: url(t.$topography);
   background-attachment: fixed;
-  @include cleartext;
 
   $min_width: 320px;
   $max_width: 1140px;
@@ -32,7 +37,7 @@ body {
   $max_font: 18px;
   // $max_font: 18px;
 
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  @include m.fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
 // Template structure
@@ -43,13 +48,14 @@ body {
 }
 
 .content {
+  --i: var(--global-component-padding);
+
   min-height: 450px;
-  padding: $global-component-padding $global-component-padding (
-      $global-component-padding * 3) $global-component-padding;
+  padding: var(--i) var(--i) calc(var(--i) * 3) var(--i);
 }
 
 .page-content {
-  max-width: $content-width;
+  max-width: var(--content-width);
   will-change: opacity, transform;
   transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1), transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
@@ -62,28 +68,30 @@ body {
 
 @media (min-width: 1140px) {
   .page-wrapper {
+
     &:before {
+      @include m.cleartext;
+
       position: absolute;
       top: 25rem;
       left: 15rem;
       z-index: -1;
       display: block;
       content: attr(data-floating-label);
-      font-family: $overpass-mono;
+      font-family: var(--font-mono);
       font-size: 1.2rem;
       font-weight: 700;
-      letter-spacing: $char-spacing;
+      letter-spacing: var(--char-spacing);
       line-height: 0;
       text-transform: uppercase;
       writing-mode: vertical-lr;
       text-orientation: sideways;
-      color: $shade;
-      @include cleartext;
+      color: var(--color-shade);
     }
   }
 }
 
-@media #{$bp-medium} {
+@media #{v.$bp-medium} {
   .page-wrapper {
     position: relative;
     display: grid;
@@ -114,7 +122,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 2fr 1fr);
     grid-template-areas: "social music music music copyright";
-    // align-items: center;
   }
 
   .page-footer__social {

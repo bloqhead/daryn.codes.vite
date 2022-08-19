@@ -14,11 +14,14 @@ http://zenorocha.mit-license.org
 
 */
 
+@use '../variables' as v;
+@use '../mixins' as m;
+
 // custom
 
 :not(pre) > code {
   display: inline-block;
-  background: $mid;
+  background: var(--color-mid);
   padding: 0 1rem;
   border-radius: 3px;
 }
@@ -29,46 +32,45 @@ pre[class*="language-"] {
 }
 
 pre code {
+  @include m.scrollbar-h;
+
   display: block;
   overflow-x: auto;
-  // padding: 2rem;
-
-  @include scrollbar-h;
 }
 
 pre code[data-label] {
   position: relative;
 
-  &::before, &::after {
+  &:before, &:after {
     position: absolute;
     top: 0;
     display: block;
   }
-  
-  &::before {
+
+  &:before {
     right: 30px;
     content: "<" attr(data-label) ">";
-    font-family: $overpass-mono;
+    font-family: var(--font-mono);
     line-height: 1;
     text-transform: lowercase;
-    color: $mid;
+    color: var(--color-mid);
     padding: 1rem;
     border-radius: 0 0 .25rem .25rem;
-    background-color: $lime;
+    background-color: var(--color-lime);
   }
 
-  &::after {
+  &:after {
     left: 0;
     content: "";
     height: 5px;
     width: 100%;
-    background: linear-gradient(to right, $pink 50%,$lime 75%);
+    background: linear-gradient(to right, var(--color-pink) 50%,var(--color-lime) 75%);
   }
 }
 
-// hide the language label if the code block has the 
+// hide the language label if the code block has the
 // data attribute but no actual value set
-pre code[data-label='']::before {
+pre code[data-label='']:before {
   display: none;
 }
 
@@ -79,7 +81,7 @@ pre code[data-label='']::before {
 .hljs-literal,
 .hljs-section,
 .hljs-link {
-  color: $pink;
+  color: var(--color-pink);
 }
 
 .hljs-function .hljs-keyword {
@@ -102,7 +104,7 @@ pre code[data-label='']::before {
 .hljs-variable,
 .hljs-template-tag,
 .hljs-template-variable {
-  color: $yellow;
+  color: var(--color-yellow);
 }
 
 .hljs-comment,
@@ -128,7 +130,7 @@ pre code[data-label='']::before {
   font-style: italic;
 }
 
-@media #{$bp-medium} {
+@media #{v.$bp-medium} {
   pre code {
     font-size: 1.8rem;
   }

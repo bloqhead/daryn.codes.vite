@@ -2,13 +2,15 @@
 // Mixins
 //
 
+@use './variables' as v;
+
 @mixin list-reset {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-@mixin logoColor($page: null, $color: $pink) {
+@mixin logoColor($page: null, $color: var(--color-pink)) {
   body.#{$page} & {
 
     .path {
@@ -45,15 +47,19 @@
   font-size: 2rem;
   line-height: 2;
   letter-spacing: 0;
-  color: $dark;
+  color: var(--color-dark);
   transform: translateY(0.6em) skewY(-3deg);
+
   @content;
 
   > span {
-    background: $pink;
+    background: var(--color-pink);
     transition: $work-transition;
     padding: 0.25em 0;
-    box-shadow: 0.5em 0 0 $pink, -0.5em 0 0 $pink, 0.75em 0.25em 0 $teal;
+    box-shadow:
+      0.5em 0 0 var(--color-pink),
+      -0.5em 0 0 var(--color-pink),
+      0.75em 0.25em 0 var(--color-teal);
   }
 
   &:after {
@@ -61,7 +67,11 @@
   }
 }
 
-@mixin panel($color: $pink, $background: $panel-bg, $border-radius: $radius) {
+@mixin panel(
+  $color: var(--color-pink),
+  $background: var(--panel-bg),
+  $border-radius: var(--radius),
+) {
   position: relative;
   margin: 3em auto 1em auto;
   padding: 0;
@@ -74,7 +84,7 @@
     display: block;
     width: 100%;
     height: 5px;
-    background: linear-gradient(to right, rgba($color, 0) 0%, $color 50%, rgba($color, 0) 100%);
+    background: linear-gradient(to right, transparent 0%, $color 50%, rgba($color, 0) 100%);
   }
 
   &:before {
@@ -110,10 +120,10 @@
   }
 }
 
-// 
+//
 // Fluid type
 // https://css-tricks.com/snippets/css/fluid-typography/
-// 
+//
 
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
@@ -142,18 +152,18 @@
   &::-webkit-scrollbar {
     width: .4em;
   }
-  
+
   &::-webkit-scrollbar-track {
-    $i: rgba($dark, .5);
+    $i: rgba(v.$dark, .5);
 
     background-color: $i;
     border: 0;
     outline: 0;
     box-shadow: 0 0 0 4px $i;
   }
-  
+
   &::-webkit-scrollbar-thumb {
-    background-color: $pink;
+    background-color: var(--color-pink);
     border-radius: .2em;
   }
 }
@@ -162,18 +172,18 @@
   &::-webkit-scrollbar {
     height: .4em;
   }
-  
+
   &::-webkit-scrollbar-track {
-    $i: rgba($dark, .5);
+    $i: rgba(v.$dark, .5);
 
     background-color: $i;
     border: 0;
     outline: 0;
     box-shadow: 0 0 0 4px $i;
   }
-  
+
   &::-webkit-scrollbar-thumb {
-    background-color: $pink;
+    background-color: var(--color-pink);
     border-radius: .2em;
   }
 }

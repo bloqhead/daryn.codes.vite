@@ -2,6 +2,8 @@
 // Header
 //
 
+@use '../variables' as v;
+
 #logo {
   width: 100%;
   height: auto;
@@ -14,7 +16,7 @@
 }
 
 .page-header {
-  padding: $global-component-padding ($global-component-padding * 2);
+  padding: var(--global-component-padding) calc(var(--global-component-padding) * 2);
 }
 
 @media (max-width: 799px) {
@@ -25,7 +27,7 @@
   }
 }
 
-@media #{$bp-medium} {
+@media #{v.$bp-medium} {
   .page-header {
     display: grid;
     grid-template-columns: repeat(3, 1fr 2fr);

@@ -2,11 +2,10 @@
 // Page transitions
 //
 
-$base-transform: 9rem;
-
 .brush.title,
 .journal-entry__title h1 {
-  transition: opacity 0.5s cubic-bezier(0.62, 0.26, 0.02, 0.87),
+  transition:
+    opacity 0.5s cubic-bezier(0.62, 0.26, 0.02, 0.87),
     transform 0.5s cubic-bezier(0.62, 0.26, 0.02, 0.87);
   transition-delay: 0.2s;
 }
@@ -25,12 +24,12 @@ $base-transform: 9rem;
 .slide-left-enter-from,
 .slide-right-leave-active {
   opacity: 0;
-  transform: translate(0, #{$base-transform});
+  transform: translate(0, var(--base-transform));
 
   .brush.title,
   .journal-entry__title h1 {
     opacity: 0;
-    transform: translate(#{$base-transform}, 0);
+    transform: translate(var(--base-transform), 0);
   }
 }
 
@@ -38,10 +37,10 @@ $base-transform: 9rem;
 .slide-left-leave-from,
 .slide-right-enter {
   opacity: 0;
-  transform: translate(0, -#{$base-transform});
+  transform: translate(0, -var(--base-transform));
 
   .brush.title {
     opacity: 0;
-    transform: translate(-#{$base-transform}, 0);
+    transform: translate(-var(--base-transform), 0);
   }
 }

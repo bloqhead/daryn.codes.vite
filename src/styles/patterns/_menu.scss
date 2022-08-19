@@ -2,18 +2,22 @@
 // Menus
 //
 
+@use '../variables' as v;
+@use '../mixins' as m;
+
 .menu {
+  @include m.cleartext;
+
   display: flex;
   justify-content: center;
   margin-left: auto;
-  font: 700 2rem/2 $overpass-mono;
+  font: 700 2rem/2 var(--font-mono);
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: $char-spacing;
-  @include cleartext;
+  letter-spacing: var(--char-spacing);
 
   ul {
-    @include list-reset;
+    @include m.list-reset;
   }
 
   li,
@@ -22,14 +26,14 @@
   }
 
   li {
-    @for $i from 1 through length($colors-site) {
-      $c: nth($colors-site, $i);
+    @for $i from 1 through length(v.$colors-site) {
+      $c: #{nth(v.$colors-site, $i)};
 
       &:nth-of-type(#{$i}) a:not(:hover) {
         color: $c;
       }
 
-      @media #{$bp-medium} {
+      @media #{v.$bp-medium} {
         &:nth-of-type(#{$i}) a:after {
           background-color: $c;
         }
@@ -45,25 +49,26 @@
     &:hover {
       color: #fff;
 
-      @media #{$bp-medium} {
+      @media #{v.$bp-medium} {
         &:after {
           transform: scaleX(0.5) scaleY(1);
         }
       }
     }
 
-    @media #{$bp-medium} {
+    @media #{v.$bp-medium} {
       &:after {
         display: block;
         content: "";
         height: 3px;
-        will-change: transform, background;
         transform: scaleX(0) scaleY(1);
-        transition: transform 300ms $base-easing, background 300ms $base-easing;
+        transition:
+          transform 300ms var(--base-easing),
+          background 300ms var(--base-easing);
       }
 
-            &.router-link-active:after {
-              transform: scaleX(0.5) scaleY(1);
+      &.router-link-active:after {
+        transform: scaleX(0.5) scaleY(1);
       }
     }
   }
@@ -76,19 +81,21 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba($mid, 0.96);
+    background-color: rgba(v.$mid, 0.96);
     font-size: 4rem;
     opacity: 0;
     visibility: hidden;
-    will-change: transform, opacity, visibility;
-    transition: visibility 300ms $base-easing, transform 300ms $base-easing,
-      opacity 300ms $base-easing;
+    transition:
+      visibility 300ms var(--base-easing),
+      transform 300ms var(--base-easing),
+      opacity 300ms var(--base-easing);
     transform-origin: center;
     transform: scale(0.85) translateY(2rem);
 
     li {
-      will-change: opacity, transform;
-      transition: opacity 300ms $base-easing, transform 300ms $base-easing;
+      transition:
+        opacity 300ms var(--base-easing),
+        transform 300ms var(--base-easing);
       opacity: 0;
       transform: translateY(-2rem);
 
@@ -111,7 +118,7 @@
     }
   }
 
-  @media #{$bp-medium} {
+  @media #{v.$bp-medium} {
     justify-content: flex-end;
 
     ul {
@@ -139,10 +146,11 @@
     z-index: 1001;
 
     &.is-active {
+
       .hamburger-inner,
       .hamburger-inner:before,
       .hamburger-inner:after {
-        background-color: $yellow;
+        background-color: var(--color-yellow);
       }
     }
   }

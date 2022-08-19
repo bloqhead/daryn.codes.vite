@@ -1,76 +1,80 @@
-// 
+//
 // Forms
-// 
+//
+
+@use '../variables' as v;
+@use '../mixins' as m;
 
 form {
 
 }
 
 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="image"]):not([type="file"]), select, textarea {
+  @include m.cleartext;
+
   display: block;
-  background-color: $mid;
+  background-color: var(--color-mid);
   border: 0;
-  border-bottom: 6px solid $shade;
+  border-bottom: 6px solid var(--color-shade);
   padding: 2rem;
   margin: 1.25rem 0;
-  color: $light;
+  color: var(--color-light);
   font-size: 18px;
-  font-family: $open-sans;
-  @include cleartext;
-  transition: 
-    border 150ms $base-easing,
-    background 150ms $base-easing;
+  font-family: var(--font-open-sans);
+  transition:
+    border 150ms var(--base-easing),
+    background 150ms var(--base-easing);
 
-  @include placeholder {
-    color: white;
+  @include m.placeholder {
+    color: #fff;
     font-weight: 700;
     opacity: 0.5;
     will-change: opacity, color;
     transition:
-      color 300ms $base-easing,
-      opacity 300ms $base-easing;
+      color 300ms var(--base-easing),
+      opacity 300ms var(--base-easing);
   }
 
   &:focus, &:hover {
-    border-bottom-color: white;
-    background-color: lighten($mid, 10%);
+    border-bottom-color: #fff;
+    background-color: lighten(v.$mid, 10%);
 
-    @include placeholder {
+    @include m.placeholder {
       opacity: 1;
     }
   }
 }
 
 input[type="submit"], input[type="reset"], button:not(.hamburger), .btn {
+  @include m.cleartext;
+
   display: inline-block;
   clear: both;
-  background-color: $pink;
+  background-color: var(--color-pink);
   padding: 1.5rem 4rem;
   margin: 1.25rem 0;
   border: 0;
-  color: $light;
+  color: var(--color-light);
   font-size: inherit;
-  font-family: $open-sans;
+  font-family: var(--font-open-sans);
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: 3px 3px 0 0 $lime;
-  will-change: box-shadow, color, background;
-  transition: 
-    box-shadow 100ms $base-easing,
-    color 300ms $base-easing,
-    background 300ms $base-easing;
-  @include cleartext;
+  box-shadow: 3px 3px 0 0 var(--color-lime);
+  transition:
+    box-shadow 100ms var(--base-easing),
+    color 300ms var(--base-easing),
+    background 300ms var(--base-easing);
 
   i, svg {
     will-change: transform;
-    transition: transform 100ms $base-easing;
+    transition: transform 100ms var(--base-easing);
   }
 
   &:hover, &:focus {
-    background-color: $lime;
-    box-shadow: 6px 6px 0 0 $light;
-    color: $mid;
+    background-color: var(--color-lime);
+    box-shadow: 6px 6px 0 0 var(--color-light);
+    color: var(--color-mid);
 
     i, svg {
       transform: translateX(3px);
@@ -83,19 +87,20 @@ input[type="submit"], input[type="reset"], button:not(.hamburger), .btn {
 }
 
 label {
+  @include m.cleartext;
+
   display: block;
-  color: $yellow;
+  color: var(--color-yellow);
   font-weight: 700;
-  @include cleartext;
 }
 
-@media #{$bp-medium} {
+@media #{v.$bp-medium} {
   .flex-form {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: stretch;
-    margin: 0 calc(-.3rem * 2);
+    margin: 0 calc(-0.3rem * 2);
 
     input, select, textarea {
       width: 100%;

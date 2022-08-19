@@ -33,11 +33,40 @@
 
 <script setup lang="ts">
 import FormatDate from '~/components/FormatDate.vue'
-import { postsStore } from '~/store/posts';
+import { postsStore } from '~/store/posts'
 
 const posts = postsStore().getPosts()
 const getDateAsString = (v: any) => v as string
 </script>
+
+<style lang="scss" scoped>
+.journal-list {
+}
+
+.journal-list__item {
+  margin: 0 0 3rem 0;
+}
+
+.journal-list__summary {
+}
+
+.journal-list__title {
+  margin: 0 0 0.8rem 0;
+
+  a {
+    display: initial;
+    text-decoration: none;
+
+    &:after {
+      display: none;
+    }
+
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+</style>
 
 <route lang="yaml">
 meta:

@@ -15,9 +15,9 @@
     --height: 40px;
     --bar-bg: #{rgba(#333, 0.85)};
     --radius: 10px;
-    --color-1: #{$pink};
-    --color-2: #{$yellow};
-    --color-3: #{$lime};
+    --color-1: var(--color-pink);
+    --color-2: var(--color-yellow);
+    --color-3: var(--color-lime);
     --x: 20px;
     --y: calc(var(--height) / 2);
 

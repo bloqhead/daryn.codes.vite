@@ -1,7 +1,9 @@
-// 
+//
 // Scrollbar styles
-// 
+//
+
+@use '../mixins' as m;
 
 body {
-  @include scrollbar-v;
+  @include m.scrollbar-v;
 }

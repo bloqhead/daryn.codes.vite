@@ -1,7 +1,7 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
 export const workStore = defineStore('work', () => {
-  const items = ref([
+  const work = ref([
     {
       name: 'DEMIGODS',
       url: 'https://github.com/bloqhead/demigods',
@@ -20,7 +20,7 @@ export const workStore = defineStore('work', () => {
         An interactive map and search tool for all breweries in the Tampa Bay area. Built on Vue and
         static HTML, our tool allows you to filter by things like food, kid-friendly, guest taps, and
         more!
-      `
+      `,
     },
     {
       name: 'Kuma Website',
@@ -42,15 +42,54 @@ export const workStore = defineStore('work', () => {
         data from the comfort of your web browser. Built entirely in Vue.js, it runs from within
         Kuma itself and offers at-a-glance details about your Dataplanes, various Policies, and
         other mesh service information.
-      `
+      `,
     },
   ])
 
-  const getWork = () => items
+  const pens = ref([
+    {
+      name: 'Vue.js Bites: Fancy Flyout Selector',
+      url: 'https://codepen.io/bloqhead/details/PoYjgjq',
+      tech: [
+        'Vue',
+        'SCSS',
+      ],
+    },
+    {
+      name: 'Vibin\'',
+      url: 'https://codepen.io/bloqhead/details/QWbOXbB',
+      tech: [
+        'CSS Vars',
+        'SCSS',
+        'JS',
+      ],
+    },
+    {
+      name: 'Nerf This!',
+      url: 'https://codepen.io/bloqhead/details/Bvdxxr',
+      tech: [
+        'GSAP',
+        'SCSS',
+        'JS',
+      ],
+    },
+    {
+      name: 'Checkbox Pokéball',
+      url: 'https://codepen.io/bloqhead/details/WKpmrN',
+      tech: [
+        'SCSS',
+      ],
+    },
+  ])
+
+  const getWork = () => work
+  const getPens = () => pens
 
   return {
-    items,
+    work,
+    pens,
     getWork,
+    getPens,
   }
 })
 

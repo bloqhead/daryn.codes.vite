@@ -2,13 +2,13 @@
 // Footer
 //
 
+@use '../variables' as v;
+
 .page-footer {
-  background-color: rgba($mid, 0.85);
-  font-family: $overpass-mono;
+  background-color: rgba(v.$mid, 0.85);
+  font-family: var(--font-mono);
   font-size: 0.8em;
-  // text-align: center;
-  color: $shade;
-  // padding: $global-component-padding * 2;
+  color: var(--color-shade);
   margin: 0;
 
   a {
@@ -33,7 +33,7 @@
 }
 
 .page-footer__content {
-  padding: $global-component-padding * 2;
+  padding: calc(var(--global-component-padding) * 2);
 }
 
 .page-footer__copyright {
@@ -55,20 +55,19 @@
 
   a {
     text-decoration: none;
-    // border-bottom: $soft-line;
-    // padding: 0.5em 0;
     margin: 0.5em 0;
 
     &:hover {
+
       svg path {
-        fill: white;
+        fill: #fff;
       }
     }
   }
 
   span {
     margin-left: 0.5em;
-    letter-spacing: $char-spacing;
+    letter-spacing: var(--char-spacing);
   }
 }
 
@@ -86,11 +85,11 @@
 }
 
 .page-footer__secondary {
-  padding: $global-component-padding * 2;
+  padding: calc(var(--global-component-padding) * 2);
   background-color: #000;
 }
 
-@media #{$bp-medium} {
+@media #{v.$bp-medium} {
   .page-footer {
     text-align: left;
   }

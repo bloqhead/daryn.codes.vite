@@ -3,42 +3,34 @@
 //
 
 // variables
-@import "variables";
+@use './variables' as v;
 
 // vendor
-@import "vendor/minireset";
-
-// hamburger settings
-$hamburger-layer-width: 40px;
-$hamburger-layer-height: 4px;
-$hamburger-layer-spacing: 8px;
-$hamburger-layer-border-radius: 2px;
-$hamburger-types: (collapse, collapse-r);
-$hamburger-layer-color: $lime;
-
-@import "vendor/hamburgers/hamburgers";
+@use 'vendor/minireset';
+@use 'vendor/hamburgers/hamburgers' with (
+  $hamburger-layer-width: 40px,
+  $hamburger-layer-height: 4px,
+  $hamburger-layer-spacing: 8px,
+  $hamburger-layer-border-radius: 2px,
+  $hamburger-types: (collapse, collapse-r),
+  $hamburger-layer-color: var(--color-lime),
+);
 
 // patterns
-@import "mixins";
-@import "patterns/bootstrapper";
-@import "patterns/scrollbar";
-@import "patterns/animation";
-@import "patterns/page-transitions";
-@import "patterns/logo";
-@import "patterns/structure";
-@import "patterns/type";
-@import "patterns/menu";
-@import "patterns/forms";
-@import "patterns/nuxt";
-@import "patterns/header";
-@import "patterns/footer";
-@import "patterns/social";
-@import "patterns/helpers";
-@import "patterns/breadcrumb";
-@import "patterns/highlightjs";
-@import "patterns/browser-chrome";
-@import "patterns/music";
-
-// pages
-@import "pages/projects";
-@import "pages/journal";
+@use 'patterns/bootstrapper';
+@use 'patterns/scrollbar';
+@use 'patterns/animation';
+@use 'patterns/page-transitions';
+@use 'patterns/structure';
+@use 'patterns/type';
+@use 'patterns/menu';
+@use 'patterns/forms';
+@use 'patterns/header';
+@use 'patterns/footer';
+@use 'patterns/social';
+@use 'patterns/helpers';
+@use 'patterns/breadcrumb';
+@use 'patterns/highlightjs';
+@use 'patterns/browser-chrome';
+@use 'patterns/music';
+@use 'patterns/journal-entry';

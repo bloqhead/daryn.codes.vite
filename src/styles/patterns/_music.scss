@@ -15,8 +15,6 @@
     border-radius: 10px;
 
     &:after {
-      $t: cubic-bezier(0.8, 0.33, 0.42, 0.85);
-
       position: absolute;
       z-index: 0;
       display: block;
@@ -28,16 +26,16 @@
       transform: scale(0);
       background-color: rgba(#000, 0.5);
       opacity: 0;
-      transition: opacity 0.2s ease-in-out, transform 0.2s $t;
+      transition: opacity 0.2s ease-in-out, transform 0.2s cubic-bezier(0.8, 0.33, 0.42, 0.85);
     }
 
     &:hover {
-      $i: 1.03;
+      --i: 1.03;
 
-      transform: scale($i);
+      transform: scale(var(--i));
 
       &:after {
-        transform: scale($i, $i);
+        transform: scale(var(--i), var(--i));
         opacity: 1;
       }
     }
@@ -68,9 +66,7 @@
 .music__icon {
   display: grid;
   place-items: center;
-  color: $shade;
-  // border-right: 1px solid rgba($shade, 0.35);
-  // margin-right: 1em;
+  color: var(--color-shade);
 }
 
 .music__album-title {
@@ -84,12 +80,12 @@
 }
 
 .music__separator {
-  color: $shade;
+  color: var(--color-shade);
 }
 
 .music__profile-link {
   display: inline-block;
-  color: $apple-music;
+  color: var(--color-apple-music);
   background-color: rgba(#000, 0.35);
   border-radius: 3px;
   padding: 3px 5px;

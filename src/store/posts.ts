@@ -14,8 +14,8 @@ export const postsStore = defineStore('posts', {
         })
 
       return items
-    }
-  }
+    },
+  },
 })
 
 if (import.meta.hot)

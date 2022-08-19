@@ -2,6 +2,8 @@
 // Helpers
 //
 
+@use '../variables' as v;
+
 // clip-path masks
 
 @mixin cp-parallelogram {
@@ -13,10 +15,10 @@
 }
 
 .intro {
-  background-color: rgba($mid, 0.85);
+  background-color: rgba(v.$mid, 0.85);
   max-width: 35em;
   font-size: 1.5em;
-  padding: calc(#{$global-component-padding} / 2);
+  padding: calc(var(--global-component-padding) / 2);
   margin: 0 0 3.5em 0;
 
   p {
@@ -26,6 +28,7 @@
 }
 
 .intro--has-image {
+
   @media (min-width: 640px) {
     display: flex;
     align-items: center;
@@ -60,7 +63,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: $lime;
+    background-color: var(--color-lime);
     transform: translate(0.65rem, 0.65rem);
   }
 
@@ -76,13 +79,10 @@
 }
 
 .attn {
-  font-family: $overpass-mono;
+  font-family: var(--font-mono);
   font-size: 1.6em;
   line-height: 1.35;
-  color: $pink;
-  // border-left: 15px solid $mid;
-  // padding-left: 1em;
-  // transform: translateX(-1.5em);
+  color: var(--color-pink);
   margin: 1.5em 0;
 }
 
@@ -97,7 +97,6 @@
 .flex-well {
   display: flex;
   flex-wrap: wrap;
-  // align-items: center;
   justify-content: center;
 }
 
@@ -133,7 +132,7 @@
   margin-bottom: 12rem;
 }
 
-@each $color, $name in $colors-brand {
+@each $name, $color in v.$colors-brand {
   .color--#{$name} {
     color: $color;
   }
@@ -143,7 +142,7 @@
   }
 }
 
-@each $color, $name in $colors-site-named {
+@each $name, $color in v.$colors-site-named {
   .color--#{$name} {
     color: $color;
   }
