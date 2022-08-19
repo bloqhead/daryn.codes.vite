@@ -8,12 +8,9 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BrandLogos: typeof import('./components/BrandLogos.vue')['default']
-    Counter: typeof import('./components/Counter.vue')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
     FormatDate: typeof import('./components/FormatDate.vue')['default']
     GlobalFooter: typeof import('./components/GlobalFooter.vue')['default']
     GlobalHeader: typeof import('./components/GlobalHeader.vue')['default']
-    Header: typeof import('./components/Header.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     Music: typeof import('./components/Music.vue')['default']
     PostList: typeof import('./components/PostList.vue')['default']

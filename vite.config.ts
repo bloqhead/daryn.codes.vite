@@ -91,22 +91,22 @@ export default defineConfig({
     }),
 
     // https://github.com/antfu/vite-plugin-pwa
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
-      manifest: {
-        name: 'daryn.codes',
-        short_name: 'daryn.codes',
-        theme_color: '#f54768',
-        icons: [
-          {
-            src: '/favicon/512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-    }),
+    // VitePWA({
+    //   registerType: 'autoUpdate',
+    //   includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+    //   manifest: {
+    //     name: 'daryn.codes',
+    //     short_name: 'daryn.codes',
+    //     theme_color: '#f54768',
+    //     icons: [
+    //       {
+    //         src: '/favicon/512x512.png',
+    //         sizes: '512x512',
+    //         type: 'image/png',
+    //       },
+    //     ],
+    //   },
+    // }),
 
     // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
     VueI18n({
