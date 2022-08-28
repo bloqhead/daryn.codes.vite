@@ -30,7 +30,6 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import axios from 'axios'
 import type { Music } from '~/types'
 

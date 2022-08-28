@@ -1,17 +1,14 @@
 <template>
-  <div
-    ref="logos"
-    class="brand-logos in-view grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 justify-center text-center mt--sm mb--sm"
-  >
+  <div class="brand-logos in-view grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 justify-center text-center mt--sm mb--sm">
     <div
-      v-for="(logo, index) in logos"
-      :key="index"
+      v-for="(v, i) in logos"
+      :key="i"
       class="brand-logos__item"
     >
       <fa
-        :icon="['fab', logo.slug]"
-        :class="`color--${logo.color || logo.slug}`"
-        :title="logo.title"
+        :icon="['fab', i]"
+        :class="`color--${i}`"
+        :title="v"
         class="fa-7x"
       />
     </div>
@@ -19,38 +16,15 @@
 </template>
 
 <script setup lang="ts">
-const logos = [
-  {
-    slug: 'html5',
-    title: 'HTML5',
-  },
-  {
-    slug: 'wordpress-simple',
-    title: 'WordPress',
-    color: 'wordpress',
-  },
-  {
-    slug: 'sass',
-    title: 'Sass',
-  },
-  {
-    slug: 'js',
-    title: 'JavaScript',
-  },
-  {
-    slug: 'php',
-    title: 'PHP',
-  },
-  {
-    slug: 'vuejs',
-    title: 'Vue.js',
-    color: 'vue',
-  },
-  {
-    slug: 'node',
-    title: 'Node.js',
-  },
-]
+const logos = {
+  html5: 'HTML5',
+  wordpress: 'WordPress',
+  sass: 'Sass',
+  js: 'JavaScript',
+  php: 'PHP',
+  vuejs: 'Vue.js',
+  node: 'Node.js',
+}
 </script>
 
 <style lang="scss" scoped>

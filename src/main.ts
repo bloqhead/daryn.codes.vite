@@ -28,7 +28,7 @@ import {
   faSass,
   faTwitter,
   faVuejs,
-  faWordpressSimple,
+  faWordpress,
 } from '@fortawesome/free-brands-svg-icons'
 
 // app, routes, types
@@ -61,7 +61,7 @@ library.add(
   faTerminal,
   faTwitter,
   faVuejs,
-  faWordpressSimple,
+  faWordpress,
 )
 
 config.autoAddCss = false
