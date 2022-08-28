@@ -9,6 +9,9 @@ on:
     branches:
       - main
 
+env:
+  FONTAWESOME_NPM_AUTH_TOKEN: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
+
 jobs:
   lint:
     runs-on: ubuntu-latest
@@ -29,10 +32,6 @@ jobs:
       - name: Lint
         run: pnpm run lint
 
-      - name: Use .npmrc
-        uses: bduff9/use-npmrc@v1.1
-        with:
-          dot-npmrc: ${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}
 
   typecheck:
     runs-on: ubuntu-latest
