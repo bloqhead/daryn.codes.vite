@@ -77,5 +77,6 @@
 
 <script setup lang="ts">
 import Music from '~/components/Music.vue'
+
 const currentYear = computed(() => new Date().getFullYear())
 </script>
