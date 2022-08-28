@@ -29,7 +29,6 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type=
     color: #fff;
     font-weight: 700;
     opacity: 0.5;
-    will-change: opacity, color;
     transition:
       color 300ms var(--base-easing),
       opacity 300ms var(--base-easing);
@@ -67,7 +66,6 @@ input[type="submit"], input[type="reset"], button:not(.hamburger), .btn {
     background 300ms var(--base-easing);
 
   i, svg {
-    will-change: transform;
     transition: transform 100ms var(--base-easing);
   }
 

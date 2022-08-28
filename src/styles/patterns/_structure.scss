@@ -56,7 +56,6 @@ body {
 
 .page-content {
   max-width: var(--content-width);
-  will-change: opacity, transform;
   transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1), transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
