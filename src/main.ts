@@ -38,7 +38,7 @@ import generatedRoutes from '~pages'
 
 // styles
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import '@unocss/reset/tailwind.css'
+// import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import './styles/styles.scss'
 
