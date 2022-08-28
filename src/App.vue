@@ -5,7 +5,7 @@
     <div class="content" role="main">
       <router-view v-slot="{ Component, route }">
         <transition name="slide-left" mode="out-in" appear>
-          <div class="page-content" :key="route.path">
+          <div :key="route.path" class="page-content">
             <component :is="Component" :key="route.path" />
           </div>
         </transition>
