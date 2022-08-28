@@ -3,5 +3,9 @@
     "env": {
       "NPM_RC": "@fontawesome"
     }
-  }
+  },
+  "rewrites": [{
+    "source": "/(.*)",
+    "destination": "/index.html"
+  }]
 }
