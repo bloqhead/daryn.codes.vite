@@ -94,6 +94,10 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+      workbox: {
+        globPatterns: ['**/*.{js,css}'],
+        navigateFallback: null,
+      },
       manifest: {
         name: 'daryn.codes',
         short_name: 'daryn.codes',
