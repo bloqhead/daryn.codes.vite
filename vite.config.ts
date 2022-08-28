@@ -7,7 +7,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-vue-markdown'
-// import { VitePWA } from 'vite-plugin-pwa'
+import { VitePWA } from 'vite-plugin-pwa'
 // import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import LinkAttributes from 'markdown-it-link-attributes'
@@ -91,22 +91,22 @@ export default defineConfig({
     }),
 
     // https://github.com/antfu/vite-plugin-pwa
-    // VitePWA({
-    //   registerType: 'autoUpdate',
-    //   includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
-    //   manifest: {
-    //     name: 'daryn.codes',
-    //     short_name: 'daryn.codes',
-    //     theme_color: '#f54768',
-    //     icons: [
-    //       {
-    //         src: '/favicon/512x512.png',
-    //         sizes: '512x512',
-    //         type: 'image/png',
-    //       },
-    //     ],
-    //   },
-    // }),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
+      manifest: {
+        name: 'daryn.codes',
+        short_name: 'daryn.codes',
+        theme_color: '#f54768',
+        icons: [
+          {
+            src: '/favicon/180x180.png',
+            sizes: '180x180',
+            type: 'image/png',
+          },
+        ],
+      },
+    }),
 
     // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
     // VueI18n({
