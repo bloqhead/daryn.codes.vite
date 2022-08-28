@@ -4,8 +4,8 @@
       "NPM_RC": "@fontawesome"
     }
   },
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
-  ]
+  "rewrites": [{
+    "source": "/:path*",
+    "destination": "/index.html"
+  }]
 }
