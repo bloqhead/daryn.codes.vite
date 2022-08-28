@@ -41,7 +41,7 @@ export default defineConfig({
         'vue',
         'vue-router',
         'vue-i18n',
-        'vue/macros',
+        // 'vue/macros',
         '@vueuse/head',
         '@vueuse/core',
       ],
