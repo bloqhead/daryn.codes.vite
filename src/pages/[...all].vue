@@ -1,9 +1,9 @@
 <template>
-  <div class="page-content">
+  <div>
     <h1 class="brush title">
       Oops!
     </h1>
-    <p class="intro mb-8">
+    <p class="intro">
       Oops! Looks like that content was removed or never existed.
     </p>
     <p>
@@ -16,4 +16,8 @@
 
 <script setup lang="ts"></script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .intro {
+    margin-bottom: 1.5em;
+  }
+</style>

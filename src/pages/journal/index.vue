@@ -1,5 +1,5 @@
 <template>
-  <div class="page-content">
+  <div>
     <h1 class="brush title">
       Journal.
     </h1>
