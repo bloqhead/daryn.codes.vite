@@ -36,11 +36,9 @@
     </div>
 
     <div class="doomguy">
-      <img
-        itemprop="photo"
-        src="/images/doomguy-walking.gif"
-        alt="An animated gif of Doomguy walking"
-      >
+      <video preload="auto" autoplay loop muted>
+        <source src="/images/doomguy-walking.webm" type='video/webm' />
+      </video>
     </div>
 
     <h3>
@@ -57,11 +55,9 @@
     </p>
 
     <div class="doomguy">
-      <img
-        itemprop="photo"
-        src="/images/doomguy.gif"
-        alt="An animated gif of Doomguy's various facial expressions"
-      >
+      <video preload="auto" autoplay loop muted>
+        <source src="/images/doomguy.webm" type='video/webm' />
+      </video>
     </div>
 
     <h3>
@@ -101,12 +97,13 @@ meta:
     border-radius: 5px;
   }
 
-  img {
+  img, video {
     display: block;
     width: 80px;
     height: auto;
     background-color: var(--bg);
     border-radius: 10px;
+    padding: 5px;
   }
 }
 </style>
