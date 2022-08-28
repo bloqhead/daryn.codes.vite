@@ -18,7 +18,7 @@ export const postsStore = defineStore('posts', {
           // give the url a trailing slash
           return {
             ...i,
-            path: `${i.path}/`
+            path: `${i.path}/`,
           }
         })
 
