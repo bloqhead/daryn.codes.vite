@@ -72,7 +72,24 @@ const routes = setupLayouts(generatedRoutes)
 // https://github.com/antfu/vite-ssg
 export const createApp = ViteSSG(
   App,
-  { routes, base: import.meta.env.BASE_URL },
+  {
+    routes,
+    base: import.meta.env.BASE_URL,
+    scrollBehavior(to, from, savedPosition) {
+      if (savedPosition) {
+        return {
+          ...savedPosition,
+          behavior: 'smooth',
+        }
+      }
+
+      return {
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      }
+    },
+  },
   (ctx) => {
     ctx.app.component('fa', FontAwesomeIcon as unknown as DefineComponent<FontAwesomeIconProps>)
 
