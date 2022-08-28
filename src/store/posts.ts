@@ -14,6 +14,13 @@ export const postsStore = defineStore('posts', {
           // sort the posts by ascending order
           return new Date(a.meta.date).getTime() > new Date(b.meta.date).getTime() ? -1 : 1
         })
+        .map((i) => {
+          // give the url a trailing slash
+          return {
+            ...i,
+            path: `${i.path}/`
+          }
+        })
 
       return items
     },
