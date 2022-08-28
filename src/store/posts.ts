@@ -7,9 +7,11 @@ export const postsStore = defineStore('posts', {
     getPosts() {
       const items = useRouter().getRoutes()
         .filter((i) => {
+          // get only journal entry routes that use the post layout
           return i.path.startsWith('/journal/') && i.meta?.layout === 'post'
         })
         .sort((a: Meta, b: Meta): number => {
+          // sort the posts by ascending order
           return new Date(a.meta.date).getTime() > new Date(b.meta.date).getTime() ? -1 : 1
         })
 

@@ -91,6 +91,7 @@
 <script setup lang="ts">
 import { workStore } from '~/store/work'
 
+// Pinia actions for fetching data
 const work = workStore().getWork()
 const pens = workStore().getPens()
 </script>
@@ -311,7 +312,7 @@ const pens = workStore().getPens()
 
   @media (min-width: 1280px) {
     > li {
-      flex-basis: calc(100% / 3);
+      flex-basis: 50%;
     }
   }
 }
@@ -332,15 +333,16 @@ const pens = workStore().getPens()
     padding: 0;
 
     &:after {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: block;
-      height: 1px;
-      width: 100%;
-      content: "";
-      background: var(--link-gradient);
-      margin: var(--x) 0 0 0;
+      display: none;
+      // position: absolute;
+      // bottom: 0;
+      // left: 0;
+      // display: block;
+      // height: 1px;
+      // width: 100%;
+      // content: "";
+      // background: var(--link-gradient);
+      // margin: var(--x) 0 0 0;
     }
 
     > div:first-of-type {
@@ -383,10 +385,10 @@ const pens = workStore().getPens()
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    background: var(--color-pink);
-    color: var(--color-dark);
+    background: #222;
+    color: var(--color-lime);
     line-height: 1.3;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 0.75rem;
     border-radius: 3px;
   }
 }

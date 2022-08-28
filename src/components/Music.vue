@@ -38,12 +38,16 @@ const items = ref<Music>()
 const error = ref<Boolean>(false)
 
 const fetchLatestScrobbles = () => {
-  const username = import.meta.env.VITE_LASTFM_USERNAME
-  const apiKey = import.meta.env.VITE_LASTFM_API_KEY
-  const api = `https://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=${username}&api_key=${apiKey}&format=json&limit=3`
-
   axios
-    .get(api)
+    .get('https://ws.audioscrobbler.com/2.0/', {
+      params: {
+        method: 'user.getlovedtracks',
+        user: import.meta.env.VITE_LASTFM_USERNAME,
+        api_key: import.meta.env.VITE_LASTFM_API_KEY,
+        format: 'json',
+        limit: 3,
+      }
+    })
     .then((res) => {
       items.value = res.data.lovedtracks.track
     })
