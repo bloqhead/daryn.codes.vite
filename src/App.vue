@@ -4,11 +4,8 @@
 
     <div class="content" role="main">
       <router-view v-slot="{ Component, route }">
-        <transition name="slide-left" mode="out-in">
-          <main :key="route.path" class="page-content">
-            <component :is="Component" :key="route.path" />
-          </main>
-          <!-- .page-content -->
+        <transition name="slide-left" mode="out-in" appear>
+          <component :is="Component" :key="route.path" />
         </transition>
       </router-view>
     </div>

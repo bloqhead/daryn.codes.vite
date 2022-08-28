@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-content">
     <h1 class="brush title">
       Versatile
     </h1>
