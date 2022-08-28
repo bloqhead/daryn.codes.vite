@@ -46,7 +46,7 @@ const fetchLatestScrobbles = () => {
         api_key: import.meta.env.VITE_LASTFM_API_KEY,
         format: 'json',
         limit: 3,
-      }
+      },
     })
     .then((res) => {
       items.value = res.data.lovedtracks.track
