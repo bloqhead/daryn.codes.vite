@@ -23,7 +23,11 @@
   }
 }
 
-@mixin nther( $n: null, $color: null, $bg: null ) {
+@mixin nther(
+  $n: null,
+  $color: null,
+  $bg: null
+) {
   $darken: 30%;
   &:nth-of-type(#{$n}) a {
     color: $color;
@@ -129,7 +133,12 @@
   @return $value / ($value * 0 + 1);
 }
 
-@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+@mixin fluid-type(
+  $min-vw,
+  $max-vw,
+  $min-font-size,
+  $max-font-size
+) {
   $u1: unit($min-vw);
   $u2: unit($max-vw);
   $u3: unit($min-font-size);
