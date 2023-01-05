@@ -41,7 +41,7 @@ const fetchLatestScrobbles = () => {
     .get('https://ws.audioscrobbler.com/2.0/', {
       params: {
         method: 'user.getlovedtracks',
-        user: import.meta.env.VITE_LASTFM_USERNAME,
+        user: 'kryosleep',
         api_key: import.meta.env.VITE_LASTFM_API_KEY,
         format: 'json',
         limit: 3,
