@@ -154,14 +154,26 @@
 
 html.dark {
 
-  .shiki-light {
-    display: none;
-  }
+  // .shiki-light {
+  //   display: none !important;
+  // }
 }
 
 html.light {
 
   .shiki-dark {
-    display: none;
+    display: none !important;
   }
+}
+
+// hidden because we don't use light mode anyway
+.shiki-light {
+  display: none !important;
+}
+
+pre.shiki {
+  padding: 1rem;
+  border-radius: var(--radius);
+  line-height: 1.5;
+  border: 3px solid rgba(#fff, 0.15);
 }

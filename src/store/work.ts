@@ -48,6 +48,14 @@ export const workStore = defineStore('work', () => {
 
   const pens = ref([
     {
+      name: 'Alpine instances talking to each other via $dispatch()',
+      url: 'https://codepen.io/bloqhead/details/wvxoJKQ',
+      tech: [
+        'JS',
+        'Alpine',
+      ],
+    },
+    {
       name: 'Vue.js Bites: Fancy Flyout Selector',
       url: 'https://codepen.io/bloqhead/details/PoYjgjq',
       tech: [

@@ -1,5 +1,9 @@
 <template>
-  <div class="brand-logos in-view grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 justify-center text-center mt--sm mb--sm">
+  <div
+    class="brand-logos mt--sm mb--sm"
+    :class="{ 'in-view': logosVisible }"
+    ref="logoContainer"
+  >
     <div
       v-for="(v, i) in logos"
       :key="i"
@@ -16,6 +20,8 @@
 </template>
 
 <script setup lang="ts">
+import { useIntersectionObserver } from '@vueuse/core'
+
 const logos = {
   html5: 'HTML5',
   wordpress: 'WordPress',
@@ -25,10 +31,29 @@ const logos = {
   vuejs: 'Vue.js',
   node: 'Node.js',
 }
+
+const logoContainer = ref(null)
+const logosVisible = ref<Boolean>(false)
+
+useIntersectionObserver(
+  logoContainer,
+  ([{ isIntersecting }], observerElement) => {
+    logosVisible.value = isIntersecting
+  },
+)
 </script>
 
 <style lang="scss" scoped>
 .brand-logos {
+  @apply 
+    grid 
+    grid-cols-2 
+    md:grid-cols-3 
+    xl:grid-cols-4 
+    gap-12 
+    justify-center 
+    text-center;
+
   .brand-logos__item {
     filter: grayscale(100%) brightness(500%);
     transform: translateY(75%);

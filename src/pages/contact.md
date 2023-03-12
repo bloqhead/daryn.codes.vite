@@ -22,7 +22,6 @@ meta:
 <div class="intro">
   <p>
     If you want to drop me a line to ask a question or just say hi, you can
-    email me at <a href="mailto:daryn.codes@pm.me">daryn.codes@pm.me</a>. I'll try to respond in
-    a day or two.
+    email me at <a href="mailto:daryn.codes@pm.me">daryn.codes@pm.me</a>.
   </p>
 </div>

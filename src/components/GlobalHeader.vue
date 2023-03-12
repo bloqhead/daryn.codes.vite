@@ -1,5 +1,5 @@
 <template>
-  <div class="page-header" itemscope itemtype="http://schema.org/Organization">
+  <div class="page-header" itemscope itemtype="http://schema.org/Organization" ref="target">
     <router-link
       to="/"
       exact
@@ -33,7 +33,10 @@
       class="menu menu--main"
       role="navigation"
       aria-labelledby="hamburger"
-      :class="{ 'is-active': isActive }"
+      :class="{
+        'is-active': isActive,
+        'in-view': navIsVisible,
+      }"
     >
       <ul>
         <li>
@@ -84,12 +87,15 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
 import anime from 'animejs'
 import Logo from '~/components/Logo.vue'
+import { useElementVisibility } from '@vueuse/core'
 
 const isActive = ref<Boolean>(false)
 const isExpanded = ref<Boolean>(false)
+
+const target = ref(null)
+const navIsVisible = useElementVisibility(target)
 
 const toggleState = () => {
   isActive.value = !isActive.value

@@ -59,14 +59,15 @@
 #logo {
   .path {
     fill: none;
-    stroke: #f54768;
+    stroke: var(--color-pink);
     stroke-width: 14;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-miterlimit: 10;
   }
+
   .wheel {
-    fill: #f54768;
+    fill: var(--color-pink);
   }
 }
 </style>

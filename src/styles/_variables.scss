@@ -13,10 +13,10 @@ $heading-text: $overpass-mono;
 
 @font-face {
   font-family: "Summer Hearts";
-  src: url("../fonts/summerhearts-regular-webfont.woff2") format("woff2"),
-    url("../fonts/summerhearts-regular-webfont.woff") format("woff"),
-    url("../fonts/summerhearts-regular-webfont.ttf") format("truetype"),
-    url("../fonts/summerhearts-regular-webfont.svg#summer_heartsregular")
+  src: url("/fonts/summerhearts-regular-webfont.woff2") format("woff2"),
+    url("/fonts/summerhearts-regular-webfont.woff") format("woff"),
+    url("/fonts/summerhearts-regular-webfont.ttf") format("truetype"),
+    url("/fonts/summerhearts-regular-webfont.svg#summer_heartsregular")
       format("svg");
   font-weight: normal;
   font-style: normal;

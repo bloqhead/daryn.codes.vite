@@ -29,17 +29,7 @@
 
       <div class="page-footer__music mb-12 xl:mb-0">
         <h5 class="page-footer__title">
-          Music Loves
-          <small>
-            <a
-              class="music__profile-link"
-              href="https://music.apple.com/profile/pizzatacos"
-              target="_blank"
-              title="@pizzatacos on Apple Music"
-            >
-              @pizzatacos
-            </a>
-          </small>
+          Last.fm Likes
         </h5>
         <music />
       </div>
@@ -50,7 +40,7 @@
           Built with <a href="https://github.com/antfu/vitesse">Vitesse</a>
         </p>
         <p>
-          Hosted by <a href="https://vercel.com/">Vercel</a>
+          Hosted on <a href="https://vercel.com/">Vercel</a>
         </p>
         <ul class="page-footer__links">
           <li>

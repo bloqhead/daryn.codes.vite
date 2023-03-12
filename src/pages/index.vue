@@ -12,7 +12,7 @@
       <div class="intro__image">
         <img
           itemprop="photo"
-          src="/images/me.jpg"
+          src="/images/me-new.jpg"
           alt="A picture of Daryn with long hair"
         >
       </div>
@@ -38,6 +38,7 @@
     <div class="doomguy">
       <video preload="auto" autoplay loop muted>
         <source src="/images/doomguy-walking.webm" type='video/webm' />
+        <source src="/images/doomguy-walking.mp4" type='video/mp4' />
       </video>
     </div>
 
@@ -57,6 +58,7 @@
     <div class="doomguy">
       <video preload="auto" autoplay loop muted>
         <source src="/images/doomguy.webm" type='video/webm' />
+        <source src="/images/doomguy.mp4" type='video/mp4' />
       </video>
     </div>
 

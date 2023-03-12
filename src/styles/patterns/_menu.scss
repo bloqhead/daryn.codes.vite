@@ -18,6 +18,7 @@
 
   ul {
     @include m.list-reset;
+    transition: all 150ms ease-in-out;
   }
 
   li,
@@ -42,9 +43,10 @@
   }
 
   .menu__link {
-    padding: 0.25em 1.5em;
+    padding: 0.25rem 2rem;
     text-decoration: none;
     outline: none;
+    transition: transform 150ms ease-in-out;
 
     &:hover {
       color: #fff;
@@ -120,12 +122,31 @@
 
   @media #{v.$bp-medium} {
     justify-content: flex-end;
+    position: relative;
+    top: auto;
+    transition: transform 500ms ease-in-out;
 
     ul {
       display: flex;
 
       > li {
         flex: 0 0 1;
+      }
+    }
+
+    &:not(.in-view) {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      justify-content: center;
+      background-color: rgba(v.$mid, 0.5);
+      backdrop-filter: blur(10px);
+
+      .menu__link {
+        padding: 0.25em 1em;
+        transform: scale(0.75);
       }
     }
   }

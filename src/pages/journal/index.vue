@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="brush title">
-      Journal.
+      Journal
     </h1>
 
     <div class="intro">

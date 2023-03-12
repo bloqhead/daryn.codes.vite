@@ -4,13 +4,13 @@
       Work
     </h1>
 
-    <div class="intro">
+    <!-- <div class="intro">
       <p>
         Select projects I've worked on that don't violate NDAs.
       </p>
-    </div>
+    </div> -->
 
-    <ul class="project-list xl:grid xl:grid-cols-2 gap-4">
+    <ul class="project-list">
       <li
         v-for="(item, idx) in work"
         :key="idx"
@@ -62,7 +62,7 @@
       My Favorite Pens
     </h3>
 
-    <ul class="pen-list xl:flex xl:flex-cols-3 xl:flex-wrap">
+    <ul class="pen-list">
       <li v-for="(item, idx2) in pens" :key="idx2">
         <a :href="item.url" class="pen-list__link">
           <header>
@@ -76,7 +76,10 @@
             </div>
           </header>
           <ul class="pen-list__tech">
-            <li v-for="(i, idx) in item.tech" :key="idx">
+            <li v-for="(i, idx3) in item.tech" :key="idx3">
+              <span class="pen-list__tech__icon">
+                <fa :icon="['fa', 'tag']" />
+              </span>
               <span>
                 {{ i }}
               </span>
@@ -105,6 +108,13 @@ const pens = workStore().getPens()
   margin: 4rem 0;
   max-width: 1320px;
 
+  @apply 
+    xl:grid 
+    lg:grid-cols-2
+    2xl:grid-cols-3 
+    gap-8;
+
+  // link resets
   li:before {
     display: none !important;
   }
@@ -285,9 +295,7 @@ const pens = workStore().getPens()
 //
 
 .pen-list {
-  justify-content: stretch;
-  align-items: stretch;
-  flex-wrap: wrap;
+  @apply xl:flex xl:flex-cols-3 xl:flex-wrap;
 
   li, a {
 
@@ -323,26 +331,29 @@ const pens = workStore().getPens()
   padding: 2rem;
   border-radius: 5px;
   background: linear-gradient(to top, #000 10%, var(--color-mid) 100%);
+  transition: all 150ms ease-in-out;
+  box-shadow: 0 0 var(--color-mid);
+
+  &:hover, &:focus {
+    transform: translate(-0.5rem, -0.5rem);
+    box-shadow: 0.5rem 0.5rem var(--color-lime);
+
+    .pen-list__icon {
+      color: var(--color-lime);
+    }
+  }
 
   header {
     position: relative;
     width: 100%;
     display: flex;
+    align-items: center;
     gap: 10px;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1.5rem 0;
     padding: 0;
 
     &:after {
       display: none;
-      // position: absolute;
-      // bottom: 0;
-      // left: 0;
-      // display: block;
-      // height: 1px;
-      // width: 100%;
-      // content: "";
-      // background: var(--link-gradient);
-      // margin: var(--x) 0 0 0;
     }
 
     > div:first-of-type {
@@ -355,12 +366,9 @@ const pens = workStore().getPens()
   }
 
   h4 {
-    --x: 1rem;
-    --i: 0 0 var(--x) 0;
-
     font-size: 1.6rem;
     color: #fff;
-    padding: var(--i);
+    padding: 0;
     margin: 0;
 
     &:after {
@@ -370,9 +378,10 @@ const pens = workStore().getPens()
 }
 
 .pen-list__icon {
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   line-height: 1.2;
   color: rgba(#fff, 0.35);
+  transition: color 150ms ease-in-out;
 }
 
 .pen-list__tech {
@@ -382,6 +391,9 @@ const pens = workStore().getPens()
   gap: 5px;
 
   li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -389,7 +401,16 @@ const pens = workStore().getPens()
     color: var(--color-lime);
     line-height: 1.3;
     padding: 0.5rem 0.75rem;
-    border-radius: 3px;
+    border-radius: var(--radius);
+
+    span {
+
+    }
   }
+}
+
+.pen-list__tech__icon {
+  color: var(--color-shade);
+  font-size: 1.2rem;
 }
 </style>

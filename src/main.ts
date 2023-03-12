@@ -14,6 +14,7 @@ import {
   faCompactDisc,
   faEnvelope,
   faTerminal,
+  faTag,
 } from '@fortawesome/pro-solid-svg-icons'
 
 import {
@@ -59,6 +60,7 @@ library.add(
   faPhp,
   faSass,
   faTerminal,
+  faTag,
   faTwitter,
   faVuejs,
   faWordpress,

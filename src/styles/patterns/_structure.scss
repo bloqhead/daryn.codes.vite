@@ -27,7 +27,7 @@ body {
   font-weight: normal;
   line-height: 2;
   font-family: var(--font-open-sans);
-  background-color: black;
+  background-color: #000;
   background-image: url(t.$topography);
   background-attachment: fixed;
 
@@ -35,7 +35,6 @@ body {
   $max_width: 1140px;
   $min_font: 14px;
   $max_font: 18px;
-  // $max_font: 18px;
 
   @include m.fluid-type($min_width, $max_width, $min_font, $max_font);
 }
@@ -56,7 +55,9 @@ body {
 
 .page-content {
   max-width: var(--content-width);
-  transition: opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1), transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: 
+    opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1), 
+    transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .page-footer__email-link {
@@ -73,7 +74,7 @@ body {
 
       position: absolute;
       top: 25rem;
-      left: 15rem;
+      left: clamp(12rem, 100px, 8.5vw);
       z-index: -1;
       display: block;
       content: attr(data-floating-label);
@@ -134,6 +135,5 @@ body {
 
   .page-footer__music {
     grid-area: music;
-    padding: 0 3em;
   }
 }
