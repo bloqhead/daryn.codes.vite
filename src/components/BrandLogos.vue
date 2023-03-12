@@ -1,8 +1,8 @@
 <template>
   <div
+    ref="logoContainer"
     class="brand-logos mt--sm mb--sm"
     :class="{ 'in-view': logosVisible }"
-    ref="logoContainer"
   >
     <div
       v-for="(v, i) in logos"
@@ -45,13 +45,13 @@ useIntersectionObserver(
 
 <style lang="scss" scoped>
 .brand-logos {
-  @apply 
-    grid 
-    grid-cols-2 
-    md:grid-cols-3 
-    xl:grid-cols-4 
-    gap-12 
-    justify-center 
+  @apply
+    grid
+    grid-cols-2
+    md:grid-cols-3
+    xl:grid-cols-4
+    gap-12
+    justify-center
     text-center;
 
   .brand-logos__item {

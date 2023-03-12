@@ -37,8 +37,8 @@
 
     <div class="doomguy">
       <video preload="auto" autoplay loop muted>
-        <source src="/images/doomguy-walking.webm" type='video/webm' />
-        <source src="/images/doomguy-walking.mp4" type='video/mp4' />
+        <source src="/images/doomguy-walking.webm" type="video/webm">
+        <source src="/images/doomguy-walking.mp4" type="video/mp4">
       </video>
     </div>
 
@@ -57,8 +57,8 @@
 
     <div class="doomguy">
       <video preload="auto" autoplay loop muted>
-        <source src="/images/doomguy.webm" type='video/webm' />
-        <source src="/images/doomguy.mp4" type='video/mp4' />
+        <source src="/images/doomguy.webm" type="video/webm">
+        <source src="/images/doomguy.mp4" type="video/mp4">
       </video>
     </div>
 

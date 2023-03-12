@@ -13,8 +13,8 @@ import {
   faCode,
   faCompactDisc,
   faEnvelope,
-  faTerminal,
   faTag,
+  faTerminal,
 } from '@fortawesome/pro-solid-svg-icons'
 
 import {

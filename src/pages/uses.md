@@ -23,7 +23,9 @@ meta:
   this for anyone that might be interested.
 </div>
 
-<img src="/images/neofetch@2x.png" style="max-width: 626px !important;" alt="neofetch screenshot from my personal MacBook Pro" />
+<div>
+  <img src="/images/neofetch@2x.png" style="max-width: 626px !important;" alt="neofetch screenshot from my personal MacBook Pro" />
+</div>
 <small>
   Made with <a href="https://github.com/dylanaraps/neofetch">neofetch</a>
 </small>
@@ -32,9 +34,8 @@ meta:
 
 * 2017 MacBook Pro 13" in space gray (no touchbar)
 * [STM Prime Backpack](https://www.amazon.com/gp/product/B01C8PIALU/) in steel gray
-* [68-key Qisan Magicforce gaming keyboard](https://www.amazon.com/gp/product/B01872MCIA/) w/ MX Blue dampers
+* Kinesis Freestyle2 split keyboard
 * Dell Ultrasharp U2718Q 27-Inch 4K IPS Monitor
-* iPhone 12 Pro Max
 * Audio-Technica ATR2100X-USB USB/XLR Microphone
 * Knox Gear Boom Arm and Shock Mount
 * Audio-Technica ATH-M30x headphones
@@ -43,6 +44,6 @@ meta:
 
 * [Nova by Panic](https://nova.app/)
 * [VSCode](https://code.visualstudio.com/)
-* [Warp](https://warp.dev/)
+* [iTerm2](https://iterm2.com/)
 * [Figma](https://figma.com/)
 * [Vercel](https://vercel.com/)

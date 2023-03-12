@@ -108,10 +108,10 @@ const pens = workStore().getPens()
   margin: 4rem 0;
   max-width: 1320px;
 
-  @apply 
-    xl:grid 
+  @apply
+    xl:grid
     lg:grid-cols-2
-    2xl:grid-cols-3 
+    2xl:grid-cols-3
     gap-8;
 
   // link resets

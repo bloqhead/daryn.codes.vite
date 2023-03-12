@@ -1,5 +1,10 @@
 <template>
-  <div class="page-header" itemscope itemtype="http://schema.org/Organization" ref="target">
+  <div
+    ref="target"
+    class="page-header"
+    itemscope
+    itemtype="http://schema.org/Organization"
+  >
     <router-link
       to="/"
       exact
@@ -88,8 +93,8 @@
 
 <script setup lang="ts">
 import anime from 'animejs'
-import Logo from '~/components/Logo.vue'
 import { useElementVisibility } from '@vueuse/core'
+import Logo from '~/components/Logo.vue'
 
 const isActive = ref<Boolean>(false)
 const isExpanded = ref<Boolean>(false)
