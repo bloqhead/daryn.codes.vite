@@ -33,12 +33,7 @@
       </p>
     </div>
 
-    <div class="doomguy">
-      <video preload="auto" autoplay loop muted>
-        <source src="/images/doomguy-walking.webm" type="video/webm">
-        <source src="/images/doomguy-walking.mp4" type="video/mp4">
-      </video>
-    </div>
+    <doom-guy video="doomguy1" />
 
     <h3>
       It all started as a kid&hellip;
@@ -53,12 +48,7 @@
       like a pro.
     </p>
 
-    <div class="doomguy">
-      <video preload="auto" autoplay loop muted>
-        <source src="/images/doomguy.webm" type="video/webm">
-        <source src="/images/doomguy.mp4" type="video/mp4">
-      </video>
-    </div>
+    <doom-guy video="doomguy2" />
 
     <h3>
       I build things with&hellip;
@@ -78,33 +68,4 @@ meta:
   layout: default
 </route>
 
-<style lang="scss" scoped>
-.doomguy {
-  --bg: #1c1c1c;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin: 1em auto;
-  text-align: center;
-
-  &:before,
-  &:after {
-    content: "";
-    height: 5px;
-    flex: 1 0 0;
-    background-color: var(--bg);
-    border-radius: 5px;
-  }
-
-  img, video {
-    display: block;
-    width: 80px;
-    height: auto;
-    background-color: var(--bg);
-    border-radius: 10px;
-    padding: 5px;
-  }
-}
-</style>
+<style lang="scss" scoped></style>

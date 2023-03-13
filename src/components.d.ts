@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BrandLogos: typeof import('./components/BrandLogos.vue')['default']
+    DoomGuy: typeof import('./components/DoomGuy.vue')['default']
     FormatDate: typeof import('./components/FormatDate.vue')['default']
     GlobalFooter: typeof import('./components/GlobalFooter.vue')['default']
     GlobalHeader: typeof import('./components/GlobalHeader.vue')['default']
