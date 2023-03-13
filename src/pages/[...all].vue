@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1 class="brush title">
-      Oops!
-    </h1>
+    <page-title title="Oops!" />
+
     <p class="intro">
       Oops! Looks like that content was removed or never existed.
     </p>
+
     <p>
       <router-link to="/">
         &larr; Take me home

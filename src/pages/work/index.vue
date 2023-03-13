@@ -1,14 +1,6 @@
 <template>
   <div>
-    <h1 class="brush title">
-      Work
-    </h1>
-
-    <!-- <div class="intro">
-      <p>
-        Select projects I've worked on that don't violate NDAs.
-      </p>
-    </div> -->
+    <page-title title="Work" />
 
     <ul class="project-list">
       <li

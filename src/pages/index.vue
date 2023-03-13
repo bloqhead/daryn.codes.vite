@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1 class="brush title">
-      Versatile
-    </h1>
+    <page-title title="Versatile" />
 
     <div
       itemscope
@@ -71,6 +69,7 @@
 </template>
 
 <script setup lang="ts">
+import PageTitle from '~/components/PageTitle.vue'
 import BrandLogos from '~/components/BrandLogos.vue'
 </script>
 

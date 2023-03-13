@@ -2,7 +2,6 @@
 // Page transitions
 //
 
-.brush.title,
 .journal-entry__title h1 {
   transition:
     opacity 0.5s cubic-bezier(0.62, 0.26, 0.02, 0.87),
@@ -26,11 +25,11 @@
   opacity: 0;
   transform: translate(0, var(--base-transform));
 
-  .brush.title,
-  .journal-entry__title h1 {
-    opacity: 0;
-    transform: translate(var(--base-transform), 0);
-  }
+  // .brush.title,
+  // .journal-entry__title h1 {
+  //   opacity: 0;
+  //   transform: translate(var(--base-transform), 0);
+  // }
 }
 
 .slide-left-leave-active,
@@ -39,8 +38,8 @@
   opacity: 0;
   transform: translate(0, -var(--base-transform));
 
-  .brush.title {
-    opacity: 0;
-    transform: translate(-var(--base-transform), 0);
-  }
+  // .brush.title {
+  //   opacity: 0;
+  //   transform: translate(-var(--base-transform), 0);
+  // }
 }

@@ -15,9 +15,7 @@ meta:
     content: Terms of Service
 ---
 
-<h1 class="brush title mb-8">
-  Terms
-</h1>
+<page-title title="Terms" />
 
 ### 1. Terms
 

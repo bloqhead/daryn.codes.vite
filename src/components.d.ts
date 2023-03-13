@@ -13,6 +13,7 @@ declare module '@vue/runtime-core' {
     GlobalHeader: typeof import('./components/GlobalHeader.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     Music: typeof import('./components/Music.vue')['default']
+    PageTitle: typeof import('./components/PageTitle.vue')['default']
     PostList: typeof import('./components/PostList.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

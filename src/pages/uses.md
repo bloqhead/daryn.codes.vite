@@ -15,7 +15,7 @@ meta:
     content: The tools of my trade
 ---
 
-<h1 class="title brush">Uses</h1>
+<page-title title="Uses" />
 
 <div class="intro">
   After shamelessly taking the idea from <a href="https://wesbos.com/uses/">Wes Bos</a>, I've created

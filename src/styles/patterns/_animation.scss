@@ -38,29 +38,6 @@
   }
 }
 
-// special title pseudo animations
-@keyframes titleBefore {
-  from {
-    opacity: 0;
-    transform: translate(0, 0) scale(0) rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-0.25em, -0.28em) scale(1.15) rotate(20deg);
-  }
-}
-
-@keyframes titleAfter {
-  from {
-    opacity: 0;
-    transform: translate(0, 0) scale(0) rotate(0deg);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-0.2em, -0.15em) scale(0.75) rotate(15deg);
-  }
-}
-
 @keyframes bounce-in {
   0% { transform: scale(0) }
   50% { transform: scale(1.5) }

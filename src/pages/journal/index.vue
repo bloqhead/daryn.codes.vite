@@ -1,8 +1,6 @@
 <template>
   <div>
-    <h1 class="brush title">
-      Journal
-    </h1>
+    <page-title title="Journal" />
 
     <div class="intro">
       <p>

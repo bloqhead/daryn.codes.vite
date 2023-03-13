@@ -15,9 +15,7 @@ meta:
     content: Say Hello
 ---
 
-<h1 class="brush title">
-  Hello
-</h1>
+<page-title title="Hello" />
 
 <div class="intro">
   <p>
