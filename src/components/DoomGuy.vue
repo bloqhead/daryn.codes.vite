@@ -16,12 +16,6 @@
 </template>
 
 <script setup lang="ts">
-const video1 = ref('')
-const video2 = ref('')
-const path = '/images/doomguy'
-
-type Video = 'doomguy1' | 'doomguy2'
-
 const props = defineProps({
   video: {
     type: String,
@@ -30,12 +24,18 @@ const props = defineProps({
   },
 })
 
-if (props.video == 'doomguy1') {
+const video1 = ref('')
+const video2 = ref('')
+const path = '/images/doomguy'
+
+type Video = 'doomguy1' | 'doomguy2'
+
+if (props.video === 'doomguy1') {
   video1.value = `${path}/doomguy1.webm`
   video2.value = `${path}/doomguy1.mp4`
 }
 
-if (props.video == 'doomguy2') {
+if (props.video === 'doomguy2') {
   video1.value = `${path}/doomguy2.webm`
   video2.value = `${path}/doomguy2.mp4`
 }
