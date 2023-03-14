@@ -4,6 +4,9 @@ title: Hello
 meta:
   - name: description
     content: This is my contact info. Drop me a line.
+  - key: og:description
+    property: og:description
+    content: This is my contact info. Drop me a line.
   - key: og:url
     property: og:url
     content: https://daryn.codes/contact

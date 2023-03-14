@@ -3,7 +3,6 @@ meta:
   layout: post
   title: content-visibility Overflow Bug
   date: 2021-01-26
-  slug: content-visibility-overflow-bug
   excerpt: While trying out content-visibility for a project, I discovered an a11y flaw.
 </route>
 

@@ -63,9 +63,4 @@ import PageTitle from '~/components/PageTitle.vue'
 import BrandLogos from '~/components/BrandLogos.vue'
 </script>
 
-<route lang="yaml">
-meta:
-  layout: default
-</route>
-
 <style lang="scss" scoped></style>

@@ -57,6 +57,7 @@ $bp-medium-max: unquote("(max-width: 800px)");
 $bp-medium-large: unquote("(min-width: 992px)");
 $bp-medium-large-max: unquote("(max-width: 992px)");
 $bp-large: unquote("(min-width: 1200px)");
+$bp-large-2x: unquote("(min-width: 1280px)");
 
 // Misc
 $sidebar-padding: 1.25em;
@@ -64,6 +65,7 @@ $sidebar-width: 14em;
 $content-width: 1140px;
 $grid-square: 2%;
 $radius: 5px;
+$radius-xl: 10px;
 $panel-bg: rgba($mid, 0.5);
 $global-component-padding: 1.5em;
 $soft-line: 1px solid rgba(#fff, 0.15);
@@ -81,6 +83,7 @@ $breakpoints: (
   'medium-large': $bp-medium-large,
   'medium-large-max': $bp-medium-large-max,
   'large': $bp-large,
+  'large-2x': $bp-large-2x,
 );
 
 $colors-site-named: (
@@ -122,6 +125,7 @@ $misc: (
   'content-width': $content-width,
   'grid-square': $grid-square,
   'radius': $radius,
+  'radius-xl': $radius-xl,
   'panel-bg': $panel-bg,
   'global-component-padding': $global-component-padding,
   'soft-line': $soft-line,

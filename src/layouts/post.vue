@@ -35,6 +35,36 @@ import FormatDate from '~/components/FormatDate.vue'
 const meta = computed((): any => {
   return useRouter().currentRoute.value.meta
 })
+
+useHead({
+  title: meta.value.title,
+  meta: [
+    {
+      name: 'description',
+      content: meta.value.description || meta.value.excerpt,
+    },
+    {
+      property: 'og:title',
+      content: meta.value.title,
+    },
+    {
+      property: 'og:description',
+      content: meta.value.description || meta.value.excerpt,
+    },
+    {
+      property: 'og:image', 
+      content: meta.value.image || 'https://daryn.codes/og@2x.png',
+    },
+    { 
+      name: 'twitter:image', 
+      content: meta.value.image || 'https://daryn.codes/og@2x.png',
+    },
+    {
+      name: 'twitter:description',
+      content: meta.value.description || meta.value.excerpt,
+    },
+  ],
+})
 </script>
 
 <style lang="scss" scoped></style>

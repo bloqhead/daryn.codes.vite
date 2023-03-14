@@ -4,6 +4,9 @@ title: Terms of Service
 meta:
   - name: description
     content: The Terms of Service for daryn.codes.
+  - key: og:description
+    property: og:description
+    content: The Terms of Service for daryn.codes.
   - key: og:url
     property: og:url
     content: https://daryn.codes/terms

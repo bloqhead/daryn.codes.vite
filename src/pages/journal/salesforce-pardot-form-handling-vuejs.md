@@ -3,7 +3,6 @@ meta:
   layout: post
   title: SalesForce Pardot Form Handling With Vue.js
   date: 2020-01-25
-  slug: salesforce-pardot-form-handling-vuejs
   excerpt: An easy and sane approach to form handling with Vue.js and SalesForce Pardot
 </route>
 

@@ -89,6 +89,20 @@ import { workStore } from '~/store/work'
 // Pinia actions for fetching data
 const work = workStore().getWork()
 const pens = workStore().getPens()
+
+const metaDescription = 'Selected projects that I\'ve worked on.'
+const metaTitle = 'Select Projects'
+
+useHead({
+  title: metaTitle,
+  meta: [
+    { name: 'description', content: metaDescription },
+    { name: 'og:title', content: metaTitle },
+    { name: 'og:description', content: metaDescription },
+    { name: 'twitter:title', content: metaTitle },
+    { name: 'twitter:description', content: metaDescription },
+  ]
+})
 </script>
 
 <style lang="scss" scoped>
@@ -238,7 +252,7 @@ const pens = workStore().getPens()
     }
   }
 
-  @media (var(--bp-medium)) {
+  @media #{v.$bp-medium} {
     font-size: 1.4rem;
   }
 }
@@ -269,7 +283,7 @@ const pens = workStore().getPens()
     display: none;
   }
 
-  @media (var(--bp-medium)) {
+  @media #{v.$bp-medium} {
     font-size: 2.4rem;
   }
 }
@@ -287,7 +301,6 @@ const pens = workStore().getPens()
 //
 
 .pen-list {
-  @apply xl:flex xl:flex-cols-3 xl:flex-wrap;
 
   li, a {
 
@@ -297,10 +310,8 @@ const pens = workStore().getPens()
   }
 
   > li {
-    align-self: stretch;
-    justify-self: stretch;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 0;
   }
 
   h4 {
@@ -310,21 +321,27 @@ const pens = workStore().getPens()
     transition: color 150ms ease-in-out;
   }
 
-  @media (min-width: 1280px) {
+  @media #{v.$bp-medium} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    
     > li {
+      flex: 0 0 50%;
       flex-basis: 50%;
     }
   }
 }
-
 .pen-list__link {
   position: relative;
   display: block;
   padding: 2rem;
-  border-radius: 5px;
-  background: linear-gradient(to top, #000 10%, var(--color-mid) 100%);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(to bottom, var(--color-mid) 10%, transparent 50%);
   transition: all 150ms ease-in-out;
   box-shadow: 0 0 var(--color-mid);
+  backdrop-filter: blur(2px);
 
   &:hover, &:focus {
     transform: translate(-0.5rem, -0.5rem);
@@ -340,7 +357,7 @@ const pens = workStore().getPens()
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     margin: 0 0 1.5rem 0;
     padding: 0;
 
@@ -372,7 +389,7 @@ const pens = workStore().getPens()
 .pen-list__icon {
   font-size: 2.5rem;
   line-height: 1.2;
-  color: rgba(#fff, 0.35);
+  color: var(--color-shade);
   transition: color 150ms ease-in-out;
 }
 
@@ -380,24 +397,20 @@ const pens = workStore().getPens()
   display: flex;
   flex-wrap: wrap;
   align-self: flex-end;
-  gap: 5px;
+  gap: 0.5rem;
 
   li {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.5rem;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    background: #222;
+    background: var(--color-mid);
     color: var(--color-lime);
     line-height: 1.3;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.8rem;
     border-radius: var(--radius);
-
-    span {
-
-    }
   }
 }
 

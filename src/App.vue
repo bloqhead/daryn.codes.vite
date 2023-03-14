@@ -29,23 +29,14 @@ const store = siteStore()
 watch(useRoute(), () => store.setTagline(), { immediate: true })
 
 useHead({
-  title: 'Daryn St. Pierre, Front-End Web Developer',
   meta: [
-    {
-      name: 'description',
-      content: 'Daryn St. Pierre is a Front-End Web Developer based in St. Petersburg Florida.',
-    },
-    {
-      name: 'theme-color',
-      content: '#f54768',
-    },
+    { name: 'theme-color', content: '#f54768' },
+    { property: 'og:image', content: 'https://daryn.codes/og@2x.png' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:image', content: 'https://daryn.codes/og@2x.png' },
   ],
   link: [
-    {
-      rel: 'icon',
-      type: 'image/svg+xml',
-      href: '/favicon.svg',
-    },
+    { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
   ],
 })
 </script>

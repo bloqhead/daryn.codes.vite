@@ -3,19 +3,30 @@
 //
 
 .music__items {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
   a {
-    display: inline-block;
     position: relative;
     display: flex;
     align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
-    padding: 0.5em 0;
+    padding: 1.5rem;
     transition: all 0.2s ease-in-out;
     transform-origin: center;
-    border-radius: 10px;
+    border-radius: var(--radius-xl);
+    background-color: rgba(#000, 0.15);
 
     &:after {
       position: absolute;
+      top: 0;
+      left: 0;
       z-index: 0;
       display: block;
       width: 100%;
@@ -23,19 +34,28 @@
       content: "";
       border-radius: 10px;
       transform-origin: center;
-      transform: scale(0);
-      background-color: rgba(#000, 0.5);
+      transform: translateY(2rem);
+      background-color: rgba(#000, 0.35);
       opacity: 0;
-      transition: opacity 0.2s ease-in-out, transform 0.2s cubic-bezier(0.8, 0.33, 0.42, 0.85);
+      transition: 
+        opacity 0.2s ease-in-out, 
+        transform 0.2s cubic-bezier(0.8, 0.33, 0.42, 0.85);
     }
 
     &:hover {
-      --i: 1.03;
 
-      transform: scale(var(--i));
+      .music__icon {
+        color: #fff;
+        animation-name: icon-spin;
+        animation-delay: 0;
+        animation-direction: normal;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+      }
 
       &:after {
-        transform: scale(var(--i), var(--i));
+        transform: translateY(0);
         opacity: 1;
       }
     }
@@ -67,6 +87,9 @@
   display: grid;
   place-items: center;
   color: var(--color-shade);
+  transition: 
+    transform 350ms ease-in-out, 
+    color 350ms ease-in-out;
 }
 
 .music__album-title {

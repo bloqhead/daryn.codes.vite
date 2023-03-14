@@ -4,6 +4,9 @@ title: Privacy Policy
 meta:
   - name: description
     content: The Privacy Policy for daryn.codes.
+  - key: og:description
+    property: og:description
+    content: The Privacy Policy for daryn.codes.
   - key: og:url
     property: og:url
     content: https://daryn.codes/privacy

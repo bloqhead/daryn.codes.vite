@@ -4,6 +4,9 @@ title: Uses
 meta:
   - name: description
     content: These are the everyday items I use to build web applications and get work done.
+  - key: og:description
+    property: og:description
+    content: These are the everyday items I use to build web applications and get work done.
   - key: og:url
     property: og:url
     content: https://daryn.codes/uses

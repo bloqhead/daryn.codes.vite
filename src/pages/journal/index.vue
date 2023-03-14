@@ -35,6 +35,20 @@ import { postsStore } from '~/store/posts'
 
 const posts = postsStore().getPosts()
 const getDateAsString = (v: any) => v as string
+
+const metaDescription = 'Topics that span the gamut of web development and life.'
+const metaTitle = 'Journal'
+
+useHead({
+  title: metaTitle,
+  meta: [
+    { name: 'description', content: metaDescription },
+    { name: 'og:title', content: metaTitle },
+    { name: 'og:description', content: metaDescription },
+    { name: 'twitter:title', content: metaTitle },
+    { name: 'twitter:description', content: metaDescription },
+  ]
+})
 </script>
 
 <style lang="scss" scoped>
@@ -65,20 +79,3 @@ const getDateAsString = (v: any) => v as string
   }
 }
 </style>
-
-<route lang="yaml">
-meta:
-  - name: description
-    content: Topics that span the gamut of web development, UX, Vue.js, and other similar topics.
-  - name: author
-    content: Daryn St. Pierre
-  - key: og:url
-    property: og:url
-    content: https://daryn.codes/journal
-  - key: og:title
-    property: og:title
-    content: Journal
-  - key: twitter:title
-    name: twitter:title
-    content: Journal
-</route>

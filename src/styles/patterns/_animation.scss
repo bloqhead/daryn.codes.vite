@@ -49,3 +49,9 @@
   50% { transform: scale(1.5) }
   100% { transform: scale(0) }
 }
+
+@keyframes icon-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

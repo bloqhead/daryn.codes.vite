@@ -3,7 +3,6 @@ meta:
   layout: post
   title: Rapid Prototyping With Vue CLI 3
   date: 2019-04-17
-  slug: rapid-prototyping-vue-cli-3
   excerpt: Learn to quickly prototype out standalone components using Vue.js 3
 </route>
 
