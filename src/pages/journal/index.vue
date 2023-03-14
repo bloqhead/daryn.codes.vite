@@ -47,7 +47,7 @@ useHead({
     { name: 'og:description', content: metaDescription },
     { name: 'twitter:title', content: metaTitle },
     { name: 'twitter:description', content: metaDescription },
-  ]
+  ],
 })
 </script>
 

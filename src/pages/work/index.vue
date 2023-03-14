@@ -101,7 +101,7 @@ useHead({
     { name: 'og:description', content: metaDescription },
     { name: 'twitter:title', content: metaTitle },
     { name: 'twitter:description', content: metaDescription },
-  ]
+  ],
 })
 </script>
 
@@ -326,7 +326,7 @@ useHead({
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1rem;
     grid-row-gap: 1rem;
-    
+
     > li {
       flex: 0 0 50%;
       flex-basis: 50%;

@@ -52,11 +52,11 @@ useHead({
       content: meta.value.description || meta.value.excerpt,
     },
     {
-      property: 'og:image', 
+      property: 'og:image',
       content: meta.value.image || 'https://daryn.codes/og@2x.png',
     },
-    { 
-      name: 'twitter:image', 
+    {
+      name: 'twitter:image',
       content: meta.value.image || 'https://daryn.codes/og@2x.png',
     },
     {
