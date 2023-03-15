@@ -7,6 +7,7 @@
 }
 
 .journal-entry {
+
   blockquote {
     padding: 1rem 3rem;
     border-left: 5px solid var(--color-mid);
@@ -103,6 +104,15 @@
     margin: 0;
     padding: 0;
   }
+}
+
+.journal-entry__postdate {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  text-transform: uppercase;
+  color: var(--color-shade);
+  letter-spacing: var(--char-spacing);
 }
 
 @media #{v.$bp-medium-large} {
