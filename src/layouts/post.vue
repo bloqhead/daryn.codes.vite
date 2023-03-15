@@ -21,9 +21,9 @@
 
     <div class="journal-entry__info">
       <div
+        v-show="timeToRead"
         class="journal-entry__ttr"
         title="Time to read"
-        v-show="timeToRead"
       >
         <div>
           <fa :icon="['fa', 'glasses']" />
@@ -53,7 +53,7 @@ const meta = computed((): any => {
 })
 
 const timeToRead = ref('')
-const postBody = ref('');
+const postBody = ref('')
 
 onMounted(() => {
   timeToRead.value = readingTime(postBody.value.textContent)
