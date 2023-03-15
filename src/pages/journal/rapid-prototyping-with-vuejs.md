@@ -1,7 +1,7 @@
 <route lang="yaml">
 meta:
   layout: post
-  title: Rapid Prototyping With Vue CLI 3
+  title: Rapid Prototyping With Vue
   date: 2019-04-17
   excerpt: Learn to quickly prototype out standalone components using Vue.js 3
 </route>

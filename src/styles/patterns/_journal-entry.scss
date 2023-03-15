@@ -4,7 +4,6 @@
 
 :root {
   --journal-item-spacing: 3rem;
-  --journal-header-border: 4px solid var(--color-mid);
 }
 
 .journal-entry {
@@ -22,24 +21,68 @@
 }
 
 .journal-entry__header {
-  position: relative;
-  margin-bottom: var(--journal-item-spacing);
-  padding: 1.5rem;
+
 }
 
-.journal-entry__postdate {
+.journal-entry__info {
   --c: var(--color-shade);
 
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
   text-transform: uppercase;
   color: var(--c);
   letter-spacing: var(--char-spacing);
+  margin: 2rem 0;
+  padding: 2rem;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  > *:first-of-type {
+    border-right: 2px solid var(--color-pink);
+    padding-right: calc(3rem - 2px);
+  }
 
   > svg > path {
     fill: var(--c);
   }
+
+  &:before, &:after {
+    position: absolute;
+    left: 0;
+    display: block;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to left, var(--color-mid) 10%, var(--color-pink) 90%);
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+  }
+
+  @media #{v.$bp-medium-large} {
+    justify-content: flex-start;
+  }
+}
+
+.journal-entry__ttr {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .journal-entry__body {
+  
   img {
     display: block;
     margin: 1rem auto;
@@ -54,28 +97,7 @@
   }
 }
 
-.journal-entry__reading-time {
-  font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: var(--char-spacing);
-  color: var(--color-shade);
-}
-
 .journal-entry__title {
-  position: relative;
-  padding: 0 0 1rem 0;
-  margin: 0 0 1rem 0;
-
-  &:after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
-    content: '';
-    height: 4px;
-    width: 100%;
-    background: linear-gradient(to left, var(--color-mid) 10%, var(--color-pink) 90%);
-  }
 
   h1 {
     margin: 0;
@@ -83,21 +105,9 @@
   }
 }
 
-.journal__hero {
-}
-
 @media #{v.$bp-medium-large} {
-  .journal-list {
-
-  }
-
-  .journal-list__item {
-
-  }
-
-  // Main articles
-
   .journal-entry__body {
+
     img:not([class]) {
       // transform: translateX(-3rem);
     }
@@ -119,13 +129,5 @@
       font-size: 6rem;
       line-height: 1;
     }
-  }
-
-  .journal-entry .journal-entry__postdate {
-    flex: 1;
-    border-top: var(--journal-header-border);
-    border-left: var(--journal-header-border);
-    padding: 1rem;
-    text-align: center;
   }
 }

@@ -13,6 +13,7 @@ import {
   faCode,
   faCompactDisc,
   faEnvelope,
+  faGlasses,
   faTag,
   faTerminal,
 } from '@fortawesome/pro-solid-svg-icons'
@@ -39,7 +40,6 @@ import generatedRoutes from '~pages'
 
 // styles
 import '@fortawesome/fontawesome-svg-core/styles.css'
-// import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import './styles/styles.scss'
 
@@ -52,6 +52,7 @@ library.add(
   faCompactDisc,
   faEnvelope,
   faGithub,
+  faGlasses,
   faHtml5,
   faInstagram,
   faJs,

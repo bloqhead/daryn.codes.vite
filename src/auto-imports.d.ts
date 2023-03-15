@@ -74,6 +74,7 @@ declare global {
   const reactiveComputed: typeof import('@vueuse/core')['reactiveComputed']
   const reactiveOmit: typeof import('@vueuse/core')['reactiveOmit']
   const reactivePick: typeof import('@vueuse/core')['reactivePick']
+  const readingTime: typeof import('./composables/readingTime')['default']
   const readonly: typeof import('vue')['readonly']
   const ref: typeof import('vue')['ref']
   const refAutoReset: typeof import('@vueuse/core')['refAutoReset']
@@ -348,6 +349,7 @@ declare module '@vue/runtime-core' {
     readonly reactiveComputed: UnwrapRef<typeof import('@vueuse/core')['reactiveComputed']>
     readonly reactiveOmit: UnwrapRef<typeof import('@vueuse/core')['reactiveOmit']>
     readonly reactivePick: UnwrapRef<typeof import('@vueuse/core')['reactivePick']>
+    readonly readingTime: UnwrapRef<typeof import('./composables/readingTime')['default']>
     readonly readonly: UnwrapRef<typeof import('vue')['readonly']>
     readonly ref: UnwrapRef<typeof import('vue')['ref']>
     readonly refAutoReset: UnwrapRef<typeof import('@vueuse/core')['refAutoReset']>
