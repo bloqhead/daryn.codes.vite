@@ -53,10 +53,45 @@
   </svg>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import anime from 'animejs'
+
+const animate = () => {
+  anime.set('#skateboard, #skateboard .wheel', {
+    opacity: 0,
+  })
+
+  const tl = anime.timeline({
+    easing: 'cubicBezier(.57,.19,.3,.95)',
+    duration: 500,
+  })
+
+  tl.add({
+    targets: '#skateboard',
+    opacity: 1,
+  })
+
+  tl.add({
+    targets: '#skateboard path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    delay: anime.stagger(250),
+  }, '+=250')
+
+  tl.add({
+    targets: '#skateboard .wheel',
+    opacity: 1,
+    delay: anime.stagger(200),
+  }, '-=200')
+}
+
+onMounted(() => {
+  animate()
+})
+</script>
 
 <style lang="scss" scoped>
 #logo {
+
   .path {
     fill: none;
     stroke: var(--color-pink);

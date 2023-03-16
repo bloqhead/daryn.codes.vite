@@ -92,7 +92,6 @@
 </template>
 
 <script setup lang="ts">
-import anime from 'animejs'
 import { useElementVisibility } from '@vueuse/core'
 import Logo from '~/components/Logo.vue'
 
@@ -111,25 +110,4 @@ const restingState = () => {
   isActive.value = false
   isExpanded.value = false
 }
-
-const animate = () => {
-  const tl = anime.timeline({
-    easing: 'cubicBezier(.57,.19,.3,.95)',
-    duration: 550,
-  })
-
-  tl.add({
-    targets: '#logo',
-    opacity: 1,
-    scale: 1,
-  })
-
-  tl.add({
-    targets: 'svg g#skateboard path',
-    strokeDashoffset: [anime.setDashoffset, 0],
-    delay: anime.stagger(250),
-  }, '+=250')
-}
-
-onMounted(() => animate())
 </script>

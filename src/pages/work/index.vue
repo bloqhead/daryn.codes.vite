@@ -10,36 +10,38 @@
         itemscope
         itemtype="http://schema.org/CreativeWork"
       >
-        <a
-          :href="item.url"
-          rel="noindex nofollow"
-          class="project-list__link browser-chrome"
-          itemprop="url"
-        >
-          <img
-            v-if="item.image"
-            :src="`/images/work/${item.image}`"
-            :alt="`A screenshot of the ${item.name} project`"
-            class="project-list__item-image"
+        <parallax-card>
+          <a
+            :href="item.url"
+            rel="noindex nofollow"
+            class="project-list__link browser-chrome"
+            itemprop="url"
           >
-          <!-- .project-list__item-image -->
-          <div class="project-list__item-content">
-            <h3 itemprop="headline" class="project-list__item-title angle-forward">
-              <div class="angle-reverse">
-                {{ item.name }}
-              </div>
-            </h3>
-            <div class="project-list__item-faux-link angle-reverse">
-              <div class="angle-forward">
-                <span>
-                  View
-                </span>
-                <fa :icon="['fa', 'arrow-right']" />
+            <img
+              v-if="item.image"
+              :src="`/images/work/${item.image}`"
+              :alt="`A screenshot of the ${item.name} project`"
+              class="project-list__item-image"
+            >
+            <!-- .project-list__item-image -->
+            <div class="project-list__item-content">
+              <h3 itemprop="headline" class="project-list__item-title angle-forward">
+                <div class="angle-reverse">
+                  {{ item.name }}
+                </div>
+              </h3>
+              <div class="project-list__item-faux-link angle-reverse">
+                <div class="angle-forward">
+                  <span>
+                    View
+                  </span>
+                  <fa :icon="['fa', 'arrow-right']" />
+                </div>
               </div>
             </div>
-          </div>
-          <!-- .project-list__item-content -->
-        </a>
+            <!-- .project-list__item-content -->
+          </a>
+        </parallax-card>
         <div class="project-list__item-tasks">
           <p>
             {{ item.summary }}
@@ -131,7 +133,7 @@ useHead({
 }
 
 .project-list__item {
-  perspective: 680px;
+  // perspective: 680px;
 
   &:not(:last-of-type) {
     margin: 0 0 6rem 0;
@@ -171,7 +173,7 @@ useHead({
     }
 
     &:hover {
-      transform: rotateX(8deg);
+      // transform: rotateX(8deg);
 
       &:after {
         height: 70%;
@@ -220,9 +222,9 @@ useHead({
 .project-list__item-tasks {
   font-size: 1.3rem;
   background: linear-gradient(to top, transparent 10%, var(--color-mid) 100%);
-  margin: 0;
+  margin: 1rem 0 0 0;
   padding: 1.3rem;
-  border-radius: 0 0 3px 3px;
+  border-radius: var(--radius);
 
   h4 {
     --i: 0 0 0.8rem 0;

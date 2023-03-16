@@ -15,6 +15,7 @@ declare module '@vue/runtime-core' {
     Logo: typeof import('./components/Logo.vue')['default']
     Music: typeof import('./components/Music.vue')['default']
     PageTitle: typeof import('./components/PageTitle.vue')['default']
+    ParallaxCard: typeof import('./components/ParallaxCard.vue')['default']
     PostList: typeof import('./components/PostList.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
