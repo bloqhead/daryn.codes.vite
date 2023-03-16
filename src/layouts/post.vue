@@ -44,7 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import { VNodeRef } from 'vue'
+import type { VNodeRef } from 'vue'
 import { useRouter } from 'vue-router'
 import readingTime from '~/composables/readingTime'
 import FormatDate from '~/components/FormatDate.vue'
