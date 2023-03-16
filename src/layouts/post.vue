@@ -44,6 +44,7 @@
 </template>
 
 <script setup lang="ts">
+import { VNodeRef } from 'vue'
 import { useRouter } from 'vue-router'
 import readingTime from '~/composables/readingTime'
 import FormatDate from '~/components/FormatDate.vue'
@@ -53,14 +54,10 @@ const meta = computed((): any => {
 })
 
 const timeToRead = ref('')
-const postBody = ref('')
+const postBody = ref<VNodeRef>('')
 
 onMounted(() => {
   timeToRead.value = readingTime(postBody.value.textContent)
-})
-
-watch(timeToRead, (ev) => {
-  console.log(ev)
 })
 
 useHead({
@@ -100,7 +97,7 @@ useHead({
     },
     {
       name: 'twitter:data1',
-      value: '3 minutes',
+      value: timeToRead,
     },
   ],
 })

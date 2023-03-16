@@ -61,6 +61,20 @@
 <script setup lang="ts">
 import PageTitle from '~/components/PageTitle.vue'
 import BrandLogos from '~/components/BrandLogos.vue'
+
+const metaDescription = 'Daryn St. Pierre is a Front-End Web Developer based in St. Petersburg Florida.'
+const metaTitle = 'Daryn St. Pierre, Front-End Web Developer'
+
+useHead({
+  title: metaTitle,
+  meta: [
+    { name: 'description', content: metaDescription },
+    { name: 'og:title', content: metaTitle },
+    { name: 'og:description', content: metaDescription },
+    { name: 'twitter:title', content: metaTitle },
+    { name: 'twitter:description', content: metaDescription },
+  ],
+})
 </script>
 
 <style lang="scss" scoped></style>
