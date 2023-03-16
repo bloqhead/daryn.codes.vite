@@ -59,6 +59,10 @@ onMounted(() => {
   timeToRead.value = readingTime(postBody.value.textContent)
 })
 
+watch(timeToRead, (ev) => {
+  console.log(ev)
+})
+
 useHead({
   title: meta.value.title,
   meta: [
@@ -96,7 +100,7 @@ useHead({
     },
     {
       name: 'twitter:data1',
-      value: timeToRead,
+      value: '3 minutes',
     },
   ],
 })
