@@ -6,11 +6,12 @@
   >
     <span
       class="word"
-      :style="`--word: '${title}';`"
+      :data-word="title"
     >
       <template v-for="(i, idx) in chars" :key="idx">
         <span
-          :style="`--idx: ${idx}; --letter: '${i}';`"
+          :data-letter="i"
+          :style="`--idx: ${idx}`"
           class="letter"
         >
           {{ i }}
