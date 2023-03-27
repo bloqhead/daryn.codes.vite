@@ -117,9 +117,8 @@ useHead({
   max-width: 1320px;
 
   @apply
-    xl:grid
+    lg:grid
     lg:grid-cols-2
-    2xl:grid-cols-3
     gap-8;
 
   // link resets

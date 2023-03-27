@@ -4,9 +4,19 @@
     class="brush title"
     :class="{ 'is-loaded': isMounted }"
   >
-    <template v-for="(i, idx) in chars" :key="idx">
-      <span :style="`--idx: ${idx}`">{{ i }}</span>
-    </template>
+    <span
+      class="word"
+      :style="`--word: ${title}`"
+    >
+      <template v-for="(i, idx) in chars" :key="idx">
+        <span
+          :style="`--idx: ${idx}; --letter: ${i}`"
+          class="letter"
+        >
+          {{ i }}
+        </span>
+      </template>
+    </span>
   </h1>
 </template>
 
@@ -37,6 +47,7 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss" scoped>
+@use '../styles/mixins' as m;
 @use '../styles/variables' as v;
 
 .title {
@@ -48,6 +59,7 @@ onBeforeUnmount(() => {
 
   position: relative;
   overflow: visible;
+  white-space: break-spaces;
 
   @keyframes titleBefore {
     from {
@@ -117,7 +129,12 @@ onBeforeUnmount(() => {
     }
   }
 
-  > span {
+  .word {
+    display: inline-block;
+  }
+
+  .letter {
+    position: relative;
     display: inline-block;
     overflow: visible;
     white-space: break-spaces;
@@ -129,12 +146,11 @@ onBeforeUnmount(() => {
     transform-origin: center;
     transform: translateX(24rem) scale(0.5);
     opacity: 0;
-    filter: grayscale(1) brightness(2);
   }
 
   &.is-loaded {
 
-    > span {
+    .letter {
       transform: translateX(0) scale(1);
       opacity: 1;
       filter: grayscale(0) brightness(1);
@@ -142,7 +158,7 @@ onBeforeUnmount(() => {
   }
 
   @media (prefers-reduced-motion) {
-    > span {
+    .letter {
       transition: none !important;
       transform: translate(0,0) scale(1) !important;
       filter: none !important;
@@ -153,7 +169,7 @@ onBeforeUnmount(() => {
 
 .brush {
   font-family: var(--font-display);
-  font-size: 18vw;
+  font-size: clamp(8rem, 14rem, 18vw);
 
   // margin
   &:not([class*="mt-"])
@@ -175,10 +191,6 @@ onBeforeUnmount(() => {
   &:not([class*="pl-"])
   &:not([class*="p-"]) {
     padding: 0;
-  }
-
-  @media #{v.$bp-medium} {
-    font-size: 14rem;
   }
 }
 </style>

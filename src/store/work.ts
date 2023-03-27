@@ -3,6 +3,16 @@ import { acceptHMRUpdate, defineStore } from 'pinia'
 export const workStore = defineStore('work', () => {
   const work = ref([
     {
+      name: 'EldenSearch',
+      url: 'https://eldensearch.vercel.app/',
+      image: 'eldensearch.png',
+      summary: `
+        As a complimentary tool to the DEMIGODS API, EldenSearch provides an easy way to search and 
+        traverse the Elden Ring weapon stats library. Built with Vue 3, Vite, TypeScript, and 
+        TailwindCSS.
+      `,
+    },
+    {
       name: 'DEMIGODS',
       url: 'https://github.com/bloqhead/demigods',
       image: 'demigods.png',
