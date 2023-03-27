@@ -10,7 +10,7 @@
     >
       <template v-for="(i, idx) in chars" :key="idx">
         <span
-          :style="`--idx: ${idx}; --letter: ${i};`"
+          :style="`--idx: ${idx}; --letter: '${i}';`"
           class="letter"
         >
           {{ i }}
