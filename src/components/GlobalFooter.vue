@@ -18,12 +18,6 @@
               <span>Github</span>
             </a>
           </li>
-          <li>
-            <a rel="me" href="https://mstdn.social/@kryosleep">
-              <fa :icon="['fab', 'mastodon']" />
-              <span>Mastodon</span>
-            </a>
-          </li>
         </ul>
       </div>
 
