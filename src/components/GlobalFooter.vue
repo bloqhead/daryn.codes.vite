@@ -18,6 +18,12 @@
               <span>Github</span>
             </a>
           </li>
+          <li>
+            <a rel="me" href="https://www.linkedin.com/in/darynstpierre/">
+              <fa :icon="['fab', 'linkedin']" />
+              <span>LinkedIn</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -51,6 +57,11 @@
             <router-link to="/terms/">
               Terms
             </router-link>
+          </li>
+          <li>
+            <a href="https://resume.daryn.codes/">
+              Resume
+            </a>
           </li>
         </ul>
       </div>
