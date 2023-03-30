@@ -1,28 +1,22 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 import { useRouter } from 'vue-router'
-import type { Meta } from '~/types'
 
 export const postsStore = defineStore('posts', {
   actions: {
     getPosts() {
-      const items = useRouter().getRoutes()
+      return useRouter().getRoutes()
         .filter((i) => {
-          // get only journal entry routes that use the post layout
           return i.path.startsWith('/journal/') && i.meta?.layout === 'post'
         })
-        .sort((a: Meta, b: Meta): number => {
-          // sort the posts by ascending order
-          return new Date(a.meta.date).getTime() > new Date(b.meta.date).getTime() ? -1 : 1
+        .sort((a, b) => {
+          return +new Date(b.meta.date as number) - +new Date(a.meta.date as number)
         })
-        .map((i) => {
-          // give the url a trailing slash
+        .map((i): object => {
           return {
             ...i,
             path: `${i.path}/`,
           }
         })
-
-      return items
     },
   },
 })

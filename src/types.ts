@@ -16,6 +16,9 @@ export interface Music {
 
 export interface Meta {
   meta: {
-    [key: string]: any
+    date: Date | string | number
+    excerpt: string
+    layout?: string
+    title: string
   }
 }

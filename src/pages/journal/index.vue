@@ -11,17 +11,17 @@
     <div class="journal-list">
       <ul class="m-0 p-0">
         <li
-          v-for="(v, k) in posts"
-          :key="k"
+          v-for="(route, idx) in posts"
+          :key="idx"
           class="mb-4"
         >
           <h3 class="journal-list__title">
-            <router-link :to="v.path">
-              {{ v.meta.title }}
+            <router-link :to="route.path">
+              {{ route.meta.title }}
             </router-link>
           </h3>
           <div class="journal-entry__postdate">
-            <format-date :date="getDateAsString(v.meta.date)" />
+            <format-date :date="route.meta.date" />
           </div>
         </li>
       </ul>
@@ -30,11 +30,13 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import FormatDate from '~/components/FormatDate.vue'
 import { postsStore } from '~/store/posts'
 
-const posts = postsStore().getPosts()
-const getDateAsString = (v: any) => v as string
+const posts = computed((): any => {
+  return postsStore().getPosts()
+})
 
 const metaDescription = 'Topics that span the gamut of web development and life.'
 const metaTitle = 'Journal'

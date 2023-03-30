@@ -4,7 +4,7 @@
       <fa :icon="['fa', 'clock']" />
     </div>
     <div>
-      <time :datetime="date">
+      <time :datetime="niceDate">
         {{ niceDate }}
       </time>
     </div>
@@ -14,7 +14,12 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
 
-const props = defineProps<{ date: string }>()
+const props = defineProps({
+  date: {
+    type: [Date, String, Number],
+    required: true,
+  },
+})
 
 const niceDate = computed((): string => {
   const rawDate = new Date(props.date)
