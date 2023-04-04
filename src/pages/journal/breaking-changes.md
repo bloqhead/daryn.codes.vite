@@ -12,7 +12,7 @@ meta:
 
 ## Tough break
 
-Another Saturday skate session rolls around. We bomb the Pier hill, speedskate up and down the Pier, and work on technical skills &mdash; something I would mentor my fellow skaters on occasionally. I grew up on ice skates growing up on Cape Cod. Instead of wheels and pavement, it was blades and frozen cranberry bogs. Skating is in my blood.
+Another Saturday skate session rolls around. We bomb the Pier hill, speedskate up and down the Pier, and work on technical skills &mdash; something I would mentor my fellow skaters on occasionally. I grew up on ice skates living on Cape Cod. Instead of wheels and pavement, it was blades and frozen cranberry bogs. Skating is in my blood.
 
 After our session ends, we part ways to enjoy the rest of our Saturdays doing chores, relaxing, or grabbing breakfast. I decide to take a bit of a long cooldown and continue to casually skate by the water. As I'm trying to stop on a strange part of the sidewalk where 3 paths intersect, one of the worst things a programmer can experience happens: 
 
@@ -22,7 +22,7 @@ I've always been cool and collected in emergency situations. I look at my now-cr
 
 After a 4-hour whirlwind that involved fentanyl, morphine, being put under, and having my arm set in a splint, I'm finally ready to go home and let this new challenge set in until surgery.
 
-### Surgery
+### Surgery day
 
 Fast forward 1 week later to surgery day. My doctor is amazing and has an impressive resume. A pioneer of sports medicine in Florida, he was appointed to the NFL Neutral Physician Examiners Panel, and served as the team doctor for the Miami Heat and Miami Sol. I got lucky.
 
@@ -46,7 +46,7 @@ Working with an amazing Physical Therapist originally from the Netherlands, my f
 
 ## The layoff
 
-It's Friday March 10. I wake up and start my routine. Coffee, memes, brush my teeth, plan my day's tasks in my head. I try to log into my work laptop but am greeted by the infamous administrator lockout screen on macOS. What the hell is going on? Try to access work Slack on my phone to ping someone. No dice. It kicks me out immediately. I get a message from a now-former colleague in another Slack we're both members of:
+It's Friday March 9. I wake up and start my routine. Coffee, internet memes, brush my teeth, plan my day's tasks in my head. I try to log into my work laptop but am greeted by the infamous administrator lockout screen on macOS. What the hell is going on? Try to access work Slack on my phone to ping someone. No dice. It kicks me out immediately. I get a message from a now-former colleague in another Slack we're both members of:
 
 > "We've been laid off."
 
