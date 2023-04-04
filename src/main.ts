@@ -7,6 +7,9 @@ import type { FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
 
+// Spline
+// import Spline from 'spline-vue/v3'
+
 import {
   faArrowRight,
   faClock,
@@ -97,6 +100,7 @@ export const createApp = ViteSSG(
   },
   (ctx) => {
     ctx.app.component('fa', FontAwesomeIcon as unknown as DefineComponent<FontAwesomeIconProps>)
+    // ctx.app.component('spline', Spline)
 
     // install all modules under `modules/`
     Object.values(import.meta.glob<{ install: UserModule }>('./modules/*.ts', { eager: true }))

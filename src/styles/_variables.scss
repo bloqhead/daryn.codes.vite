@@ -34,6 +34,7 @@ $light: #fff;
 $mid: #222;
 $shade: #777;
 $dark: #000;
+$fog: #eee;
 
 // Brand colors
 $github: #c6cbd1;
@@ -96,6 +97,7 @@ $colors-site-named: (
   'mid': $mid,
   'shade': $shade,
   'dark': $dark,
+  'fog': $fog,
 );
 
 $colors-brand: (

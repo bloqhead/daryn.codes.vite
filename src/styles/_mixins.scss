@@ -71,6 +71,19 @@
   }
 }
 
+@mixin textPanel {
+  background-color: rgba(v.$mid, 0.85);
+  font-size: 1.5em;
+  padding: var(--global-component-padding);
+  border-radius: 2rem;
+  text-wrap: balance;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 @mixin panel(
   $color: var(--color-pink),
   $background: var(--panel-bg),
@@ -100,13 +113,6 @@
     bottom: 0; left: 0;
     border-radius: 0 0 $border-radius $border-radius;
   }
-}
-
-@mixin pattern($color: "teal") {
-  background-image: url("#{$img-path}/patterns/pattern_#{$color}.svg");
-  background-size: 576px 576px;
-  background-repeat: repeat;
-  background-attachment: fixed;
 }
 
 @mixin cleartext {

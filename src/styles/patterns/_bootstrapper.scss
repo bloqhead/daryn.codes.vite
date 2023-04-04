@@ -6,3 +6,14 @@ img {
   max-width: 100% !important;
   height: auto;
 }
+
+picture {
+  display: block;
+
+  img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}

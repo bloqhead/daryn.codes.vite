@@ -12,6 +12,8 @@ declare module '@vue/runtime-core' {
     FormatDate: typeof import('./components/FormatDate.vue')['default']
     GlobalFooter: typeof import('./components/GlobalFooter.vue')['default']
     GlobalHeader: typeof import('./components/GlobalHeader.vue')['default']
+    JournalImage: typeof import('./components/JournalImage.vue')['default']
+    JournalIntro: typeof import('./components/JournalIntro.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
     Music: typeof import('./components/Music.vue')['default']
     PageTitle: typeof import('./components/PageTitle.vue')['default']
@@ -20,5 +22,6 @@ declare module '@vue/runtime-core' {
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Skateboard: typeof import('./components/Skateboard.vue')['default']
   }
 }

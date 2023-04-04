@@ -2,7 +2,7 @@
 // Browser chrome
 //
 
-.browser-chrome {
+@mixin browserChrome {
   overflow: hidden;
 
   > img {
@@ -42,4 +42,8 @@
         transparent 51%
       );
   }
+}
+
+.browser-chrome {
+  @include browserChrome;
 }

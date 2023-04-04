@@ -13,6 +13,7 @@ body {
 
 html {
   font-size: 62.5%;
+  text-wrap: balance;
 
   &.has-active-menu {
     overflow: hidden !important;
@@ -23,11 +24,11 @@ body {
   @include m.cleartext;
 
   min-height: 100vh;
-  color: #eee;
+  color: var(--color-fog);
   font-weight: normal;
   line-height: 2;
   font-family: var(--font-open-sans);
-  background-color: #000;
+  background-color: var(--color-dark);
   background-image: url(t.$topography);
   background-attachment: fixed;
 

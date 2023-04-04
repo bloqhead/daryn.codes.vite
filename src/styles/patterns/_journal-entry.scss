@@ -4,19 +4,55 @@
 
 :root {
   --journal-item-spacing: 3rem;
+  --quote-height: 4rem;
+  --quote-accent: var(--color-pink);
+  --quote-padding: 1rem;
 }
 
 .journal-entry {
 
   blockquote {
-    padding: 1rem 3rem;
-    border-left: 5px solid var(--color-mid);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(v.$mid, 0.25);
+    backdrop-filter: blur(2px);
     max-width: 90%;
+    padding: 1.5rem 3rem;
     margin: 2rem auto;
+    font-size: 1.8rem;
+    border-left: 5px solid var(--color-pink);
 
     p:last-of-type {
       margin-bottom: 0;
       padding-bottom: 0;
+    }
+
+    @media #{v.$bp-medium} {
+      max-width: 75%;
+      font-size: 2.5rem;
+      margin: 4rem auto;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: calc(var(--quote-padding) * -7);
+        content: "";
+        height: var(--quote-height);
+        width: calc(var(--quote-height) * 1.1);
+        background-image:
+          radial-gradient(
+            circle at bottom right,
+            transparent calc(var(--quote-height) / 4 - 1px),
+            var(--quote-accent, #000) calc(var(--quote-height) / 4) calc(var(--quote-height) / 2), 
+            transparent calc(var(--quote-height) / 2 + 1px)
+          ),
+          linear-gradient(var(--quote-accent, #000), var(--quote-accent, #000));
+        background-size: calc(var(--quote-height) / 2) calc(var(--quote-height) / 2);
+        background-position: top left, bottom left;
+        background-repeat: space no-repeat;
+      }
     }
   }
 }
@@ -84,12 +120,12 @@
 
 .journal-entry__body {
   
-  img {
+  > div > img {
     display: block;
     margin: 1rem auto;
   }
 
-  img:not([class]) {
+  > div > img:not([class]) {
     // border: 2px solid $pink;
     background-color: rgba(#000, 0.5);
     padding: 0.5rem;
