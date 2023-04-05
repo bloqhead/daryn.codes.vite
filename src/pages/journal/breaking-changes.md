@@ -56,7 +56,7 @@ I reel for a bit and then the thoughts roll in. No employment means no insurance
 
 ### A reality check
 
-Every event leading up to now has sent me down a mutltitude of mental highways ranging from depression, to anger, to nihilism, but at the end of all of it, all that can be done is to move forward. While we sit at our desks, in our vehicles, are out on walks, or wherever, we need to acknowledge that everyone everywhere is fighting some battle or dealing with some form of adversity. 
+Every event leading up to now has sent me down a multitude of mental highways ranging from depression, to anger, to nihilism, but at the end of all of it, all that can be done is to move forward. While we sit at our desks, in our vehicles, are out on walks, or wherever, we need to acknowledge that everyone everywhere is fighting some battle or dealing with some form of adversity. 
 
 When things are not clear and emails and Slack messages won't cut it, get on a video call. Call out wins and successes, not just the mistakes. Don't ask people how they're doing unless you mean it. When a project or feature launches, celebrate it. Don't simply move onto the next task. Be empathetic and help lift others up.
 
