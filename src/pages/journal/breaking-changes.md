@@ -42,7 +42,7 @@ Like any good American, my first question to myself is "how am I going to get an
 
 Despite breaking my wrist, enduring some of the most agonizing pain of my life (I describe it as "my arm being crushed in a vice while on fire"), and facing uncertainty when it comes to work performance, I somehow kept a positive, upbeat outlook on things. I perceived it as a unique challenge that required equally unique solutions. I used it as a talking point when people asked, and was more than happy to show off my keyboard setup. It's a common pattern in my field and I found myself relating it to my problem solving skills elsewhere. It was oddly familiar and yet entirely foreign.
 
-Working with an amazing Physical Therapist, my flexibility has been consistently improving, the pain has reduced, and it's starting to feel like a normal, useful arm again. New and improved with a 4 inch scar, and some metal hardware, I can _finally_ say I'm metal as fuck.
+Working with an amazing Physical Therapist, my flexibility has been consistently improving, the pain has reduced, and it's starting to feel like a normal, useful arm again. New and improved with a 4 inch scar and some hardware, I can _finally_ say I'm metal as fuck.
 
 ## The layoff
 
