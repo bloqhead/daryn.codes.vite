@@ -52,7 +52,7 @@ It's Friday March 9. I wake up and start my routine. Coffee, internet memes, bru
 
 Glowing review, tons of work in motion, very positive feedback from a client after a feature release... and then nothing.
 
-I reel for a bit and then the thoughts roll in. No employment means no insurance soon, which means physical therapy appointments are out-of-pocket only. I do the adult things. Cancel my birthday plans, go to my last PT appointments, and try my best not to let the vice of American capitalism not crush me.
+I reel for a bit and then the thoughts roll in. No employment means no insurance soon, which means physical therapy appointments are out-of-pocket only. I do the adult things. Cancel my birthday plans, go to my last PT appointments, and try my best not to let the vice of American capitalism crush me.
 
 ### A reality check
 
