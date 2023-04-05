@@ -1,10 +1,10 @@
 <template>
   <div class="music">
-    <div v-if="error">
+    <div v-if="hasError">
       <p>Error retrieving scrobble data.</p>
     </div>
     <div
-      v-if="items && !error"
+      v-if="items && !hasError"
       class="music__content"
     >
       <ul class="music__items">
@@ -30,30 +30,34 @@
 </template>
 
 <script setup lang="ts">
-import axios from 'axios'
 import type { Music } from '~/types'
 
 const items = ref<Music>()
-const error = ref<Boolean>(false)
+const hasError = ref<Boolean>(false)
 
-const fetchLatestScrobbles = () => {
-  axios
-    .get('https://ws.audioscrobbler.com/2.0/', {
-      params: {
-        method: 'user.getlovedtracks',
-        user: 'kryosleep',
-        api_key: import.meta.env.VITE_LASTFM_API_KEY,
-        format: 'json',
-        limit: 3,
-      },
+const fetchLatestScrobbles = async () => {
+  const userName = 'kryosleep'
+  const apiKey = import.meta.env.VITE_LASTFM_API_KEY
+  const url = `https://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=${userName}&api_key=${apiKey}&limit=3&nowplaying=false&format=json`
+
+  try {
+    const res = await fetch(url, {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-cache',
     })
-    .then((res) => {
-      items.value = res.data.lovedtracks.track
-    })
-    .catch((err) => {
-      error.value = true
-      throw err
-    })
+
+    if (res.ok) {
+      const json = await res.json()
+      items.value = await json.lovedtracks.track
+    } else {
+      hasError.value = true
+      throw new Error('error')
+    }
+  } catch(error) {
+    hasError.value = true
+    console.log(error)
+  }
 }
 
 onMounted(() => fetchLatestScrobbles())

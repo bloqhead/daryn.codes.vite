@@ -4,13 +4,12 @@
 
     <div class="new-intro">
       <div class="new-intro__photo">
-        <picture>
-          <img
-            itemprop="photo"
-            src="/images/me-new.jpg"
-            alt="A picture of Daryn with long hair"
-          >
-        </picture>
+        <image-loader 
+          image="/images/me-new.jpg"
+          alt="A picture of Daryn with long hair"
+          :width="300"
+          :height="251"
+        />
       </div>
       <div class="new-intro__content">
         <div class="gw-wrapper">
@@ -71,6 +70,7 @@ import { ref } from 'vue'
 import GlitchedWriter from 'vue-glitched-writer'
 import PageTitle from '~/components/PageTitle.vue'
 import BrandLogos from '~/components/BrandLogos.vue'
+import ImageLoader from '~/components/ImageLoader.vue'
 
 // GW text array
 const gwText = ref([

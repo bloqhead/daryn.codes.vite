@@ -17,12 +17,14 @@
             class="project-list__link browser-chrome"
             itemprop="url"
           >
-            <img
+            <image-loader
               v-if="item.image"
-              :src="`/images/work/${item.image}`"
+              :image="`/images/work/${item.image}`"
               :alt="`A screenshot of the ${item.name} project`"
+              :width="443"
+              :height="223"
               class="project-list__item-image"
-            >
+            />
             <!-- .project-list__item-image -->
             <div class="project-list__item-content">
               <h3 itemprop="headline" class="project-list__item-title angle-forward">
@@ -87,6 +89,7 @@
 
 <script setup lang="ts">
 import { workStore } from '~/store/work'
+import ImageLoader from '~/components/ImageLoader.vue'
 
 // Pinia actions for fetching data
 const work = workStore().getWork()
@@ -132,7 +135,6 @@ useHead({
 }
 
 .project-list__item {
-  // perspective: 680px;
 
   &:not(:last-of-type) {
     margin: 0 0 6rem 0;
@@ -212,10 +214,7 @@ useHead({
   margin: 0;
   width: 100%;
   height: auto;
-
-  img {
-    aspect-ratio: 16 / 9;
-  }
+  background-color: #000;
 }
 
 .project-list__item-tasks {

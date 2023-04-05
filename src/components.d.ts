@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     FormatDate: typeof import('./components/FormatDate.vue')['default']
     GlobalFooter: typeof import('./components/GlobalFooter.vue')['default']
     GlobalHeader: typeof import('./components/GlobalHeader.vue')['default']
+    ImageLoader: typeof import('./components/ImageLoader.vue')['default']
     JournalImage: typeof import('./components/JournalImage.vue')['default']
     JournalIntro: typeof import('./components/JournalIntro.vue')['default']
     Logo: typeof import('./components/Logo.vue')['default']
