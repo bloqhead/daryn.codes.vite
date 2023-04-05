@@ -18,7 +18,7 @@ After our session ends, we part ways to enjoy the rest of our Saturdays doing ch
 
 **I fall and break my wrist.**
 
-I've always been cool and collected in emergency situations. I look at my now-crooked wrist, determine it's indeed broken using the very scientific method of looking at it, and have a stranger call an ambulance for me. I make sure to tell them it's non-emergency since I'm not bleeding to death on the sidewalk. I call my wife and tell her the news in my typical deadpan, trying-not-to-panic-anyone fashion.
+I've always been cool and collected in emergency situations.I think its a byproduct of ADHD. I assess my now-crooked wrist, determine it's indeed broken using the very scientific method of looking at it, and have a stranger call an ambulance for me. I make sure to tell them it's non-emergency since I'm not bleeding to death on the sidewalk. I call my wife and tell her the news in my typical deadpan, trying-not-to-panic-anyone fashion.
 
 After a 4-hour whirlwind that involved fentanyl, morphine, being put under, and having my arm set in a splint, I'm finally ready to go home and let this new challenge set in until surgery.
 
@@ -34,7 +34,7 @@ Fast forward 1 week later to surgery day. My doctor is amazing and has an impres
 
 ### Recovery
 
-Like any good American, my first question to myself is "how am I going to get any work done?" I formulate approaches using voice recognition software, one-handed keyboards, etc. I eventually settle for a cheaper entry into the split keyboard game: the [Kinesis Freestyle2 for macOS](https://kinesis-ergo.com/keyboards/freestyle2-keyboard/). An unexpected but welcome purchase. I'd wanted to try a split keyboard and what better time to try it? It started off a little rough since it was completely new, but quickly became muscle memory.
+Like any good American, my first question to myself is "how am I going to get any work done?" I formulate approaches using voice recognition software, one-handed keyboards, etc. I eventually settle for a cheaper entry into the split keyboard game: the [Kinesis Freestyle2 for macOS](https://kinesis-ergo.com/keyboards/freestyle2-keyboard/). An unexpected but welcome purchase. I'd wanted to try a split keyboard and what better time to take the plunge? It started off a little rough since it was completely new, but quickly became muscle memory.
 
 <journal-image caption="Kinesis Freestyle2 with the left side propped up on a tablet stand.">
   <img src="/images/journal/kinesis-freestyle2-mac.jpg" alt="A picture of my Kinesis Freestyle2 macOS keyboard with the left side mounted on a makeshift stand" />
