@@ -45,8 +45,8 @@ const props = defineProps({
 })
 
 const styles = {
-  minWidth: `${props.width}px`,
-  minHeight: `${props.height}px`,
+  width: `${props.width}px`,
+  height: `${props.height}px`,
 }
 
 const { isLoading, error } = useImage({
