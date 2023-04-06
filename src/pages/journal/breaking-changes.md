@@ -18,7 +18,7 @@ After our session ends, we part ways to enjoy the rest of our Saturdays doing ch
 
 **I fall and break my wrist.**
 
-I've always been cool and collected in emergency situations.I think its a byproduct of ADHD. I assess my now-crooked wrist, determine it's indeed broken using the very scientific method of looking at it, and have a stranger call an ambulance for me. I make sure to tell them it's non-emergency since I'm not bleeding to death on the sidewalk. I call my wife and tell her the news in my typical deadpan, trying-not-to-panic-anyone fashion.
+I've always been cool and collected in emergency situations. I think its a byproduct of ADHD. I assess my now-crooked wrist, determine it's indeed broken using the very scientific method of looking at it, and have a stranger call an ambulance for me. I make sure to tell them it's non-emergency since I'm not bleeding to death on the sidewalk. I call my wife and tell her the news in my typical deadpan, trying-not-to-panic-anyone fashion.
 
 After a 4-hour whirlwind that involved fentanyl, morphine, being put under, and having my arm set in a splint, I'm finally ready to go home and let this new challenge set in until surgery.
 
