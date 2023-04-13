@@ -2,6 +2,9 @@ import { ViteSSG } from 'vite-ssg'
 import { setupLayouts } from 'virtual:generated-layouts'
 import type { DefineComponent } from 'vue'
 
+// Vercel analytics
+import { inject } from '@vercel/analytics';
+
 // Font Awesome
 import type { FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -9,6 +12,9 @@ import { config, library } from '@fortawesome/fontawesome-svg-core'
 
 // Spline
 // import Spline from 'spline-vue/v3'
+
+// init Vercel analytics
+inject();
 
 import {
   faArrowRight,
