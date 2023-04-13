@@ -5,9 +5,7 @@
       class="image-loader__loading"
       :style="styles"
     >
-      <div
-        class="image-loader__loading__icon"
-        role="presentation"></div>
+      <div class="image-loader__loading__icon" role="presentation" />
     </div>
     <div
       v-else-if="error"
@@ -20,7 +18,7 @@
       :src="props.image"
       :alt="props.alt"
       :style="styles"
-    />
+    >
   </picture>
 </template>
 
@@ -53,9 +51,7 @@ const styles = {
 
 const { isLoading, error } = useImage({
   src: props.image,
-  }, {
-    delay: 2000,
-  })
+}, { delay: 2000 })
 </script>
 
 <style lang="scss" scoped>
@@ -77,7 +73,7 @@ const { isLoading, error } = useImage({
   }
 
   &__loading {
-    
+
     &__icon {
       --i: 32px;
 
@@ -106,7 +102,6 @@ const { isLoading, error } = useImage({
       }
     }
   }
-
 
   &__error {
 

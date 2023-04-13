@@ -50,13 +50,14 @@ const fetchLatestScrobbles = async () => {
     if (res.ok) {
       const json = await res.json()
       items.value = await json.lovedtracks.track
-    } else {
+    }
+    else {
       hasError.value = true
       throw new Error('error')
     }
-  } catch(error) {
+  }
+  catch (error) {
     hasError.value = true
-    console.log(error)
   }
 }
 

@@ -4,7 +4,7 @@
 
     <div class="new-intro">
       <div class="new-intro__photo">
-        <image-loader 
+        <image-loader
           image="/images/me-new.jpg"
           alt="A picture of Daryn with long hair"
           :width="300"
