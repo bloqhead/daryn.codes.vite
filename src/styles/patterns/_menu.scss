@@ -46,7 +46,7 @@
     padding: 0.25rem 2rem;
     text-decoration: none;
     outline: none;
-    transition: transform 150ms ease-in-out;
+    transition: all 250ms ease-in-out;
 
     &:hover {
       color: #fff;
@@ -65,8 +65,8 @@
         height: 3px;
         transform: scaleX(0) scaleY(1);
         transition:
-          transform 300ms var(--base-easing),
-          background 300ms var(--base-easing);
+          transform 250ms var(--base-easing),
+          background 250ms var(--base-easing);
       }
 
       &.router-link-active:after {
@@ -121,10 +121,14 @@
   }
 
   @media #{v.$bp-medium} {
+    position: fixed;
+    z-index: 999;
+    top: 2rem;
+    right: 2rem;
+    overflow: hidden;
     justify-content: flex-end;
-    position: relative;
-    top: auto;
-    transition: transform 500ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    transform-origin: center;
 
     ul {
       display: flex;
@@ -135,18 +139,18 @@
     }
 
     &:not(.in-view) {
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      width: 100vw;
+      right: 50%;
+      transform: translateX(50%);
       justify-content: center;
-      background-color: rgba(v.$mid, 0.5);
+      background-color: rgba(v.$mid, 0.75);
       backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      // border: 1px solid rgba(v.$shade, 0.25);
+      font-size: 1.5rem;
 
       .menu__link {
-        padding: 0.25em 1em;
-        transform: scale(0.75);
+        padding: 0.75em 1.5em;
+        // transform: scale(0.75);
       }
     }
   }

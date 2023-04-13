@@ -5,7 +5,9 @@
       class="image-loader__loading"
       :style="styles"
     >
-      <div class="image-loader__loading__icon" role="presentation"></div>
+      <div
+        class="image-loader__loading__icon"
+        role="presentation"></div>
     </div>
     <div
       v-else-if="error"
