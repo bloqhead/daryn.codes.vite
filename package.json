@@ -22,7 +22,6 @@
     "@fortawesome/vue-fontawesome": "^3.0.1",
     "@splinetool/runtime": "^0.9.280",
     "@types/animejs": "^3.1.5",
-    "@vercel/analytics": "^0.1.11",
     "@vueuse/core": "^9.1.0",
     "@vueuse/head": "^0.7.9",
     "animejs": "^3.2.1",
