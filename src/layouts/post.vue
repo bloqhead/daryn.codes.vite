@@ -29,7 +29,7 @@
           <fa :icon="['fa', 'glasses']" />
         </div>
         <div>
-          <p>{{ ttr }}</p>
+          <p>{{ timeToRead }}</p>
         </div>
       </div>
       <div>
@@ -52,7 +52,7 @@ const meta = computed((): any => {
   return useRouter().currentRoute.value.meta
 })
 
-const ttr = computed((): string => {
+const timeToRead = computed((): string => {
   const label = meta.value.ttr > 1 ? 'minutes' : 'minute'
   return `${meta.value.ttr} ${label}`
 })
@@ -98,7 +98,7 @@ useHead({
     },
     {
       name: 'twitter:data1',
-      value: ttr,
+      value: timeToRead,
     },
   ],
 })
