@@ -4,6 +4,7 @@ meta:
   title: Rapid Prototyping With Vue
   date: 2019-04-17
   excerpt: Learn to quickly prototype out standalone components using Vue.js 3
+  ttr: 4
 </route>
 
 When you're like me (and a ton of other devs), you'll get an idea in your head that you want to start working on immediately. So you might clone a boilerplate you have stored in Github, spin up a new Pen (my usual plan of attack), serve an index file via Node, or one of a million other ways. Sometimes the effort to finally get to working on your idea can be a chore or perhaps you're lazy like myself. From my experience, those small ideas often evolve into projects that go into a Github repo and are comprised of multiple asset files.

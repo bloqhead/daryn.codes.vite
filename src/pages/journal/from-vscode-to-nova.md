@@ -5,6 +5,7 @@ meta:
   date: 2020-11-11
   slug: from-vscode-to-nova
   excerpt: Your go-to guide for switching from VSCode to Panic's new Nova editor
+  ttr: 5
 </route>
 
 With the surge of 100% free editors flooding the market that are built on Electron, it’s hard to justify jumping ship from tools like VS Code, Atom, etc. As Panic themselves say on the [Nova website](https://nova.app/), “[…] Mac apps are a bit of a lost art.” As a developer that came from editors like Coda, Espresso, TextMate, and Sublime, this resonates with me heavily. I always loved the snappiness and responsiveness of native macOS editors.

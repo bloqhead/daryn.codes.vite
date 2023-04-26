@@ -4,6 +4,7 @@ meta:
   title: SalesForce Pardot Form Handling With Vue.js
   date: 2020-01-25
   excerpt: An easy and sane approach to form handling with Vue.js and SalesForce Pardot
+  ttr: 4
 </route>
 
 I am writing this short piece to save some poor souls out there from the heartache and hours of pure, unadulterated rage I faced when I came to the realization that SalesForce's Pardot form handlers do not accept your basic AJAX POST functions like every other sane piece of software out in the world does. This is a quick rundown on how to handle things in a sane manner.

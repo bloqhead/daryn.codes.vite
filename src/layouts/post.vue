@@ -21,7 +21,7 @@
 
     <div class="journal-entry__info">
       <div
-        v-show="timeToRead"
+        v-show="meta.ttr"
         class="journal-entry__ttr"
         title="Time to read"
       >
@@ -29,7 +29,7 @@
           <fa :icon="['fa', 'glasses']" />
         </div>
         <div>
-          <p>{{ timeToRead }}</p>
+          <p>{{ ttr }}</p>
         </div>
       </div>
       <div>
@@ -46,19 +46,20 @@
 <script setup lang="ts">
 import type { VNodeRef } from 'vue'
 import { useRouter } from 'vue-router'
-import readingTime from '~/composables/readingTime'
 import FormatDate from '~/components/FormatDate.vue'
 
 const meta = computed((): any => {
   return useRouter().currentRoute.value.meta
 })
 
-const timeToRead = ref('')
-const postBody = ref<VNodeRef>('')
-
-onMounted(() => {
-  timeToRead.value = readingTime(postBody.value.textContent)
+const ttr = computed((): string => {
+  const label = meta.value.ttr > 1 ? 'minutes' : 'minute'
+  return `${meta.value.ttr} ${label}`
 })
+
+const postBody = ref<VNodeRef>('')
+const encodedTitle = encodeURIComponent(meta.value.title)
+const ogImage = `https://kryog.vercel.app/api/og?title=${encodedTitle}&ttr=${meta.value.ttr}`
 
 useHead({
   title: meta.value.title,
@@ -77,7 +78,7 @@ useHead({
     },
     {
       property: 'og:image',
-      content: meta.value.image || 'https://daryn.codes/og@2x.png',
+      content: ogImage,
     },
     {
       property: 'og:type',
@@ -85,7 +86,7 @@ useHead({
     },
     {
       name: 'twitter:image',
-      content: meta.value.image || 'https://daryn.codes/og@2x.png',
+      content: ogImage,
     },
     {
       name: 'twitter:description',
@@ -97,7 +98,7 @@ useHead({
     },
     {
       name: 'twitter:data1',
-      value: timeToRead,
+      value: meta.value.ttr,
     },
   ],
 })

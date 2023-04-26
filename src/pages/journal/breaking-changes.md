@@ -4,6 +4,7 @@ meta:
   title: Breaking Changes
   date: 2023-04-03
   excerpt: A broken wrist, a layoff, and everything in between.
+  ttr: 5
 </route>
 
 <journal-intro>

@@ -4,6 +4,7 @@ meta:
   title: content-visibility Overflow Bug
   date: 2021-01-26
   excerpt: While trying out content-visibility for a project, I discovered an a11y flaw.
+  ttr: 2
 </route>
 
 If you keep up with the latest CSS spec and features, you've probably already heard about `content-visibility`, which shipped recently in Chrome v85. I'll allow [Una Kravets and Vladimir Levin](https://web.dev/content-visibility/) to explain it:
