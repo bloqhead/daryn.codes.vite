@@ -98,7 +98,7 @@ useHead({
     },
     {
       name: 'twitter:data1',
-      value: meta.value.ttr,
+      value: ttr,
     },
   ],
 })
