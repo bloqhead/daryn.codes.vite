@@ -59,6 +59,11 @@ body {
   transition: 
     opacity 0.5s cubic-bezier(0.55, 0, 0.1, 1), 
     transform 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+
+  &:not([class*="slide-"]) {
+    opacity: 1;
+    transform: translate(0,0);
+  }
 }
 
 .page-footer__email-link {

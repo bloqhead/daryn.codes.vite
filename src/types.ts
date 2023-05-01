@@ -20,5 +20,7 @@ export interface Meta {
     excerpt: string
     layout?: string
     title: string
+    ttr?: string | number
+    state?: object | Array<{}>
   }
 }

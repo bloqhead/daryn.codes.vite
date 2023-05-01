@@ -28,12 +28,15 @@
         <div>
           <fa :icon="['fa', 'glasses']" />
         </div>
-        <div>
+        <div v-if="timeToRead">
           <p>{{ timeToRead }}</p>
         </div>
       </div>
       <div>
-        <format-date :date="meta.date" />
+        <format-date
+          v-if="meta && meta.date"
+          :date="meta.date"
+        />
       </div>
     </div>
 
@@ -44,21 +47,28 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
 import type { VNodeRef } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
 import FormatDate from '~/components/FormatDate.vue'
 
-const meta = computed((): any => {
-  return useRouter().currentRoute.value.meta
-})
+const meta = ref()
+const postBody = ref<VNodeRef>('')
+
+// update meta data on each route change
+watch(useRoute(), (route) => {
+  meta.value = route.meta
+}, { immediate: true })
 
 const timeToRead = computed((): string => {
   const label = meta.value.ttr > 1 ? 'minutes' : 'minute'
   return `${meta.value.ttr} ${label}`
 })
 
-const postBody = ref<VNodeRef>('')
-const encodedTitle = encodeURIComponent(meta.value.title)
+const encodedTitle = computed((): string => {
+  return encodeURIComponent(meta.value.title)
+})
+
 const ogImage = `https://kryog.vercel.app/api/og?title=${encodedTitle}&ttr=${meta.value.ttr}`
 
 useHead({
