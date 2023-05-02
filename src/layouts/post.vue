@@ -61,8 +61,8 @@ watch(useRoute(), (route) => {
 }, { immediate: true })
 
 const timeToRead = computed((): string => {
-  const label = meta.value.ttr > 1 ? 'minutes' : 'minute'
-  return `${meta.value.ttr} ${label}`
+  const time = meta.value.ttr
+  return `${time} minute${time > 1 && 's'}`
 })
 
 const encodedTitle = computed((): string => {
