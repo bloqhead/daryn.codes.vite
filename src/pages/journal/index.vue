@@ -21,7 +21,7 @@
             </router-link>
           </h3>
           <div class="journal-entry__postdate">
-            <format-date :date="route.meta.date" />
+            <format-date :date="dateToString(route.meta.date)" />
           </div>
         </li>
       </ul>
@@ -35,6 +35,8 @@ import { postsStore } from '~/store/posts'
 import FormatDate from '~/components/FormatDate.vue'
 
 const posts = computed(() => postsStore().posts)
+
+const dateToString = (date: any) => date as string
 
 const metaDescription = 'Topics that span the gamut of web development and life.'
 const metaTitle = 'Journal'

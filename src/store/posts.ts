@@ -11,7 +11,7 @@ export const postsStore = defineStore('postsStore', () => {
       .sort((a, b) => {
         return +new Date(b.meta.date as number) - +new Date(a.meta.date as number)
       })
-      .map((i): object => {
+      .map((i) => {
         return { ...i, path: `${i.path}/` }
       })
   })
