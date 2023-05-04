@@ -21,7 +21,6 @@
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { siteStore } from '~/store'
-
 import GlobalFooter from '~/components/GlobalFooter.vue'
 import GlobalHeader from '~/components/GlobalHeader.vue'
 

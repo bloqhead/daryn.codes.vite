@@ -31,8 +31,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import FormatDate from '~/components/FormatDate.vue'
 import { postsStore } from '~/store/posts'
+import FormatDate from '~/components/FormatDate.vue'
 
 const posts = computed(() => postsStore().posts)
 
