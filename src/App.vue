@@ -20,13 +20,17 @@
 <script setup lang="ts">
 import { watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { siteStore } from '~/store'
+
 import GlobalFooter from '~/components/GlobalFooter.vue'
 import GlobalHeader from '~/components/GlobalHeader.vue'
 
 const store = siteStore()
 
 // update the stored tagline on route change
-watch(useRoute(), () => store.setTagline(), { immediate: true })
+watch(useRoute(), () => {
+  store.setTagline()
+}, { immediate: true })
 
 useHead({
   meta: [

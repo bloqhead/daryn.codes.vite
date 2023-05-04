@@ -1,45 +1,40 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
-export const siteStore = defineStore('site', () => {
-  const tagline = ref<string>()
+export const siteStore = defineStore('siteStore', () => {
+  const tagline = ref<string>('')
+
+  const titles = ref([
+    'Front-End Web Developer',
+    'JAMStack\'r',
+    'Front-End Engineer',
+    'Pizza Evangelist',
+    'CodePen 10x\'er',
+    'Cat Hoarder',
+    '90s Byproduct',
+    'Code jockey',
+    'Text editor connoisseur',
+    'Occasional Artist',
+    'JavaScript\'r',
+    'jQuery Alumni',
+    'Fan of eating and drinking',
+    'Animator of web things',
+    'Good Speller',
+    'Vue.js Junkie',
+    'WordPress Masochist',
+    'Self-Proclaimed Cyberpunk',
+    'Bash Hax0r',
+    'Black Lives Matter',
+    'Elden Ring Tarnished',
+  ])
 
   const setTagline = () => {
-    const titles = [
-      'Front End Web Developer',
-      'JAMStack\'r',
-      'Front End Engineer',
-      'Pizza evangelist',
-      'CodePen 10x\'er',
-      'Cat Hoarder',
-      '80s and 90s era byproduct',
-      'Code jockey',
-      'Text editor connoisseur',
-      'Occasional artist',
-      'Owner of too many video games',
-      'JavaScript abuser',
-      'Fan of eating and drinking',
-      'Animator of web things',
-      'Good speller',
-      'Vue.js junkie',
-      'WordPress tamer',
-      'Dark Souls masochist',
-      'Self-proclaimed Cyberpunk',
-      'Bash hax0r',
-      'Black Lives Matter',
-      'Elden Ring Addict',
-      'Capitalism is the enemy',
-    ]
-
-    const rand = titles[Math.floor(Math.random() * titles.length)]
+    const rand = titles.value[Math.floor(Math.random() * titles.value.length)]
 
     tagline.value = `Daryn St. Pierre // ${rand}`
   }
 
-  return {
-    tagline,
-    setTagline,
-  }
+  return { tagline, setTagline }
 })
 
 if (import.meta.hot)
-  import.meta.hot.accept(acceptHMRUpdate(siteStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(siteStore as any, import.meta.hot))

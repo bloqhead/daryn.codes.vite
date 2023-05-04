@@ -88,12 +88,13 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import { workStore } from '~/store/work'
 import ImageLoader from '~/components/ImageLoader.vue'
 
 // Pinia actions for fetching data
-const work = workStore().getWork()
-const pens = workStore().getPens()
+const work = computed(() => workStore().work)
+const pens = computed(() => workStore().pens)
 
 const metaDescription = 'Selected projects that I\'ve worked on.'
 const metaTitle = 'Select Projects'

@@ -1,6 +1,6 @@
 import { acceptHMRUpdate, defineStore } from 'pinia'
 
-export const workStore = defineStore('work', () => {
+export const workStore = defineStore('workStore', () => {
   const work = ref([
     {
       name: 'EldenSearch',
@@ -100,16 +100,8 @@ export const workStore = defineStore('work', () => {
     },
   ])
 
-  const getWork = () => work
-  const getPens = () => pens
-
-  return {
-    work,
-    pens,
-    getWork,
-    getPens,
-  }
+  return { work, pens }
 })
 
 if (import.meta.hot)
-  import.meta.hot.accept(acceptHMRUpdate(workStore, import.meta.hot))
+  import.meta.hot.accept(acceptHMRUpdate(workStore as any, import.meta.hot))

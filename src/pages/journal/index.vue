@@ -34,9 +34,7 @@ import { computed } from 'vue'
 import FormatDate from '~/components/FormatDate.vue'
 import { postsStore } from '~/store/posts'
 
-const posts = computed((): any => {
-  return postsStore().getPosts()
-})
+const posts = computed(() => postsStore().posts)
 
 const metaDescription = 'Topics that span the gamut of web development and life.'
 const metaTitle = 'Journal'
