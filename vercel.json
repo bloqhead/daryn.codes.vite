@@ -1,9 +1,4 @@
 {
-  "build": {
-    "env": {
-      "NPM_RC": "@fontawesome"
-    }
-  },
   "cleanUrls": true,
   "trailingSlash": true,
   "rewrites": [{
