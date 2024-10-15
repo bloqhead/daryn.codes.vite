@@ -20,11 +20,12 @@ export const siteStore = defineStore('siteStore', () => {
     'Animator of web things',
     'Good Speller',
     'Vue.js Junkie',
-    'WordPress Masochist',
+    'Fuck Matt Mullenweg',
     'Self-Proclaimed Cyberpunk',
     'Bash Hax0r',
     'Black Lives Matter',
     'Elden Ring Tarnished',
+    'Free Palestine 🇵🇸',
   ])
 
   const setTagline = () => {
