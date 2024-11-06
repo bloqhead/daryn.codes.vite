@@ -20,7 +20,6 @@ declare module '@vue/runtime-core' {
     PageTitle: typeof import('./components/PageTitle.vue')['default']
     ParallaxCard: typeof import('./components/ParallaxCard.vue')['default']
     PostList: typeof import('./components/PostList.vue')['default']
-    README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Skateboard: typeof import('./components/Skateboard.vue')['default']

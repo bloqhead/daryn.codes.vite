@@ -9,7 +9,6 @@ specifiers:
   '@fortawesome/vue-fontawesome': ^3.0.1
   '@iconify-json/carbon': ^1.1.7
   '@intlify/vite-plugin-vue-i18n': ^6.0.1
-  '@splinetool/runtime': ^0.9.280
   '@types/animejs': ^3.1.5
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
@@ -59,7 +58,6 @@ dependencies:
   '@fortawesome/free-brands-svg-icons': 6.1.2
   '@fortawesome/pro-solid-svg-icons': 6.1.2
   '@fortawesome/vue-fontawesome': 3.0.1_sqiqa7hvpgqdakjrbqzbqxvzme
-  '@splinetool/runtime': 0.9.281
   '@types/animejs': 3.1.5
   '@vueuse/core': 9.1.0_vue@3.2.37
   '@vueuse/head': 0.7.9_vue@3.2.37
@@ -1531,8 +1529,8 @@ packages:
       - supports-color
     dev: true
 
-  /@intlify/bundle-utils/6.0.0_vue-i18n@9.2.2:
-    resolution: {integrity: sha512-c8nTDgsTrBqVk3LPoF/YEarqeqcW0XAY5Y0UmFl5VKWKRNQh47jzvHRDmeRWhos5bUw1zIdiTixrs99FMJ9j5g==}
+  /@intlify/bundle-utils/7.0.0_vue-i18n@9.2.2:
+    resolution: {integrity: sha512-+/RBsYWbiZcs97RyVb4mrsSrLmIMaI6evj30jI9f1psjXx+syRbf0ab63I5SIz290EOm6TE80fTst/Xjel+D9w==}
     engines: {node: '>= 14.16'}
     peerDependencies:
       petite-vue-i18n: '*'
@@ -1543,8 +1541,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.17
-      '@intlify/shared': 9.3.0-beta.17
+      '@intlify/message-compiler': 9.3.0-beta.20
+      '@intlify/shared': 9.3.0-beta.20
       acorn: 8.8.2
       escodegen: 2.0.0
       estree-walker: 2.0.2
@@ -1578,21 +1576,26 @@ packages:
       '@intlify/shared': 9.2.2
       source-map: 0.6.1
 
-  /@intlify/message-compiler/9.3.0-beta.17:
-    resolution: {integrity: sha512-i7hvVIRk1Ax2uKa9xLRJCT57to08OhFMhFXXjWN07rmx5pWQYQ23MfX1xgggv9drnWTNhqEiD+u4EJeHoS5+Ww==}
-    engines: {node: '>= 14'}
+  /@intlify/message-compiler/9.3.0-beta.20:
+    resolution: {integrity: sha512-hwqQXyTnDzAVZ300SU31jO0+3OJbpOdfVU6iBkrmNpS7t2HRnVACo0EwcEXzJa++4EVDreqz5OeqJbt+PeSGGA==}
+    engines: {node: '>= 16'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.17
-      source-map: 0.6.1
+      '@intlify/shared': 9.3.0-beta.20
+      source-map-js: 1.0.2
+    dev: true
+
+  /@intlify/shared/10.0.0:
+    resolution: {integrity: sha512-6ngLfI7DOTew2dcF9WMJx+NnMWghMBhIiHbGg+wRvngpzD5KZJZiJVuzMsUQE1a5YebEmtpTEfUrDp/NqVGdiw==}
+    engines: {node: '>= 16'}
     dev: true
 
   /@intlify/shared/9.2.2:
     resolution: {integrity: sha512-wRwTpsslgZS5HNyM7uDQYZtxnbI12aGiBZURX3BTR9RFIKKRWpllTsgzHWvj3HKm3Y2Sh5LPC1r0PDCKEhVn9Q==}
     engines: {node: '>= 14'}
 
-  /@intlify/shared/9.3.0-beta.17:
-    resolution: {integrity: sha512-mscf7RQsUTOil35jTij4KGW1RC9SWQjYScwLxP53Ns6g24iEd5HN7ksbt9O6FvTmlQuX77u+MXpBdfJsGqizLQ==}
-    engines: {node: '>= 14'}
+  /@intlify/shared/9.3.0-beta.20:
+    resolution: {integrity: sha512-RucSPqh8O9FFxlYUysQTerSw0b9HIRpyoN1Zjogpm0qLiHK+lBNSa5sh1nCJ4wSsNcjphzgpLQCyR60GZlRV8g==}
+    engines: {node: '>= 16'}
     dev: true
 
   /@intlify/vite-plugin-vue-i18n/6.0.1_vite@3.0.9+vue-i18n@9.2.2:
@@ -1610,8 +1613,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/bundle-utils': 6.0.0_vue-i18n@9.2.2
-      '@intlify/shared': 9.3.0-beta.17
+      '@intlify/bundle-utils': 7.0.0_vue-i18n@9.2.2
+      '@intlify/shared': 10.0.0
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4
       fast-glob: 3.2.11
@@ -1860,13 +1863,6 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
     dev: true
-
-  /@splinetool/runtime/0.9.281:
-    resolution: {integrity: sha512-Tnp5V3cjNSZeKAvM0crbhALd38st01CGxjC+oyNLk7DdZcwC309HMdbQgksf8FltfPMT1pBKhFuVxmBFyJduUg==}
-    dependencies:
-      on-change: 4.0.2
-      semver-compare: 1.0.0
-    dev: false
 
   /@surma/rollup-plugin-off-main-thread/2.2.3:
     resolution: {integrity: sha512-lR8q/9W7hZpMWweNiAKU7NQerBnzQQLvi8qnTDU/fxItPhtZVMbPV3lbCwjhIlNBe9Bbr5V+KHshvWmVSG9cxQ==}
@@ -6342,11 +6338,6 @@ packages:
       undici: 5.8.0
     dev: true
 
-  /on-change/4.0.2:
-    resolution: {integrity: sha512-cMtCyuJmTx/bg2HCpHo3ZLeF7FZnBOapLqZHr2AlLeJ5Ul0Zu2mUJJz051Fdwu/Et2YW04ZD+TtU+gVy0ACNCA==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
-
   /on-finished/2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
@@ -7146,10 +7137,6 @@ packages:
   /select-hose/2.0.0:
     resolution: {integrity: sha512-mEugaLK+YfkijB4fx0e6kImuJdCIt2LxCRcbEYPqRGCs4F2ogyfZU5IAZRdjCP8JPq2AtdNoC/Dux63d9Kiryg==}
     dev: true
-
-  /semver-compare/1.0.0:
-    resolution: {integrity: sha512-YM3/ITh2MJ5MtzaM429anh+x2jiLVjqILF4m4oyQB18W7Ggea7BfqdH/wGMK7dDiMghv/6WG7znWMwUDzJiXow==}
-    dev: false
 
   /semver/5.7.1:
     resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
