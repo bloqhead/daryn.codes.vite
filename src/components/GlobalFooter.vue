@@ -40,7 +40,7 @@
           Built with <a href="https://github.com/antfu/vitesse">Vitesse</a>
         </p>
         <p>
-          Hosted on <a href="https://vercel.com/">Vercel</a>
+          Hosted on <a href="https://render.com/">Render</a>
         </p>
         <ul class="page-footer__links">
           <li>
