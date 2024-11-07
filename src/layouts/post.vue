@@ -69,7 +69,7 @@ const encodedTitle = computed((): string => {
   return encodeURIComponent(meta.value.title)
 })
 
-const ogImage = `https://kryog.vercel.app/api/og?title=${encodedTitle.value}&ttr=${meta.value.ttr}`
+const ogImage = `https://kryog.onrender.com/api/og?title=${encodedTitle.value}&ttr=${meta.value.ttr}`
 
 useHead({
   title: meta.value.title,
