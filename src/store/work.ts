@@ -4,7 +4,7 @@ export const workStore = defineStore('workStore', () => {
   const work = ref([
     {
       name: 'EldenSearch',
-      url: 'https://eldensearch.vercel.app/',
+      url: 'https://eldensearch.onrender.com/',
       image: 'eldensearch.png',
       summary: `
         As a complimentary tool to the DEMIGODS API, EldenSearch provides an easy way to search and 
