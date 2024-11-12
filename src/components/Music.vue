@@ -63,3 +63,124 @@ const fetchLatestScrobbles = async () => {
 
 onMounted(() => fetchLatestScrobbles())
 </script>
+
+<style lang="scss" scoped>
+.music__items {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+
+  a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    padding: 1.5rem;
+    transition: all 0.2s ease-in-out;
+    transform-origin: center;
+    border-radius: var(--radius-xl);
+    background-color: rgba(#000, 0.15);
+
+    &:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      border-radius: 10px;
+      transform-origin: center;
+      transform: translateY(2rem);
+      background-color: rgba(#000, 0.35);
+      opacity: 0;
+      transition:
+        opacity 0.2s ease-in-out,
+        transform 0.2s cubic-bezier(0.8, 0.33, 0.42, 0.85);
+    }
+
+    &:hover {
+
+      .music__icon {
+        color: #fff;
+        animation-name: icon-spin;
+        animation-delay: 0;
+        animation-direction: normal;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+      }
+
+      &:after {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    >div {
+      position: relative;
+      z-index: 1;
+
+      &:first-of-type {
+        margin-right: 1.5em;
+      }
+    }
+  }
+}
+
+.music__cover {
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.music__icon {
+  display: grid;
+  place-items: center;
+  color: var(--color-shade);
+  transition:
+    transform 350ms ease-in-out,
+    color 350ms ease-in-out;
+}
+
+.music__album-title {
+  font-size: 1.2em;
+  letter-spacing: 0;
+  margin: 0;
+
+  &:after {
+    display: none;
+  }
+}
+
+.music__separator {
+  color: var(--color-shade);
+}
+
+.music__profile-link {
+  display: inline-block;
+  color: var(--color-apple-music);
+  background-color: var(--color-dark-35);
+  border-radius: 3px;
+  padding: 3px 5px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:active {
+    color: var(--color-light);
+  }
+}
+</style>

@@ -8,7 +8,7 @@ meta:
 </route>
 
 <journal-intro>
-  <p>In typical early Saturday morning fashion, I strapped on my <a href="https://www.inlinewarehouse.com/Powerslide_Next_100/descpage-908367.html">Powerslide Next 100</a> urban inline skates and hit the pavement at the St. Pete Pier. What initially started off as a conditioning routine for an ice hockey beer league coming to Tampa Bay this year, evolved into an adored workout routine. Eventually, it became a shared love among my wife, and 2 friends that I discovered are also regularly on inline skates.</p>
+  <p>In typical early Saturday morning fashion, I strapped on my Powerslide Next 100 inline skates and hit the pavement at the St. Pete Pier. What initially started off as a conditioning routine for an ice hockey beer league coming to Tampa Bay this year, evolved into an adored workout routine. Eventually, it became a shared love among my wife, and 2 friends that I discovered are also regularly on inline skates.</p>
 </journal-intro>
 
 ## Tough break

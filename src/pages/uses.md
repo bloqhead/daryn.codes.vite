@@ -26,27 +26,25 @@ meta:
   this for anyone that might be interested.
 </div>
 
-<div>
-  <img src="/images/neofetch@2x.png" style="max-width: 626px !important;" alt="neofetch screenshot from my personal MacBook Pro" />
-</div>
-<small>
-  Made with <a href="https://github.com/dylanaraps/neofetch">neofetch</a>
-</small>
+<picture>
+  <source srcset="/images/macfetch.png, /images/macfetch@2x.png 2x" />
+  <img src="/images/macfetch.png" alt="macfetch screenshot from my personal MacBook Air" />
+  <figcaption>
+    Made with <a href="https://github.com/gantoreno/macfetch">macfetch</a>
+  </figcaption>
+</picture>
 
 ## Hardware
-
-* 2017 MacBook Pro 13" in space gray (no touchbar)
-* [STM Prime Backpack](https://www.amazon.com/gp/product/B01C8PIALU/) in steel gray
-* Kinesis Freestyle2 split keyboard
-* Dell Ultrasharp U2718Q 27-Inch 4K IPS Monitor
-* Audio-Technica ATR2100X-USB USB/XLR Microphone
-* Knox Gear Boom Arm and Shock Mount
-* Audio-Technica ATH-M30x headphones
+* 💻 2024 13" MacBook Air M3
+* 🎒 STM Prime in steel gray
+* ⌨️ nuphy Air96 V2 w/ Gateron Red switches
+* 🖥️ Dell Ultrasharp U2718Q 27" 4K IPS
+* 🖥️ LG 27" 27UL500-W 4K UHD UltraFine IPS
+* 🎧 Sony WH-1000XM5 headphones
 
 ## Software
 
-* [Nova by Panic](https://nova.app/)
-* [VSCode](https://code.visualstudio.com/)
-* [iTerm2](https://iterm2.com/)
-* [Figma](https://figma.com/)
-* [Vercel](https://vercel.com/)
+* Editor: [VSCode](https://code.visualstudio.com/)
+* Terminal: [iTerm2](https://iterm2.com/)
+* Design: [Figma](https://figma.com/)
+* Hosting: [Render](https://render.com/)

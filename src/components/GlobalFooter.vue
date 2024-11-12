@@ -75,3 +75,111 @@ import Music from '~/components/Music.vue'
 
 const currentYear = computed(() => new Date().getFullYear())
 </script>
+
+<style lang="scss" scoped>
+@use '../styles/variables' as v;
+
+.page-footer {
+  background-color: rgba(v.$mid, 0.85);
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: var(--color-shade);
+  margin: 0;
+
+  a {
+    text-decoration: underline;
+
+    &.router-link-active {
+      color: #fff;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.page-footer__title {
+  font-size: 1.25em;
+  letter-spacing: 0;
+  margin: 1em 0;
+  color: #fff;
+}
+
+.page-footer__content {
+  padding: calc(var(--global-component-padding) * 2);
+}
+
+.page-footer__copyright {
+  margin-top: 2em;
+}
+
+.page-footer__social {
+  list-style: none;
+  padding: 0;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+
+    svg path {
+      transition: fill 0.2s ease-in-out;
+    }
+
+    &:hover {
+
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+
+  span {
+    margin-left: 0.5em;
+    letter-spacing: var(--char-spacing);
+  }
+}
+
+.page-footer__links {
+  display: flex;
+  margin: 1rem -1rem;
+
+  li {
+    margin: 0 1rem;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.page-footer__secondary {
+  padding: calc(var(--global-component-padding) * 2);
+  background-color: #000;
+}
+
+@media #{v.$bp-medium} {
+  .page-footer {
+    text-align: left;
+  }
+
+  .page-footer__copyright {
+    margin-top: 0;
+  }
+}
+</style>

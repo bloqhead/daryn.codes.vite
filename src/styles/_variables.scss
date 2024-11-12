@@ -33,8 +33,13 @@ $pink: #f54768;
 $light: #fff;
 $mid: #222;
 $shade: #777;
-$dark: #000;
 $fog: #eee;
+
+$dark: #000;
+$dark-15: rgba($dark, 0.15);
+$dark-35: rgba($dark, 0.35);
+$dark-50: rgba($dark, 0.5);
+$dark-75: rgba($dark, 0.75);
 
 // Brand colors
 $github: #c6cbd1;
@@ -71,7 +76,7 @@ $panel-bg: rgba($mid, 0.5);
 $global-component-padding: 1.5em;
 $soft-line: 1px solid rgba(#fff, 0.15);
 $char-spacing: 0.15em;
-$base-easing: cubic-bezier(0.28, 0.32, 0.14, 0.74);
+$base-easing: cubic-bezier(.48,.28,.49,.87);
 $base-transform: 6rem;
 $link-gradient: linear-gradient(to right, var(--color-lime), var(--color-pink));
 $link-gradient-hover: linear-gradient(to right, var(--color-light), var(--color-light));

@@ -226,3 +226,35 @@ hr {
   border: 0;
   border-bottom: 2px dotted var(--color-pink);
 }
+
+picture:not([class]):not([id]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 auto;
+  padding: 2rem;
+
+  img {
+    display: block;
+    margin: 0;
+    padding: 1rem;
+    border: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-light);
+    margin: 0.5rem auto;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-mid);
+    border-radius: 5px;
+  }
+}
