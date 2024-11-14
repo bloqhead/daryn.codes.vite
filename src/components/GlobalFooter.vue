@@ -24,6 +24,12 @@
               <span>LinkedIn</span>
             </a>
           </li>
+          <li>
+            <a rel="me" href="https://bsky.app/profile/guillotine.club">
+              <fa :icon="['fab', 'bluesky']" />
+              <span>Bluesky</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -90,7 +96,7 @@ const currentYear = computed(() => new Date().getFullYear())
     text-decoration: underline;
 
     &.router-link-active {
-      color: #fff;
+      color: var(--color-light);
     }
   }
 
@@ -104,7 +110,7 @@ const currentYear = computed(() => new Date().getFullYear())
   font-size: 1.25em;
   letter-spacing: 0;
   margin: 1em 0;
-  color: #fff;
+  color: var(--color-light);
 }
 
 .page-footer__content {
@@ -144,7 +150,7 @@ const currentYear = computed(() => new Date().getFullYear())
     &:hover {
 
       svg path {
-        fill: #fff;
+        fill: var(--color-light);
       }
     }
   }
@@ -170,7 +176,7 @@ const currentYear = computed(() => new Date().getFullYear())
 
 .page-footer__secondary {
   padding: calc(var(--global-component-padding) * 2);
-  background-color: #000;
+  background-color: var(--color-dark);
 }
 
 @media #{v.$bp-medium} {

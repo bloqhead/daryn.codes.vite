@@ -1,3 +1,4 @@
+@use "sass:string";
 //
 // Variables
 //
@@ -57,13 +58,13 @@ $apple-music: #fa2d48;
 $colors-site: ($teal $yellow $pink $lime $red $light $mid $shade $dark);
 
 // Breakpoints
-$bp-small: unquote("(min-width: 320px) and (max-width: 799px)");
-$bp-medium: unquote("(min-width: 800px)");
-$bp-medium-max: unquote("(max-width: 800px)");
-$bp-medium-large: unquote("(min-width: 992px)");
-$bp-medium-large-max: unquote("(max-width: 992px)");
-$bp-large: unquote("(min-width: 1200px)");
-$bp-large-2x: unquote("(min-width: 1280px)");
+$bp-small: string.unquote("(min-width: 320px) and (max-width: 799px)");
+$bp-medium: string.unquote("(min-width: 800px)");
+$bp-medium-max: string.unquote("(max-width: 800px)");
+$bp-medium-large: string.unquote("(min-width: 992px)");
+$bp-medium-large-max: string.unquote("(max-width: 992px)");
+$bp-large: string.unquote("(min-width: 1200px)");
+$bp-large-2x: string.unquote("(min-width: 1280px)");
 
 // Misc
 $sidebar-padding: 1.25em;
