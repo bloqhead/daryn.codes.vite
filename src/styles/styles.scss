@@ -7,7 +7,7 @@
 
 // vendor
 @use 'vendor/minireset';
-@use 'vendor/hamburgers/hamburgers' with (
+@use 'vendor/hamburgers' with (
   $hamburger-layer-width: 40px,
   $hamburger-layer-height: 4px,
   $hamburger-layer-spacing: 8px,

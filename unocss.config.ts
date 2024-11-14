@@ -23,6 +23,7 @@ export default defineConfig({
     }),
     presetTypography(),
     presetWebFonts({
+      provider: 'google',
       fonts: {
         sans: 'Open Sans',
         display: 'Summer Hearts',

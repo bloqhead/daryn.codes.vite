@@ -115,6 +115,7 @@ const restingState = () => {
 <style lang="scss" scoped>
 @use '../styles/variables' as v;
 @use '../styles/mixins' as m;
+@use 'sass:list';
 
 #logo {
   width: 100%;
@@ -178,8 +179,8 @@ const restingState = () => {
   }
 
   li {
-    @for $i from 1 through length(v.$colors-site) {
-      $c: #{nth(v.$colors-site, $i)};
+    @for $i from 1 through list.length(v.$colors-site) {
+        $c: #{list.nth(v.$colors-site, $i)};
 
       &:nth-of-type(#{$i}) a:not(:hover) {
         color: $c;

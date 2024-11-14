@@ -22,6 +22,5 @@ declare module 'vue' {
     PostList: typeof import('./components/PostList.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Skateboard: typeof import('./components/Skateboard.vue')['default']
   }
 }
