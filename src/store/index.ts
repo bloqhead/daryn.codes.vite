@@ -26,6 +26,11 @@ export const siteStore = defineStore('siteStore', () => {
     'Black Lives Matter',
     'Elden Ring Tarnished',
     'Free Palestine 🇵🇸',
+    'ACAB',
+    '1312',
+    'Elon Musk is a nazi',
+    'Fuck Israel',
+    'Trans rights are human rights',
   ])
 
   const setTagline = () => {
