@@ -24,7 +24,6 @@ import { useIntersectionObserver } from '@vueuse/core'
 
 const logos = {
   html5: 'HTML5',
-  wordpress: 'WordPress',
   sass: 'Sass',
   js: 'JavaScript',
   php: 'PHP',
