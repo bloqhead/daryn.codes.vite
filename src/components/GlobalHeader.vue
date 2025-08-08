@@ -95,18 +95,18 @@
 import { useElementVisibility } from '@vueuse/core'
 import Logo from '~/components/Logo.vue'
 
-const isActive = ref<Boolean>(false)
-const isExpanded = ref<Boolean>(false)
+const isActive = ref<boolean>(false)
+const isExpanded = ref<boolean>(false)
 
 const target = ref(null)
 const navIsVisible = useElementVisibility(target)
 
-const toggleState = () => {
+function toggleState() {
   isActive.value = !isActive.value
   isExpanded.value = !isExpanded.value
 }
 
-const restingState = () => {
+function restingState() {
   isActive.value = false
   isExpanded.value = false
 }

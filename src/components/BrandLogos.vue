@@ -1,20 +1,7 @@
 <template>
-  <div
-    ref="logoContainer"
-    class="brand-logos mt--sm mb--sm"
-    :class="{ 'in-view': logosVisible }"
-  >
-    <div
-      v-for="(v, i) in logos"
-      :key="i"
-      class="brand-logos__item"
-    >
-      <fa
-        :icon="['fab', i]"
-        :class="`color--${i}`"
-        :title="v"
-        class="fa-7x"
-      />
+  <div ref="logoContainer" class="brand-logos mt--sm mb--sm" :class="{ 'in-view': logosVisible }">
+    <div v-for="(v, i) in logos" :key="i" class="brand-logos__item">
+      <fa :icon="['fab', i]" :class="`color--${i}`" :title="v" class="fa-7x" />
     </div>
   </div>
 </template>
@@ -24,20 +11,18 @@ import { useIntersectionObserver } from '@vueuse/core'
 
 const logos = {
   html5: 'HTML5',
-  wordpress: 'WordPress',
   sass: 'Sass',
   js: 'JavaScript',
-  php: 'PHP',
   vuejs: 'Vue.js',
   node: 'Node.js',
 }
 
 const logoContainer = ref(null)
-const logosVisible = ref<Boolean>(false)
+const logosVisible = ref<boolean>(false)
 
 useIntersectionObserver(
   logoContainer,
-  ([{ isIntersecting }], observerElement) => {
+  ([{ isIntersecting }], _observerElement) => {
     logosVisible.value = isIntersecting
   },
 )
@@ -50,13 +35,14 @@ useIntersectionObserver(
   gap: 3rem;
   justify-content: center;
   text-align: center;
+  justify-items: center;
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
   @media (min-width: 1280px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 
   .brand-logos__item {

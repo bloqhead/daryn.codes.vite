@@ -56,7 +56,7 @@
 <script setup lang="ts">
 import anime from 'animejs'
 
-const animate = () => {
+function animate() {
   anime.set('#skateboard, #skateboard .wheel', {
     opacity: 0,
   })

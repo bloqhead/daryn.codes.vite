@@ -89,8 +89,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { workStore } from '~/store/work'
 import ImageLoader from '~/components/ImageLoader.vue'
+import { workStore } from '~/store/work'
 
 // Pinia actions for fetching data
 const work = computed(() => workStore().work)

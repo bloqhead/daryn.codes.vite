@@ -1,14 +1,27 @@
-import { ViteSSG } from 'vite-ssg'
-import { setupLayouts } from 'virtual:generated-layouts'
 import type { DefineComponent } from 'vue'
+import { setupLayouts } from 'virtual:generated-layouts'
+import { ViteSSG } from 'vite-ssg'
 
 // Font Awesome
 import type { FontAwesomeIconProps } from '@fortawesome/vue-fontawesome'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { config, library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Spline
 // import Spline from 'spline-vue/v3'
+
+import type { UserModule } from './types'
+
+import {
+  faCodepen,
+  faGithub,
+  faHtml5,
+  faJs,
+  faLinkedin,
+  faNode,
+  faSass,
+  faVuejs,
+} from '@fortawesome/free-brands-svg-icons'
 
 import {
   faArrowRight,
@@ -20,28 +33,9 @@ import {
   faTag,
   faTerminal,
 } from '@fortawesome/pro-solid-svg-icons'
-
-import {
-  faCodepen,
-  faGithub,
-  faHtml5,
-  faInstagram,
-  faJs,
-  faLinkedin,
-  faMastodon,
-  faNode,
-  faPhp,
-  faSass,
-  faTwitter,
-  faVuejs,
-  faWordpress,
-  faBluesky,
-} from '@fortawesome/free-brands-svg-icons'
-
+import generatedRoutes from '~pages'
 // app, routes, types
 import App from './App.vue'
-import type { UserModule } from './types'
-import generatedRoutes from '~pages'
 
 // styles
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -58,19 +52,13 @@ library.add(
   faGithub,
   faGlasses,
   faHtml5,
-  faInstagram,
   faJs,
   faLinkedin,
-  faMastodon,
   faNode,
-  faPhp,
   faSass,
   faTerminal,
   faTag,
-  faTwitter,
   faVuejs,
-  faWordpress,
-  faBluesky,
 )
 
 config.autoAddCss = false

@@ -47,8 +47,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
 import type { VNodeRef } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import FormatDate from '~/components/FormatDate.vue'
 
@@ -104,11 +104,11 @@ useHead({
     },
     {
       name: 'twitter:label1',
-      value: 'Time to read',
+      content: 'Time to read',
     },
     {
       name: 'twitter:data1',
-      value: timeToRead,
+      content: timeToRead,
     },
   ],
 })

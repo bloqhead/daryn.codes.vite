@@ -24,12 +24,6 @@
               <span>LinkedIn</span>
             </a>
           </li>
-          <li>
-            <a rel="me" href="https://bsky.app/profile/guillotine.club">
-              <fa :icon="['fab', 'bluesky']" />
-              <span>Bluesky</span>
-            </a>
-          </li>
         </ul>
       </div>
 
@@ -43,10 +37,7 @@
       <div class="page-footer__copyright">
         <p>&copy; {{ currentYear }} Daryn St. Pierre</p>
         <p>
-          Built with <a href="https://github.com/antfu/vitesse">Vitesse</a>
-        </p>
-        <p>
-          Hosted on <a href="https://render.com/">Render</a>
+          <a href="https://vitejs.dev/">Vite</a> + <a href="https://render.com/">Render</a>
         </p>
         <ul class="page-footer__links">
           <li>
