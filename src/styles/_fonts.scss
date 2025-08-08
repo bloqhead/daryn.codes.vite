@@ -1,0 +1,23 @@
+// Google Fonts (replacing UnoCSS web fonts)
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;600;700&display=swap');
+
+// Font family variables
+:root {
+  --font-sans: 'Open Sans', sans-serif;
+  --font-mono: 'Overpass Mono', monospace;
+  --font-display: 'Summer Hearts', cursive; // Keep local font
+}
+
+// Apply font families
+body {
+  font-family: var(--font-sans);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}

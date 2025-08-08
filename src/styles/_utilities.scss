@@ -1,0 +1,113 @@
+// Spacing utilities
+.m-0 { margin: 0; }
+.p-0 { padding: 0; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+
+// Responsive spacing
+@media (min-width: 1280px) {
+  .xl\:mb-0 { margin-bottom: 0; }
+}
+
+// Grid utilities
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-12 {
+  gap: 3rem;
+}
+
+// Responsive grid
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid {
+    display: grid;
+  }
+  
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Layout utilities
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Button utilities (from UnoCSS shortcuts)
+.btn {
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  background-color: #0f766e;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  
+  &:hover {
+    background-color: #115e59;
+  }
+  
+  &:disabled {
+    cursor: default;
+    background-color: #4b5563;
+    opacity: 0.5;
+  }
+}
+
+.icon-btn {
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.75;
+  transition: opacity 200ms ease-in-out;
+  
+  &:hover {
+    opacity: 1;
+    color: #0d9488;
+  }
+}
+
+// Typography utilities
+.prose {
+  max-width: 65ch;
+  
+  &.prose-sm {
+    font-size: 0.875rem;
+    line-height: 1.7142857;
+  }
+  
+  &.m-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  &.text-left {
+    text-align: left;
+  }
+}

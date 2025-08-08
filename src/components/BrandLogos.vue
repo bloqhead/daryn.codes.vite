@@ -45,14 +45,19 @@ useIntersectionObserver(
 
 <style lang="scss" scoped>
 .brand-logos {
-  @apply
-    grid
-    grid-cols-2
-    md:grid-cols-3
-    xl:grid-cols-4
-    gap-12
-    justify-center
-    text-center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  justify-content: center;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   .brand-logos__item {
     filter: grayscale(100%) brightness(500%);

@@ -45,7 +45,6 @@ import generatedRoutes from '~pages'
 
 // styles
 import '@fortawesome/fontawesome-svg-core/styles.css'
-import 'uno.css'
 import './styles/styles.scss'
 
 // add FA icons
