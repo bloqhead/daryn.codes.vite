@@ -25,7 +25,7 @@
 - Pinia for state management
 - File-based routing with vite-plugin-pages
 - Auto-imported components and composables
-- UnoCSS for utility-first styling
+- SCSS for modular and component-based styling
 - Markdown support for content pages
 
 ## Testing
