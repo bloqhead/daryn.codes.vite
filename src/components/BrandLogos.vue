@@ -1,20 +1,7 @@
 <template>
-  <div
-    ref="logoContainer"
-    class="brand-logos mt--sm mb--sm"
-    :class="{ 'in-view': logosVisible }"
-  >
-    <div
-      v-for="(v, i) in logos"
-      :key="i"
-      class="brand-logos__item"
-    >
-      <fa
-        :icon="['fab', i]"
-        :class="`color--${i}`"
-        :title="v"
-        class="fa-7x"
-      />
+  <div ref="logoContainer" class="brand-logos mt--sm mb--sm" :class="{ 'in-view': logosVisible }">
+    <div v-for="(v, i) in logos" :key="i" class="brand-logos__item">
+      <fa :icon="['fab', i]" :class="`color--${i}`" :title="v" class="fa-7x" />
     </div>
   </div>
 </template>
@@ -26,17 +13,16 @@ const logos = {
   html5: 'HTML5',
   sass: 'Sass',
   js: 'JavaScript',
-  php: 'PHP',
   vuejs: 'Vue.js',
   node: 'Node.js',
 }
 
 const logoContainer = ref(null)
-const logosVisible = ref<Boolean>(false)
+const logosVisible = ref<boolean>(false)
 
 useIntersectionObserver(
   logoContainer,
-  ([{ isIntersecting }], observerElement) => {
+  ([{ isIntersecting }], _observerElement) => {
     logosVisible.value = isIntersecting
   },
 )
@@ -44,14 +30,20 @@ useIntersectionObserver(
 
 <style lang="scss" scoped>
 .brand-logos {
-  @apply
-    grid
-    grid-cols-2
-    md:grid-cols-3
-    xl:grid-cols-4
-    gap-12
-    justify-center
-    text-center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 1280px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 
   .brand-logos__item {
     filter: grayscale(100%) brightness(500%);

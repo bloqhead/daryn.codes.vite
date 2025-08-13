@@ -30,36 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Music } from '~/types'
-
-const items = ref<Music>()
-const hasError = ref<Boolean>(false)
-
-const fetchLatestScrobbles = async () => {
-  const userName = 'kryosleep'
-  const apiKey = import.meta.env.VITE_LASTFM_API_KEY
-  const url = `https://ws.audioscrobbler.com/2.0/?method=user.getlovedtracks&user=${userName}&api_key=${apiKey}&limit=3&nowplaying=false&format=json`
-
-  try {
-    const res = await fetch(url, {
-      method: 'GET',
-      mode: 'cors',
-      cache: 'no-cache',
-    })
-
-    if (res.ok) {
-      const json = await res.json()
-      items.value = await json.lovedtracks.track
-    }
-    else {
-      hasError.value = true
-      throw new Error('error')
-    }
-  }
-  catch (error) {
-    hasError.value = true
-  }
-}
+const { items, hasError, fetchLatestScrobbles } = useLastFmScrobbles()
 
 onMounted(() => fetchLatestScrobbles())
 </script>

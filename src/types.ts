@@ -1,18 +1,19 @@
-import { type ViteSSGContext } from 'vite-ssg'
+import type { ViteSSGContext } from 'vite-ssg'
 
 export type UserModule = (ctx: ViteSSGContext) => void
 
-export interface Artist {
-  url: string
+export interface LastFmArtist {
   name: string
-  artist: {
-    name: string
-  }
+  url: string
 }
 
-export interface Music {
-  [key: string]: Artist
+export interface LastFmTrack {
+  name: string
+  url: string
+  artist: LastFmArtist
 }
+
+export type Music = LastFmTrack[]
 
 export interface Meta {
   meta: {
@@ -21,6 +22,6 @@ export interface Meta {
     layout?: string
     title: string
     ttr?: string | number
-    state?: object | Array<{}>
+    state?: object | unknown[]
   }
 }

@@ -68,9 +68,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import GlitchedWriter from 'vue-glitched-writer'
-import PageTitle from '~/components/PageTitle.vue'
 import BrandLogos from '~/components/BrandLogos.vue'
 import ImageLoader from '~/components/ImageLoader.vue'
+import PageTitle from '~/components/PageTitle.vue'
 
 // GW text array
 const gwText = ref([

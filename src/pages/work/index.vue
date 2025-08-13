@@ -89,8 +89,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { workStore } from '~/store/work'
 import ImageLoader from '~/components/ImageLoader.vue'
+import { workStore } from '~/store/work'
 
 // Pinia actions for fetching data
 const work = computed(() => workStore().work)
@@ -120,10 +120,11 @@ useHead({
   margin: 4rem 0;
   max-width: 1320px;
 
-  @apply
-    lg:grid
-    lg:grid-cols-2
-    gap-8;
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 
   // link resets
   li:before {
