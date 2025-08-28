@@ -31,6 +31,7 @@ export const siteStore = defineStore('siteStore', () => {
     'Elon Musk is a nazi',
     'Fuck Israel',
     'Trans rights are human rights',
+    'Fuck ICE',
   ])
 
   const setTagline = () => {
